@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
+  <defs>
+    <linearGradient id="hero-grad-5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="50%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <linearGradient id="card-grad-5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="390" height="844" fill="#0c1017"/>
+
+  <!-- Status Bar -->
+  <text x="32" y="34" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">21:42</text>
+  <path d="M340 24h18a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-18a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2zm22 3v5" stroke="#e2e8f0" stroke-width="1.5" fill="none"/>
+  <rect x="342" y="26" width="14" height="7" rx="1" fill="#f59e0b"/>
+
+  <!-- Top App Bar -->
+  <g transform="translate(20, 52)">
+    <text x="0" y="22" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="800">Sångboken</text>
+    <text x="0" y="38" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Upptäck &amp; sjung tillsammans</text>
+
+    <circle cx="316" cy="18" r="16" fill="#1e293b"/>
+    <text x="309" y="24" font-size="14">🔍</text>
+    <circle cx="354" cy="18" r="16" fill="#1e293b"/>
+    <text x="347" y="24" font-size="14">⚙️</text>
+  </g>
+
+  <!-- Featured Hero Banner: "Kvällens Första Snaps" -->
+  <g transform="translate(20, 106)">
+    <rect width="350" height="150" rx="18" fill="url(#hero-grad-5)" stroke="#f59e0b" stroke-width="1.2"/>
+    
+    <rect x="16" y="16" width="128" height="20" rx="10" fill="#fef3c7" opacity="0.2"/>
+    <text x="24" y="30" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">🌟 KVÄLLENS FÖRSTA</text>
+
+    <text x="16" y="66" fill="#ffffff" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="bold">Helan Går</text>
+    <text x="16" y="86" fill="#fde68a" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">Melodi: Helan går • Klassiker</text>
+
+    <text x="16" y="112" fill="#fef3c7" opacity="0.8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+      "Helan går, sjung hopp faderallan lallan lej..."
+    </text>
+
+    <!-- Hero CTA Button -->
+    <rect x="236" y="98" width="100" height="36" rx="18" fill="#fbbf24"/>
+    <text x="254" y="121" fill="#451a03" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="bold">Sjung Nu 🍻</text>
+  </g>
+
+  <!-- Section 1 Header: "Populära Snapsvisor" -->
+  <g transform="translate(20, 280)">
+    <text x="0" y="14" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700">🥃 Populära Snapsvisor</text>
+    <text x="350" y="14" text-anchor="end" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Visa alla (12) ›</text>
+  </g>
+
+  <!-- Carousel Row 1 -->
+  <g transform="translate(20, 304)">
+    
+    <!-- Carousel Card 1: Halvan -->
+    <g transform="translate(0, 0)">
+      <rect width="144" height="150" rx="14" fill="url(#card-grad-5)" stroke="#374151" stroke-width="1"/>
+      <rect x="10" y="10" width="46" height="18" rx="9" fill="#3b291a"/>
+      <text x="16" y="23" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="bold">Nr 2</text>
+      <text x="122" y="24" fill="#f59e0b" font-size="12">★</text>
+      
+      <text x="10" y="52" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold">Halvan</text>
+      <text x="10" y="68" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">Hurra vad jag är glad</text>
+      
+      <text x="10" y="90" fill="#6b7280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">
+        <tspan x="10" dy="0">"Hur länge skall på</tspan>
+        <tspan x="10" dy="12">bordet den lilla..."</tspan>
+      </text>
+
+      <rect x="10" y="118" width="124" height="22" rx="6" fill="#374151"/>
+      <text x="44" y="133" fill="#e5e7eb" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Öppna visa</text>
+    </g>
+
+    <!-- Carousel Card 2: Mera Brännvin -->
+    <g transform="translate(156, 0)">
+      <rect width="144" height="150" rx="14" fill="url(#card-grad-5)" stroke="#374151" stroke-width="1"/>
+      <rect x="10" y="10" width="46" height="18" rx="9" fill="#3b291a"/>
+      <text x="16" y="23" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="bold">Nr 3</text>
+      <text x="122" y="24" fill="#4b5563" font-size="12">☆</text>
+      
+      <text x="10" y="52" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold">Mera Brännvin</text>
+      <text x="10" y="68" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">Internationalen</text>
+      
+      <text x="10" y="90" fill="#6b7280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">
+        <tspan x="10" dy="0">"Mera brännvin i</tspan>
+        <tspan x="10" dy="12">glasen, mera glas..."</tspan>
+      </text>
+
+      <rect x="10" y="118" width="124" height="22" rx="6" fill="#374151"/>
+      <text x="44" y="133" fill="#e5e7eb" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Öppna visa</text>
+    </g>
+
+    <!-- Carousel Card 3 (Peek edge) -->
+    <g transform="translate(312, 0)">
+      <rect width="58" height="150" rx="14" fill="url(#card-grad-5)" stroke="#374151" stroke-width="1"/>
+      <text x="10" y="52" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold">Tersen</text>
+    </g>
+  </g>
+
+  <!-- Section 2 Header: "Kräftskiva & Högtid" -->
+  <g transform="translate(20, 480)">
+    <text x="0" y="14" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700">🦞 Kräftskiva &amp; Högtid</text>
+    <text x="350" y="14" text-anchor="end" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Visa alla (6) ›</text>
+  </g>
+
+  <!-- Carousel Row 2 -->
+  <g transform="translate(20, 504)">
+    
+    <!-- Carousel Card 2.1: Kräftans Lov -->
+    <g transform="translate(0, 0)">
+      <rect width="144" height="150" rx="14" fill="url(#card-grad-5)" stroke="#374151" stroke-width="1"/>
+      <rect x="10" y="10" width="56" height="18" rx="9" fill="#381d18"/>
+      <text x="16" y="23" fill="#f87171" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="bold">Kräfta</text>
+      <text x="122" y="24" fill="#f59e0b" font-size="12">★</text>
+      
+      <text x="10" y="52" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold">Kräftans Lov</text>
+      <text x="10" y="68" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">Mors lilla Olle</text>
+      
+      <text x="10" y="90" fill="#6b7280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">
+        <tspan x="10" dy="0">"Kräftorna skramlar</tspan>
+        <tspan x="10" dy="12">i grytan så röd..."</tspan>
+      </text>
+
+      <rect x="10" y="118" width="124" height="22" rx="6" fill="#374151"/>
+      <text x="44" y="133" fill="#e5e7eb" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Öppna visa</text>
+    </g>
+
+    <!-- Carousel Card 2.2: En Kräfta -->
+    <g transform="translate(156, 0)">
+      <rect width="144" height="150" rx="14" fill="url(#card-grad-5)" stroke="#374151" stroke-width="1"/>
+      <rect x="10" y="10" width="56" height="18" rx="9" fill="#381d18"/>
+      <text x="16" y="23" fill="#f87171" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="bold">Kräfta</text>
+      <text x="122" y="24" fill="#4b5563" font-size="12">☆</text>
+      
+      <text x="10" y="52" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold">Kräftans Visa</text>
+      <text x="10" y="68" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">Tre små gummor</text>
+      
+      <text x="10" y="90" fill="#6b7280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">
+        <tspan x="10" dy="0">"En kräfta vi ska äta,</tspan>
+        <tspan x="10" dy="12">en nubbe vi ska ta..."</tspan>
+      </text>
+
+      <rect x="10" y="118" width="124" height="22" rx="6" fill="#374151"/>
+      <text x="44" y="133" fill="#e5e7eb" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Öppna visa</text>
+    </g>
+
+    <!-- Carousel Card 2.3 (Peek edge) -->
+    <g transform="translate(312, 0)">
+      <rect width="58" height="150" rx="14" fill="url(#card-grad-5)" stroke="#374151" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- Sticky Bottom Navigation -->
+  <g transform="translate(0, 756)">
+    <rect width="390" height="88" fill="#080c14" opacity="0.96" stroke="#1e293b" stroke-width="1"/>
+    <rect x="20" y="12" width="350" height="48" rx="24" fill="#f59e0b"/>
+    <text x="136" y="42" fill="#0f172a" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold">🎲 Slumpa en Visa!</text>
+  </g>
+</svg>

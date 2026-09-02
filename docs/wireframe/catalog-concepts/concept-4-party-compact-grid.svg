@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
+  <defs>
+    <linearGradient id="party-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="100%" stop-color="#05070c"/>
+    </linearGradient>
+    <linearGradient id="neon-glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="390" height="844" fill="url(#party-bg)"/>
+
+  <!-- Status Bar -->
+  <text x="32" y="34" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">21:42</text>
+  <path d="M340 24h18a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-18a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2zm22 3v5" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+  <rect x="342" y="26" width="14" height="7" rx="1" fill="#ec4899"/>
+
+  <!-- Top App Header -->
+  <g transform="translate(20, 52)">
+    <text x="0" y="24" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="800">SÅNGBOK</text>
+    <circle cx="120" cy="18" r="4" fill="#ec4899"/>
+    <text x="130" y="22" fill="#ec4899" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="bold">PARTY MODE</text>
+
+    <!-- Quick Stats -->
+    <rect x="270" y="4" width="80" height="28" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="282" y="22" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">26 visor 🎵</text>
+  </g>
+
+  <!-- Compact Search Input -->
+  <g transform="translate(20, 96)">
+    <rect width="330" height="40" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+    <text x="12" y="25" fill="#6b7280" font-size="14">🔍</text>
+    <text x="36" y="25" fill="#6b7280" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Snabbsök visa...</text>
+  </g>
+
+  <!-- Alphabet Quick Index Rail -->
+  <g transform="translate(362, 160)" text-anchor="middle" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="bold">
+    <text y="0" fill="#f59e0b">#</text>
+    <text y="20">A</text>
+    <text y="40">B</text>
+    <text y="60">E</text>
+    <text y="80">H</text>
+    <text y="100">J</text>
+    <text y="120">K</text>
+    <text y="140">M</text>
+    <text y="160">N</text>
+    <text y="180">O</text>
+    <text y="200">P</text>
+    <text y="220">R</text>
+    <text y="240">S</text>
+    <text y="260">T</text>
+    <text y="280">V</text>
+    <text y="300">Ö</text>
+  </g>
+
+  <!-- High-Density 2-Column Song Grid -->
+  <g transform="translate(20, 150)">
+
+    <!-- Tile 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="160" height="88" rx="12" fill="#111827" stroke="#f59e0b" stroke-width="1.2"/>
+      <circle cx="16" cy="18" r="4" fill="#f59e0b"/>
+      <text x="26" y="21" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">01 • SNAPS</text>
+      <text x="140" y="22" fill="#fbbf24" font-size="12">★</text>
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold">Helan Går</text>
+      <text x="14" y="60" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">"Helan går, sjung hopp..."</text>
+      <text x="14" y="74" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">Egen melodi</text>
+    </g>
+
+    <!-- Tile 2 -->
+    <g transform="translate(170, 0)">
+      <rect width="160" height="88" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#f59e0b"/>
+      <text x="26" y="21" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">02 • SNAPS</text>
+      <text x="140" y="22" fill="#475569" font-size="12">☆</text>
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold">Halvan</text>
+      <text x="14" y="60" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">"Hur länge skall på..."</text>
+      <text x="14" y="74" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">Hurra vad jag är glad</text>
+    </g>
+
+    <!-- Tile 3 -->
+    <g transform="translate(0, 98)">
+      <rect width="160" height="88" rx="12" fill="#111827" stroke="#ef4444" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#ef4444"/>
+      <text x="26" y="21" fill="#f87171" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">03 • KRÄFTA</text>
+      <text x="140" y="22" fill="#fbbf24" font-size="12">★</text>
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold">Kräftans Lov</text>
+      <text x="14" y="60" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">"Kräftorna skramlar i..."</text>
+      <text x="14" y="74" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">Mors lilla Olle</text>
+    </g>
+
+    <!-- Tile 4 -->
+    <g transform="translate(170, 98)">
+      <rect width="160" height="88" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#f59e0b"/>
+      <text x="26" y="21" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">04 • SNAPS</text>
+      <text x="140" y="22" fill="#475569" font-size="12">☆</text>
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold">Mera Brännvin</text>
+      <text x="14" y="60" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">"Mera brännvin i..."</text>
+      <text x="14" y="74" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">Internationalen</text>
+    </g>
+
+    <!-- Tile 5 -->
+    <g transform="translate(0, 196)">
+      <rect width="160" height="88" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#10b981"/>
+      <text x="26" y="21" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">05 • SOMMAR</text>
+      <text x="140" y="22" fill="#fbbf24" font-size="12">★</text>
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold">Små Grodorna</text>
+      <text x="14" y="60" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">"Små grodorna, små..."</text>
+      <text x="14" y="74" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">Små grodorna</text>
+    </g>
+
+    <!-- Tile 6 -->
+    <g transform="translate(170, 196)">
+      <rect width="160" height="88" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#a855f7"/>
+      <text x="26" y="21" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">06 • PUNSCH</text>
+      <text x="140" y="22" fill="#475569" font-size="12">☆</text>
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold">Punschen...</text>
+      <text x="14" y="60" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">"Punschen kommer..."</text>
+      <text x="14" y="74" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">Glada Änkan</text>
+    </g>
+
+    <!-- Tile 7 -->
+    <g transform="translate(0, 294)">
+      <rect width="160" height="88" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#f59e0b"/>
+      <text x="26" y="21" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">07 • SNAPS</text>
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold">Tersen</text>
+      <text x="14" y="60" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">"Nu tar vi tersen..."</text>
+    </g>
+
+    <!-- Tile 8 -->
+    <g transform="translate(170, 294)">
+      <rect width="160" height="88" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#3b82f6"/>
+      <text x="26" y="21" fill="#60a5fa" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">08 • ÖL</text>
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold">O Gamla Klang</text>
+      <text x="14" y="60" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">"O gamla klang..."</text>
+    </g>
+
+    <!-- Tile 9 -->
+    <g transform="translate(0, 392)">
+      <rect width="160" height="88" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#f59e0b"/>
+      <text x="26" y="21" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">09 • SNAPS</text>
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold">Tänk om jag...</text>
+    </g>
+
+    <!-- Tile 10 -->
+    <g transform="translate(170, 392)">
+      <rect width="160" height="88" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#f59e0b"/>
+      <text x="26" y="21" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="bold">10 • SNAPS</text>
+      <text x="14" y="44" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="bold">Siffervisan</text>
+    </g>
+  </g>
+
+  <!-- Sticky Bottom Party Toolbelt (3-button layout) -->
+  <g transform="translate(0, 754)">
+    <rect width="390" height="90" fill="#080c14" opacity="0.96" stroke="#1e293b" stroke-width="1"/>
+    
+    <!-- Tab 1: Slumpa -->
+    <g transform="translate(40, 14)">
+      <circle cx="24" cy="20" r="18" fill="#1e293b"/>
+      <text x="16" y="26" font-size="16">🎲</text>
+      <text x="24" y="48" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">Slumpa</text>
+    </g>
+
+    <!-- Tab 2: Huvudknapp (Sjung) -->
+    <g transform="translate(145, 8)">
+      <rect width="100" height="48" rx="24" fill="url(#neon-glow)"/>
+      <text x="50" y="30" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="bold">🍻 Sjung Nu</text>
+    </g>
+
+    <!-- Tab 3: Favoriter -->
+    <g transform="translate(285, 14)">
+      <circle cx="24" cy="20" r="18" fill="#1e293b"/>
+      <text x="16" y="26" font-size="16">⭐</text>
+      <text x="24" y="48" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">Favoriter</text>
+    </g>
+  </g>
+</svg>

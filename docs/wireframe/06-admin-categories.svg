@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" width="390" height="844">
+  <defs>
+    <linearGradient id="admin-cat-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="gold-btn-cat" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="390" height="844" fill="url(#admin-cat-bg)"/>
+
+  <!-- Status Bar -->
+  <text x="32" y="34" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">21:42</text>
+  <path d="M340 24h18a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-18a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2zm22 3v5" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+  <rect x="342" y="26" width="14" height="7" rx="1" fill="#f59e0b"/>
+
+  <!-- Admin Header -->
+  <g transform="translate(20, 52)">
+    <text x="0" y="22" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="800">Sångboken Admin</text>
+    <rect x="290" y="2" width="60" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="300" y="19" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Logga ut</text>
+  </g>
+
+  <!-- Admin Navigation Tabs -->
+  <g transform="translate(20, 92)">
+    <rect width="350" height="38" rx="10" fill="#1e293b"/>
+    <!-- Inactive Tab: Visor -->
+    <text x="56" y="24" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">🎵 Visor (26)</text>
+    
+    <!-- Active Tab: Kategorier -->
+    <rect x="175" y="3" width="172" height="32" rx="8" fill="#f59e0b"/>
+    <text x="216" y="23" fill="#0f172a" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700">🏷️ Kategorier (7)</text>
+  </g>
+
+  <!-- Action Bar: Add Category Button -->
+  <g transform="translate(20, 142)">
+    <text x="0" y="22" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">Hantera teman &amp; kategorier</text>
+    
+    <rect x="230" y="2" width="120" height="32" rx="16" fill="url(#gold-btn-cat)"/>
+    <text x="246" y="22" fill="#0f172a" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="bold">+ Ny Kategori</text>
+  </g>
+
+  <!-- Category List -->
+  <g transform="translate(20, 186)">
+
+    <!-- Row 1: Snapsvisor -->
+    <g transform="translate(0, 0)">
+      <rect width="350" height="68" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <rect x="12" y="14" width="40" height="40" rx="10" fill="#3b291a"/>
+      <text x="22" y="40" font-size="18">🥃</text>
+
+      <text x="62" y="30" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">Snapsvisor</text>
+      <text x="62" y="48" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Slug: snaps • 12 visor kopplade</text>
+
+      <rect x="236" y="20" width="48" height="28" rx="6" fill="#334155"/>
+      <text x="246" y="38" fill="#f8fafc" font-size="11">✏️ Ändra</text>
+
+      <rect x="290" y="20" width="48" height="28" rx="6" fill="#450a0a"/>
+      <text x="300" y="38" fill="#fca5a5" font-size="11">🗑️ Ta bort</text>
+    </g>
+
+    <!-- Row 2: Kräftskiva -->
+    <g transform="translate(0, 78)">
+      <rect width="350" height="68" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <rect x="12" y="14" width="40" height="40" rx="10" fill="#381d18"/>
+      <text x="22" y="40" font-size="18">🦞</text>
+
+      <text x="62" y="30" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">Kräftskiva</text>
+      <text x="62" y="48" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Slug: kraftskiva • 4 visor kopplade</text>
+
+      <rect x="236" y="20" width="48" height="28" rx="6" fill="#334155"/>
+      <text x="246" y="38" fill="#f8fafc" font-size="11">✏️ Ändra</text>
+
+      <rect x="290" y="20" width="48" height="28" rx="6" fill="#450a0a"/>
+      <text x="300" y="38" fill="#fca5a5" font-size="11">🗑️ Ta bort</text>
+    </g>
+
+    <!-- Row 3: Midsommar -->
+    <g transform="translate(0, 156)">
+      <rect width="350" height="68" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <rect x="12" y="14" width="40" height="40" rx="10" fill="#1e2c1e"/>
+      <text x="22" y="40" font-size="18">🌸</text>
+
+      <text x="62" y="30" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">Midsommar</text>
+      <text x="62" y="48" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Slug: midsommar • 3 visor kopplade</text>
+
+      <rect x="236" y="20" width="48" height="28" rx="6" fill="#334155"/>
+      <text x="246" y="38" fill="#f8fafc" font-size="11">✏️ Ändra</text>
+
+      <rect x="290" y="20" width="48" height="28" rx="6" fill="#450a0a"/>
+      <text x="300" y="38" fill="#fca5a5" font-size="11">🗑️ Ta bort</text>
+    </g>
+
+    <!-- Row 4: Jul & Högtid -->
+    <g transform="translate(0, 234)">
+      <rect width="350" height="68" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <rect x="12" y="14" width="40" height="40" rx="10" fill="#1e2c1e"/>
+      <text x="22" y="40" font-size="18">🎄</text>
+
+      <text x="62" y="30" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">Jul &amp; Högtid</text>
+      <text x="62" y="48" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Slug: jul • 3 visor kopplade</text>
+
+      <rect x="236" y="20" width="48" height="28" rx="6" fill="#334155"/>
+      <text x="246" y="38" fill="#f8fafc" font-size="11">✏️ Ändra</text>
+
+      <rect x="290" y="20" width="48" height="28" rx="6" fill="#450a0a"/>
+      <text x="300" y="38" fill="#fca5a5" font-size="11">🗑️ Ta bort</text>
+    </g>
+
+    <!-- Row 5: Öl & Vin -->
+    <g transform="translate(0, 312)">
+      <rect width="350" height="68" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <rect x="12" y="14" width="40" height="40" rx="10" fill="#1e293b"/>
+      <text x="22" y="40" font-size="18">🍺</text>
+
+      <text x="62" y="30" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">Öl &amp; Vin</text>
+      <text x="62" y="48" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Slug: ol-vin • 2 visor kopplade</text>
+
+      <rect x="236" y="20" width="48" height="28" rx="6" fill="#334155"/>
+      <text x="246" y="38" fill="#f8fafc" font-size="11">✏️ Ändra</text>
+
+      <rect x="290" y="20" width="48" height="28" rx="6" fill="#450a0a"/>
+      <text x="300" y="38" fill="#fca5a5" font-size="11">🗑️ Ta bort</text>
+    </g>
+  </g>
+
+  <!-- Category Editor Preview Card (Floating at Bottom) -->
+  <g transform="translate(20, 580)">
+    <rect width="350" height="210" rx="16" fill="#182234" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="16" y="28" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold">✏️ Redigera Kategori: Kräftskiva</text>
+    
+    <text x="16" y="56" fill="#94a3b8" font-size="11">Namn:</text>
+    <rect x="16" y="64" width="200" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="26" y="84" fill="#ffffff" font-size="12">Kräftskiva</text>
+
+    <text x="230" y="56" fill="#94a3b8" font-size="11">Emoji:</text>
+    <rect x="230" y="64" width="104" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="240" y="85" font-size="14">🦞 Kräfta</text>
+
+    <text x="16" y="116" fill="#94a3b8" font-size="11">Färgtema &amp; Förhandsgranskning:</text>
+    <!-- Color Swatches -->
+    <circle cx="28" cy="138" r="10" fill="#f59e0b"/>
+    <circle cx="56" cy="138" r="12" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="84" cy="138" r="10" fill="#10b981"/>
+    <circle cx="112" cy="138" r="10" fill="#3b82f6"/>
+    <circle cx="140" cy="138" r="10" fill="#a855f7"/>
+
+    <!-- Live Preview Badge -->
+    <rect x="180" y="126" width="154" height="24" rx="12" fill="#381d18" stroke="#ef4444" stroke-width="1"/>
+    <text x="194" y="142" fill="#f87171" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold">🦞 Kräftskiva (4)</text>
+
+    <!-- Save & Cancel Buttons -->
+    <rect x="16" y="166" width="150" height="32" rx="8" fill="#334155"/>
+    <text x="70" y="186" fill="#ffffff" font-size="12">Avbryt</text>
+
+    <rect x="180" y="166" width="154" height="32" rx="8" fill="url(#gold-btn-cat)"/>
+    <text x="216" y="186" fill="#0f172a" font-size="12" font-weight="bold">Spara ändringar</text>
+  </g>
+</svg>
