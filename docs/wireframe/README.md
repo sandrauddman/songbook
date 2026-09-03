@@ -18,19 +18,20 @@ The primary landing view for party guests on mobile devices.
 ---
 
 ## 2. Sing-Along Lyric View
-**File:** [`02-lyric-view.jpg`](./02-lyric-view.jpg)
+**File:** [`02-lyric-view.svg`](./02-lyric-view.svg) *(Alternative 1: Midnight Gold / OLED Tavern — Chosen Design)*
 
 The focused singing experience optimized for dim dinner environments, one-handed phone holding, and group singalongs.
+- **Color Scheme:** Deep OLED pitch black (`#000000` / `#09090b`) canvas with festive champagne & amber gold (`#f59e0b` / `#fbbf24`) accents and maximum 21:1 contrast white typography.
 - **Top Bar:** Back button, Song Title, Star Favorite toggle, and Table QR share button.
-- **Melody Pill:** Prominently displays the original melody (e.g., `Melodi: Helan går`).
-- **Lyric Canvas:** Large high-contrast text with clear verse spacing.
-- **Toast Banner:** Celebratory banner (*"SKÅL! 🍻"*).
+- **Melody Pill:** Prominently displays the original melody (e.g., `Melodi: Helan går`) in a glowing gold badge.
+- **Lyric Canvas:** Large high-contrast text (`#ffffff`) with clear verse spacing.
+- **Toast Banner:** Celebratory golden ribbon banner (*"SKÅL! 🍻"*).
 - **Sticky Sing-Along Toolbelt:**
   - **Screen Wake Lock Status:** `💡 Skärmen hålls vaken` (keeps screen active during singing).
   - **Font Size Stepper:** `A-` / `A+` buttons for instant text scaling.
   - **Navigation Controls:** `‹` Previous and `›` Next song buttons.
 
-![02 Lyric View](./02-lyric-view.jpg)
+![02 Lyric View](./02-lyric-view.svg)
 
 ---
 
