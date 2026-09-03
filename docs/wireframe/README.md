@@ -8,7 +8,7 @@ This directory contains the 5 core UI wireframe designs for the **Digital Sångb
 **File:** [`01-catalog-view.jpg`](./01-catalog-view.jpg)
 
 The primary landing view for party guests on mobile devices.
-- **Header:** App branding ("Skål! Sångbok"), dark/light theme switch, favorites counter, and admin link.
+- **Header:** App branding ("Uddmans bästa snapsvisor!"), dark/light theme switch, favorites counter, and admin link.
 - **Search Bar:** Instant live search field (*"Sök visa, melodi eller text..."*).
 - **Category Filter Pills:** Horizontally scrollable chips (`Alla`, `Snapsvisor 🥃`, `Kräftskiva 🦞`, `Midsommar 🌸`, `Jul 🎄`, `⭐ Mina favoriter`).
 - **Song Cards:** Displays song title, melody badge (`Melodi: ...`), category tag, opening 2-line lyric preview, and quick star favorite button.
@@ -18,20 +18,19 @@ The primary landing view for party guests on mobile devices.
 ---
 
 ## 2. Sing-Along Lyric View
-**File:** [`02-lyric-view.svg`](./02-lyric-view.svg) *(Alternative 1: Midnight Gold / OLED Tavern — Chosen Design)*
+**File:** [`02-lyric-view.jpg`](./02-lyric-view.jpg)
 
 The focused singing experience optimized for dim dinner environments, one-handed phone holding, and group singalongs.
-- **Color Scheme:** Deep OLED pitch black (`#000000` / `#09090b`) canvas with festive champagne & amber gold (`#f59e0b` / `#fbbf24`) accents and maximum 21:1 contrast white typography.
 - **Top Bar:** Back button, Song Title, Star Favorite toggle, and Table QR share button.
-- **Melody Pill:** Prominently displays the original melody (e.g., `Melodi: Helan går`) in a glowing gold badge.
-- **Lyric Canvas:** Large high-contrast text (`#ffffff`) with clear verse spacing.
-- **Toast Banner:** Celebratory golden ribbon banner (*"SKÅL! 🍻"*).
+- **Melody Pill:** Prominently displays the original melody (e.g., `Melodi: Helan går`).
+- **Lyric Canvas:** Large high-contrast text with clear verse spacing.
+- **Toast Banner:** Celebratory banner (*"SKÅL! 🍻"*).
 - **Sticky Sing-Along Toolbelt:**
   - **Screen Wake Lock Status:** `💡 Skärmen hålls vaken` (keeps screen active during singing).
   - **Font Size Stepper:** `A-` / `A+` buttons for instant text scaling.
   - **Navigation Controls:** `‹` Previous and `›` Next song buttons.
 
-![02 Lyric View](./02-lyric-view.svg)
+![02 Lyric View](./02-lyric-view.jpg)
 
 ---
 
