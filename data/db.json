@@ -1,0 +1,517 @@
+{
+  "categories": [
+    {
+      "id": "snapsvisor",
+      "name": "Snapsvisor",
+      "emoji": "🥃",
+      "color": "amber",
+      "description": "Klassiska visor till nubben",
+      "order": 1
+    },
+    {
+      "id": "kraftskiva",
+      "name": "Kräftskiva",
+      "emoji": "🦞",
+      "color": "red",
+      "description": "Sommarens kräftfest",
+      "order": 2
+    },
+    {
+      "id": "midsommar",
+      "name": "Midsommar",
+      "emoji": "🌸",
+      "color": "green",
+      "description": "Midsommar och sommarpsalm",
+      "order": 3
+    },
+    {
+      "id": "jul",
+      "name": "Jul & Vinter",
+      "emoji": "🎄",
+      "color": "slate",
+      "description": "Julvisor och vinterglädje",
+      "order": 4
+    },
+    {
+      "id": "student",
+      "name": "Öl & Studentvisor",
+      "emoji": "🍺",
+      "color": "blue",
+      "description": "Student- och ölvisor",
+      "order": 5
+    }
+  ],
+  "songs": [
+    {
+      "id": "helan-gar",
+      "slug": "helan-gar",
+      "title": "Helan går",
+      "melody": "Helan går",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Helan går,",
+        "sjung hopp faderallan lallan lej,",
+        "helan går,",
+        "sjung hopp faderallan lej.",
+        "Och den som inte helan tar,",
+        "han ej heller halvan får.",
+        "Helan går...",
+        "[Skål!]"
+      ],
+      "tags": ["snaps", "nubbe", "klassiker"],
+      "notes": "Skålas efter sista raden!",
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "halvan",
+      "slug": "halvan",
+      "title": "Halvan",
+      "melody": "Halvan",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Halvan går,",
+        "halvan går,",
+        "den som inte halvan tar,",
+        "han blir en skam för alla karlar.",
+        "Skål för halvan,",
+        "skål för hela kvällen!"
+      ],
+      "tags": ["snaps", "halvan"],
+      "notes": "Vanligt att sjunga i snabbare takt.",
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "tersen",
+      "slug": "tersen",
+      "title": "Tersen",
+      "melody": "Tersen",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Tersen går,",
+        "tersen går,",
+        "skål för den som står här!",
+        "Tersen går,",
+        "tersen går,",
+        "och nu blir det fler!"
+      ],
+      "tags": ["snaps", "tersen"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "kvarten",
+      "slug": "kvarten",
+      "title": "Kvarten",
+      "melody": "Kvarten",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Kvarten går,",
+        "kvarten går,",
+        "låt den få sin ära!",
+        "Kvarten går,",
+        "kvarten går,",
+        "och vi går vidare!"
+      ],
+      "tags": ["snaps", "kvarten"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "mera-brannvin",
+      "slug": "mera-brannvin",
+      "title": "Mera brännvin",
+      "melody": "Mera brännvin",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Mera brännvin i glasen,",
+        "mera brännvin i vinet,",
+        "en skål för glädjen,",
+        "och en skål för vinet."
+      ],
+      "tags": ["snaps", "brännvin"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "sangen-om-kraftan",
+      "slug": "sangen-om-kraftan",
+      "title": "Sången om kräftan",
+      "melody": "Kräftan lyser röd på fatet",
+      "categoryId": "kraftskiva",
+      "lyrics": [
+        "Kräftan lyser röd på fatet,",
+        "grönsakerna står i rad,",
+        "och vi sjunger glatt om sommaren,",
+        "när god mat sätter smak i kvällen."
+      ],
+      "tags": ["kräftskiva", "sommar"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "nar-kraftorna-ar-kokta",
+      "slug": "nar-kraftorna-ar-kokta",
+      "title": "När kräftorna är kokta",
+      "melody": "När kräftorna är kokta",
+      "categoryId": "kraftskiva",
+      "lyrics": [
+        "När kräftorna är kokta,",
+        "och smöret har sin dag,",
+        "då blir det fest i stugan,",
+        "och glad i alla lag."
+      ],
+      "tags": ["kräftskiva", "höst"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "smagrodorna",
+      "slug": "smagrodorna",
+      "title": "Små grodorna",
+      "melody": "Små grodorna",
+      "categoryId": "midsommar",
+      "lyrics": [
+        "Små grodorna, små grodorna är lustiga att se,",
+        "de sjunger på sommaren,",
+        "de hoppar i sin grej."
+      ],
+      "tags": ["midsommar", "sommar"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "sommarpsalm",
+      "slug": "sommarpsalm",
+      "title": "Sommarpsalm",
+      "melody": "Sommarpsalm",
+      "categoryId": "midsommar",
+      "lyrics": [
+        "Solen lyser över ängen,",
+        "vinden viskar sakta,",
+        "och en god och varm sommarnatt,",
+        "fyller hjärtat med glädje."
+      ],
+      "tags": ["midsommar", "sommar"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "nu-ar-det-jul-igen",
+      "slug": "nu-ar-det-jul-igen",
+      "title": "Nu är det jul igen",
+      "melody": "Nu är det jul igen",
+      "categoryId": "jul",
+      "lyrics": [
+        "Nu är det jul igen,",
+        "nu är det jul igen,",
+        "ljusen brinner klart i kväll,",
+        "och glädjen fyller allt."
+      ],
+      "tags": ["jul", "vinter"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "hej-tomtegubbar",
+      "slug": "hej-tomtegubbar",
+      "title": "Hej tomtegubbar",
+      "melody": "Hej tomtegubbar",
+      "categoryId": "jul",
+      "lyrics": [
+        "Hej tomtegubbar,",
+        "hej tomtegubbar,",
+        "spring nu till vår gran,",
+        "vi önskar er en glad och ljus jul." 
+      ],
+      "tags": ["jul", "tomte"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "o-gamla-klang-och-jubeltid",
+      "slug": "o-gamla-klang-och-jubeltid",
+      "title": "O, gamla klang och jubeltid",
+      "melody": "O, gamla klang och jubeltid",
+      "categoryId": "student",
+      "lyrics": [
+        "O gamla klang och jubeltid,",
+        "du fjärdar oss till vår ungdoms tid,",
+        "och gör det lätt att sjunga,",
+        "och läsa även i kväll."
+      ],
+      "tags": ["student", "klassiker"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "strejk-pa-eriksdal",
+      "slug": "strejk-pa-eriksdal",
+      "title": "Strejk på Eriksdal",
+      "melody": "Strejk på Eriksdal",
+      "categoryId": "student",
+      "lyrics": [
+        "Strejk på Eriksdal,",
+        "det går i rymden,",
+        "ett glatt och kraftfullt studentenslag,",
+        "som lyfter oss till vänskap och till sång."
+      ],
+      "tags": ["student", "sång"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "midsommar-vaka",
+      "slug": "midsommar-vaka",
+      "title": "Midsommarnatt",
+      "melody": "Midsommarnatt",
+      "categoryId": "midsommar",
+      "lyrics": [
+        "Midsommarnattens skäraste timma,",
+        "så snart som solen går ned,",
+        "fyller vi våra glas med glädje,",
+        "och sjunger in sommarens fred."
+      ],
+      "tags": ["midsommar", "sommar"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "gubben-noak",
+      "slug": "gubben-noak",
+      "title": "Gubben Noak",
+      "melody": "Gubben Noak",
+      "categoryId": "student",
+      "lyrics": [
+        "Gubben Noak, gubben Noak,",
+        "han seglade ut i skyn,",
+        "och med sig hade han en liten skuta,",
+        "som gick i gott sällskap."
+      ],
+      "tags": ["student", "klassiker"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "sommarnatt",
+      "slug": "sommarnatt",
+      "title": "Sommarnatt",
+      "melody": "Sommarnatt",
+      "categoryId": "midsommar",
+      "lyrics": [
+        "Sommarnatt, du ljuva natt,",
+        "fylld med doft och stjärnors sken,",
+        "där mellan fjärilens vingar,",
+        "vi glömmer dagens allvar."
+      ],
+      "tags": ["midsommar", "natt"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "lilla-bjorn",
+      "slug": "lilla-bjorn",
+      "title": "Lilla Björn",
+      "melody": "Lilla Björn",
+      "categoryId": "student",
+      "lyrics": [
+        "Lilla Björn, lilla Björn,",
+        "du är så rolig att se,",
+        "när du dansar i vår fest,",
+        "och vi alla ler." 
+      ],
+      "tags": ["student", "fest"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "sa-skal-du-liva",
+      "slug": "sa-skal-du-liva",
+      "title": "Så skål du leva",
+      "melody": "Så skål du leva",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Så skål du leva,",
+        "och skål på friska liv,",
+        "där glädjen går i ringen,",
+        "och varje glas får nytt liv."
+      ],
+      "tags": ["snaps", "skål"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "skal-dig-vanner",
+      "slug": "skal-dig-vanner",
+      "title": "Skål dig vänner",
+      "melody": "Skål dig vänner",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Skål dig, vänner,",
+        "skål tillsammans,",
+        "natten blir så fin med sång,",
+        "och varje liten stund blir en glädje."
+      ],
+      "tags": ["snaps", "vänner"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "goda-novell",
+      "slug": "goda-novell",
+      "title": "Goda kväll",
+      "melody": "Goda kväll",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Goda kväll, kära vänner,",
+        "vi har samlats här igen,",
+        "och fortfarandets sång,",
+        "fyller våra hjärtan."
+      ],
+      "tags": ["snaps", "kväll"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "en-sommarvisa",
+      "slug": "en-sommarvisa",
+      "title": "En sommarvisa",
+      "melody": "En sommarvisa",
+      "categoryId": "midsommar",
+      "lyrics": [
+        "En sommarvisa,",
+        "en liten sång för dagen,",
+        "där luften är varm,",
+        "och hjärtat är lätt."
+      ],
+      "tags": ["midsommar", "sommar"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "julvisa-1",
+      "slug": "julvisa-1",
+      "title": "Julvisa i stugan",
+      "melody": "Julvisa i stugan",
+      "categoryId": "jul",
+      "lyrics": [
+        "Julvisa i stugan,",
+        "ljus på fönsterbrädan,",
+        "snö som dalar sakta,",
+        "och glädjen i vårt hem."
+      ],
+      "tags": ["jul", "stuga"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "studentens-liv",
+      "slug": "studentens-liv",
+      "title": "Studentens liv",
+      "melody": "Studentens liv",
+      "categoryId": "student",
+      "lyrics": [
+        "Studentens liv det går så fort,",
+        "från morgon till kväll,",
+        "med sång och vänner,",
+        "och ett hjärta utan trötthet."
+      ],
+      "tags": ["student", "liv"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "skala-for-venner",
+      "slug": "skala-for-venner",
+      "title": "Skål för vänner",
+      "melody": "Skål för vänner",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Skål för vänner,",
+        "skål för glädje,",
+        "skål för kvällen,",
+        "som vi minns i många år."
+      ],
+      "tags": ["snaps", "vänner"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "barndomsminnen",
+      "slug": "barndomsminnen",
+      "title": "Barndomsminnen",
+      "melody": "Barndomsminnen",
+      "categoryId": "midsommar",
+      "lyrics": [
+        "Barndomsminnen dansar fram,",
+        "i sommarens ljus,",
+        "med barnslig glädje,",
+        "och ett hjärta som aldrig slutar."
+      ],
+      "tags": ["midsommar", "minnen"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "en-klar-natt",
+      "slug": "en-klar-natt",
+      "title": "En klar natt",
+      "melody": "En klar natt",
+      "categoryId": "jul",
+      "lyrics": [
+        "En klar natt,",
+        "en stilla natt,",
+        "och ljusen täcker vårt hem,",
+        "med hopp och kärlek i vår famn."
+      ],
+      "tags": ["jul", "natt"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    },
+    {
+      "id": "festens-lat",
+      "slug": "festens-lat",
+      "title": "Festens låt",
+      "melody": "Festens låt",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Festens låt,",
+        "festens låt,",
+        "berättar om glädjen vi bär,",
+        "och gör varje stund till ett minne." 
+      ],
+      "tags": ["snaps", "fest"],
+      "language": "sv",
+      "createdAt": "2026-09-01T00:00:00.000Z",
+      "updatedAt": "2026-09-01T00:00:00.000Z"
+    }
+  ],
+  "booklets": []
+}
