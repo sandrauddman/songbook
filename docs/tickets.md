@@ -74,11 +74,11 @@ Create Next.js App Router API route handlers (`/api/songs`, `/api/songs/[id]`, `
   - `hooks/useCategories.ts` (React hook for fetching categories)
 
 ### Acceptance Criteria
-- [ ] `GET /api/songs` returns all songs from `json-server`.
-- [ ] `GET /api/songs?q=helan` performs full-text search against lyrics, title, melody, tags.
-- [ ] `GET /api/songs?categoryId=snaps` filters songs by category ID.
-- [ ] `GET /api/songs/[id]` returns 200 with the single song object or 404 if not found.
-- [ ] `GET /api/categories` returns category list ordered by `order`.
+- [x] `GET /api/songs` returns all songs from `json-server`.
+- [x] `GET /api/songs?q=helan` performs full-text search against lyrics, title, melody, tags.
+- [x] `GET /api/songs?categoryId=snaps` filters songs by category ID.
+- [x] `GET /api/songs/[id]` returns 200 with the single song object or 404 if not found.
+- [x] `GET /api/categories` returns category list ordered by `order`.
 
 ---
 
