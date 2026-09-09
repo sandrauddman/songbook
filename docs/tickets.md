@@ -112,23 +112,20 @@ Implement the responsive home page (`/`) featuring a festive header, debounced s
 - **Milestone:** Phase 1 (MVP)
 - **Priority:** `priority:p0`
 - **Labels:** `phase-1:mvp`, `type:ui/ux`, `type:feature`, `priority:p0`
-- **User Story:** US-3, US-5: As a singer around a dinner table, I want large high-contrast lyrics with distinct verse spacing, melody banners, and next/prev buttons.
+- **User Story:** US-3, US-5: As a singer around a dinner table, I want large high-contrast lyrics with distinct verse spacing, melody banners, and ritual notes.
 
 ### Description
-Build the dedicated sing-along song view (`/visa/[slug]`) optimized for low-light dinner environments. Include clear title hierarchy, "Melodi: ..." banner, formatted stanza line breaks, ritual notes callouts, and bottom navigation to cycle through songs.
+Build the dedicated sing-along song view (`/visa/[slug]`) optimized for low-light dinner environments. Include clear title hierarchy, "Melodi: ..." banner, formatted stanza line breaks, and ritual notes callouts.
 
 ### Technical Scope
 - **Files Created/Modified:**
   - `app/visa/[slug]/page.tsx` (Dynamic route with SSR metadata and dynamic params)
   - `components/SongDetail.tsx` (Large typography lyric display, toast/ritual callout box)
-  - Prev/Next navigation bar with keyboard arrow navigation (`ArrowLeft` / `ArrowRight`)
 
 ### Acceptance Criteria
-- [ ] Navigating to `/visa/helan-gar` renders song title, category badge, melody name, notes callout, and formatted lyrics.
-- [ ] Stanzas/lines preserve proper spacing and readability.
-- [ ] Prev / Next buttons navigate smoothly between adjacent songs in the catalog.
-- [ ] Left/Right keyboard arrows navigate to previous/next songs on desktop/tablet.
-- [ ] Shows 404/not-found screen if an invalid slug is requested.
+- [x] Navigating to `/visa/helan-gar` renders song title, category badge, melody name, notes callout, and formatted lyrics.
+- [x] Stanzas/lines preserve proper spacing and readability.
+- [x] Shows 404/not-found screen if an invalid slug is requested.
 
 ---
 
