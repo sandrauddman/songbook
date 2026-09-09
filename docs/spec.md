@@ -27,7 +27,7 @@ Features are structured across three clear priority phases:
 | **Phase 1: Lean MVP** | **P0** | **Sing-Along Lyric View** | Large-format typography, clear verse spacing, high contrast, and prominent "Melodi: ..." banner. | Maximum legibility when singing around dinner tables. |
 | **Phase 1: Lean MVP** | **P0** | **One-Tap Font Sizing** | `A-` / `A+` font scaling stepper with browser persistence (`localStorage`). | Quickly adapts text size for varying eyesight and table distances. |
 | **Phase 1: Lean MVP** | **P0** | **Server-Side Search & Filters** | Real-time query param search (`/api/songs?q=...&categoryId=...`) routed to `json-server` full-text search with category filter chips. | Find any song in under 2 seconds when someone calls for a toast. |
-| **Phase 1: Lean MVP** | **P0** | **Direct Shareable URLs** | Unique route `/visa/[slug]` with previous/next navigation buttons using slug-based IDs. | Direct sharing in group chats (WhatsApp, SMS, Messenger). |
+| **Phase 1: Lean MVP** | **P0** | **Direct Shareable URLs** | Unique route `/visa/[slug]` for opening a specific song directly. | Direct sharing in group chats (WhatsApp, SMS, Messenger). |
 | **Phase 1: Lean MVP** | **P0** | **`json-server` REST Data Store** | Standalone `json-server` process on port 3001 watching `data/db.json`, proxied by Next.js API routes on port 3000. | Real-time JSON REST persistence and synchronized catalog. |
 | **Phase 2: Power Features** | **P1.1** | **Admin Song CRUD** | PIN-protected admin portal (`/admin`) to Add, Edit lyrics/melodies/tags, and Delete songs via authenticated proxy routes. | Toastmaster/host can customize songs and add inside jokes. |
 | **Phase 2: Power Features** | **P1.2** | **Admin Category Management** | Create and edit custom themes (e.g. *Nyår 🍾*, *Bröllop 💍*, *Valborg 🔥*), emojis, and badge colors. | Customizes categories for specific events and seasons. |
@@ -227,7 +227,6 @@ export interface SongBooklet {
 - Large, bold title and prominent `Melodi: [Melodititel]` banner.
 - High-contrast typography with generous line height and stanza spacing.
 - Ritual/toast callouts (*"Skålas efter sista raden!"*).
-- Navigation footer: `← Föregående visa` and `Nästa visa →` with keyboard arrow support.
 
 #### 3. One-Tap Font Sizing
 - Sticky or header-integrated `A-` / `A+` font size control (4 steps: Normal, Large, X-Large, Huge).
@@ -383,7 +382,7 @@ songbook/
    - Configure `.env.local` and `package.json` scripts (`dev`, `dev:next`, `dev:server`).
    - Implement Next.js proxy API routes (`/api/songs`, `/api/categories`).
    - Implement home catalog with debounced server query search, category chips, and song grid.
-   - Implement `/visa/[slug]` sing-along view with `A-` / `A+` font scaling and prev/next links.
+  - Implement `/visa/[slug]` sing-along view with `A-` / `A+` font scaling.
 2. **Milestone 2 (Admin Management & Power Utilities - Phase 2 / P1):**
    - Implement PIN-protected `/admin` portal with Song CRUD (live preview) and Category CRUD (emoji + color pickers) routing mutating requests through Next.js auth proxy to `json-server`.
    - Implement Screen Wake Lock API and indicator.
