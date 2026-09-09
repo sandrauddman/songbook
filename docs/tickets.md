@@ -100,11 +100,11 @@ Implement the responsive home page (`/`) featuring a festive header, debounced s
   - `app/globals.css` (Tailwind v4 styling and responsive layout variables)
 
 ### Acceptance Criteria
-- [ ] Typing in the search input debounces requests (~300ms) to `/api/songs?q=...`.
-- [ ] Clicking category chips filters the list immediately, updating active chip style and URL state.
-- [ ] Displays empty state (*"Inga visor hittades"*) with a reset search button when 0 results match.
-- [ ] Responsive grid: 1 column on mobile, 2 columns on tablet, 3 columns on desktop.
-- [ ] Clicking a `SongCard` navigates to `/visa/[slug]`.
+- [x] Typing in the search input debounces requests (~300ms) to `/api/songs?q=...`.
+- [x] Clicking category chips filters the list immediately, updating active chip style and URL state.
+- [x] Displays empty state (*"Inga visor hittades"*) with a reset search button when 0 results match.
+- [x] Responsive grid: 1 column on mobile, 2 columns on tablet, 3 columns on desktop.
+- [x] Clicking a `SongCard` navigates to `/visa/[slug]`.
 
 ---
 
