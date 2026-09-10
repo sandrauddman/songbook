@@ -28,3 +28,8 @@ This repository is configured to follow the engineering discipline and skill wor
 - `/to-tickets`: Deconstruct specifications into small, testable, vertical tickets.
 - `/implement`: Build features following TDD and vertical slices according to active tickets.
 - `/triage`: Review and assign priority, phase, and labels to issues.
+
+
+## File naming convention
+
+for this project always use kebab-case when creating new files.

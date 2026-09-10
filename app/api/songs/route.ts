@@ -1,6 +1,7 @@
 import { NextRequest } from 'next/server';
 
-import { getSongs, JsonServerError } from '@/lib/json-server-client';
+import { errorResponse } from '@/lib/api-response';
+import { getSongs } from '@/lib/json-server-client';
 
 export async function GET(request: NextRequest) {
   const searchParams = new URLSearchParams();
@@ -18,10 +19,6 @@ export async function GET(request: NextRequest) {
   try {
     return Response.json(await getSongs(searchParams));
   } catch (error) {
-    if (error instanceof JsonServerError) {
-      return Response.json({ error: error.message }, { status: error.status });
-    }
-
-    return Response.json({ error: 'Unable to load songs.' }, { status: 500 });
+    return errorResponse(error, 'Unable to load songs.');
   }
 }

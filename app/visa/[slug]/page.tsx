@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { SongDetail } from '@/components/SongDetail';
-import { Header } from '@/components/Header';
+import { SongDetail } from '@/components/song/song-detail';
+import { Header } from '@/components/layout/header';
 import { JsonServerError, getCategories, getSong } from '@/lib/json-server-client';
 
 interface SongPageProps {
