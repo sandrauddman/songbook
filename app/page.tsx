@@ -16,7 +16,6 @@ interface HomePageProps {
 
 export default async function Home({ searchParams }: HomePageProps) {
   const { q = '', categoryId = '' } = await searchParams;
-  const normalizedCategory = categoryId === 'snaps' ? 'snapsvisor' : categoryId;
 
   let categories: Category[] = [];
   let songs: Song[] = [];
@@ -24,10 +23,10 @@ export default async function Home({ searchParams }: HomePageProps) {
   let error: string | null = null;
 
   try {
-    const isFiltering = Boolean(q.trim() || normalizedCategory);
+    const isFiltering = Boolean(q.trim() || categoryId);
     const queryParams = new URLSearchParams();
     if (q.trim()) queryParams.set('q', q.trim());
-    if (normalizedCategory) queryParams.set('categoryId', normalizedCategory);
+    if (categoryId) queryParams.set('categoryId', categoryId);
 
     const [fetchedCategories, fetchedAllSongs, fetchedFilteredSongs] = await Promise.all([
       getCategories(),
@@ -56,7 +55,7 @@ export default async function Home({ searchParams }: HomePageProps) {
         <Suspense fallback={null}>
           <SearchAndFilter
             initialQuery={q}
-            selectedCategory={normalizedCategory}
+            selectedCategory={categoryId}
             categories={categories}
             categoryCounts={categoryCounts}
           />
