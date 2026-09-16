@@ -145,10 +145,10 @@ Implement persistent dynamic font sizing across the song detail view. Users can 
   - Integrate into `components/SongDetail.tsx` and `app/visa/[slug]/page.tsx`
 
 ### Acceptance Criteria
-- [ ] `A-` decreases font size down to minimum (Normal); `A+` increases font size up to maximum (Huge).
-- [ ] Stepper buttons disable when reaching minimum or maximum bounds.
-- [ ] Font size preference is saved to `localStorage` and restored automatically when opening another song.
-- [ ] Lyric text scales smoothly without breaking UI layout or line wrapping on mobile.
+- [x] `A-` decreases font size down to minimum (Normal); `A+` increases font size up to maximum (Huge).
+- [x] Stepper buttons disable when reaching minimum or maximum bounds.
+- [x] Font size preference is saved to `localStorage` and restored automatically when opening another song.
+- [x] Lyric text scales smoothly without breaking UI layout or line wrapping on mobile.
 
 ---
 
