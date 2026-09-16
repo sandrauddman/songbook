@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import { SongDetail } from '@/components/song/song-detail';
 import type { Category, Song } from '@/types/song';
@@ -31,6 +31,10 @@ const mockSongWithNotes: Song = {
 };
 
 describe('SongDetail component', () => {
+  beforeEach(() => {
+    window.localStorage.clear();
+  });
+
   it('renders song title, melody, and stanzas separated properly', () => {
     render(<SongDetail song={mockSongWithNotes} category={mockCategory} />);
 
@@ -45,5 +49,40 @@ describe('SongDetail component', () => {
 
     expect(screen.getByText('Toastmästarens notis')).toBeInTheDocument();
     expect(screen.getByText('Skålas efter sista raden!')).toBeInTheDocument();
+  });
+
+  it('changes lyric size through four steps and disables controls at the bounds', () => {
+    render(<SongDetail song={mockSongWithNotes} category={mockCategory} />);
+
+    const decreaseButton = screen.getByRole('button', { name: 'Minska textstorlek' });
+    const increaseButton = screen.getByRole('button', { name: 'Öka textstorlek' });
+    const lyrics = screen.getByText(/sjung hopp faderallan lallan lej/).closest('div[style]') as HTMLElement | null;
+
+    expect(lyrics).not.toBeNull();
+    expect(decreaseButton).toBeDisabled();
+    expect(increaseButton).not.toBeDisabled();
+    expect(lyrics?.style.fontSize).toBe('1.25rem');
+
+    fireEvent.click(increaseButton);
+    fireEvent.click(increaseButton);
+    fireEvent.click(increaseButton);
+
+    expect(increaseButton).toBeDisabled();
+    expect(decreaseButton).not.toBeDisabled();
+    expect(lyrics?.style.fontSize).toBe('2.25rem');
+    expect(screen.getByLabelText('Textstorlek 4 av 4')).toBeInTheDocument();
+  });
+
+  it('restores the saved font size when another song is opened', async () => {
+    const firstRender = render(<SongDetail song={mockSongWithNotes} category={mockCategory} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Öka textstorlek' }));
+    firstRender.unmount();
+
+    render(<SongDetail song={mockSongWithNotes} category={mockCategory} />);
+
+    await waitFor(() => {
+      expect(screen.getByLabelText('Textstorlek 2 av 4')).toBeInTheDocument();
+    });
+    expect(window.localStorage.getItem('songbook-font-size')).toBe('1');
   });
 });

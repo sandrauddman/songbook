@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 
+import { FontSizeControls } from '@/components/font-size-controls';
+import { useFontSize } from '@/hooks/use-font-size';
 import type { Category, Song } from '@/types/song';
 
 interface SongDetailProps {
@@ -34,17 +36,27 @@ function splitIntoStanzas(lyrics: string[]): string[][] {
 
 export function SongDetail({ song, category }: SongDetailProps) {
   const stanzas = splitIntoStanzas(song.lyrics);
+  const { fontSize, fontSizeIndex, canDecrease, canIncrease, decrease, increase } = useFontSize();
 
   return (
     <article className="mx-auto max-w-4xl px-5 pb-16 sm:px-8">
-      <nav aria-label="Brödsmulor" className="pt-6">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-sm font-bold text-[var(--accent)] hover:text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
-        >
-          <span aria-hidden="true">←</span> Till sångboken
-        </Link>
-      </nav>
+      <div className="sticky top-0 z-10 -mx-5 flex items-center justify-between gap-4 border-b border-[var(--line)] bg-[var(--paper)]/90 px-5 py-3 backdrop-blur sm:-mx-8 sm:px-8">
+        <nav aria-label="Brödsmulor">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[var(--accent)] hover:text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
+          >
+            <span aria-hidden="true">←</span> Till sångboken
+          </Link>
+        </nav>
+        <FontSizeControls
+          fontSizeIndex={fontSizeIndex}
+          canDecrease={canDecrease}
+          canIncrease={canIncrease}
+          onDecrease={decrease}
+          onIncrease={increase}
+        />
+      </div>
 
       <header className="pt-10 sm:pt-14">
         <span className="inline-flex items-center gap-2 rounded-full bg-[var(--accent-soft)] px-3 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-[var(--accent)]">
@@ -62,7 +74,10 @@ export function SongDetail({ song, category }: SongDetailProps) {
       </header>
 
       <div className="mt-12 max-w-2xl border-t border-[var(--line)] pt-10 sm:mt-16 sm:pt-14">
-        <div className="space-y-10 text-xl leading-[1.75] text-[var(--ink)] sm:text-2xl sm:leading-[1.8]">
+        <div
+          className="space-y-10 leading-[1.75] text-[var(--ink)] transition-[font-size] duration-200 sm:leading-[1.8]"
+          style={{ fontSize: `${fontSize}rem` }}
+        >
           {stanzas.map((stanza, stanzaIndex) => (
             <p key={stanzaIndex} className="whitespace-pre-line">
               {stanza.join('\n')}
