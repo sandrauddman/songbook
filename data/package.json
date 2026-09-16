@@ -1,0 +1,12 @@
+{
+  "name": "songbook-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone json-server sidecar for the Digital Sångbok, deployed separately from the Next.js app.",
+  "scripts": {
+    "start": "json-server --watch ../data/db.json --port $PORT --host 0.0.0.0"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
