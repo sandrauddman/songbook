@@ -57,7 +57,7 @@
         "han ej heller halvan får.",
         "Helan går...",
         "[Skål!]",
-        "Sjung hopp faderallan lej,"
+        "Sjung hopp faderallan lej!"
       ],
       "tags": ["snaps", "nubbe", "klassiker"],
       "notes": "Skålas efter sista raden!",
@@ -231,14 +231,12 @@
       "melody": "Hej tomtegubbar",
       "categoryId": "jul",
       "lyrics": [
-        "Hej tomtegubbar,",
-        "slå i glasen och låt oss lustiga vara,",
-        "Hej tomtegubbar,",
-        "slå i glasen och låt oss lustiga vara,",
-        "en lite tid, vi leva här,",
+        "||:Hej tomtegubbar,",
+        "slå i glasen och låt oss lustiga vara:||",
+        "En lite tid, vi leva här,",
         "med mycket möda och stort besvär.",
         "Hej tomtegubbar,",
-        "slå i glasen och låt oss lustiga vara,"
+        "slå i glasen och låt oss lustiga vara!"
       ],
       "tags": ["jul", "tomte"],
       "language": "sv",
@@ -254,12 +252,12 @@
       "lyrics": [
         "O gamla klang och jubeltid,",
         "ditt minne skall förbliva,",
-        "och en åt livets bistr strid,",
+        "och en åt livets bistra strid,",
         "ett rosigt skimmer giva.",
         "Snart tystnar allt vårt yra skämt,",
         "vår sång blir stum, vårt glam förstämt,",
         "o jerum jerum jerum,",
-        "o quae mutatio rerum,"
+        "o quae mutatio rerum"
       ],
       "tags": ["student", "klassiker"],
       "language": "sv",
