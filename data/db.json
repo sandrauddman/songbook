@@ -56,7 +56,8 @@
         "Och den som inte helan tar,",
         "han ej heller halvan får.",
         "Helan går...",
-        "[Skål!]"
+        "[Skål!]",
+        "Sjung hopp faderallan lej,"
       ],
       "tags": ["snaps", "nubbe", "klassiker"],
       "notes": "Skålas efter sista raden!",
@@ -231,9 +232,13 @@
       "categoryId": "jul",
       "lyrics": [
         "Hej tomtegubbar,",
-        "hej tomtegubbar,",
-        "spring nu till vår gran,",
-        "vi önskar er en glad och ljus jul." 
+        "slå i glasen och låt oss lustiga vara,",
+        "Hej tomtegubbar,",
+        "slå i glasen och låt oss lustiga vara,",
+        "en lite tid, vi leva här,",
+        "med mycket möda och stort besvär.",
+        "Hej tomtegubbar,",
+        "slå i glasen och låt oss lustiga vara,"
       ],
       "tags": ["jul", "tomte"],
       "language": "sv",
@@ -244,13 +249,17 @@
       "id": "o-gamla-klang-och-jubeltid",
       "slug": "o-gamla-klang-och-jubeltid",
       "title": "O, gamla klang och jubeltid",
-      "melody": "O, gamla klang och jubeltid",
+      "melody": "O, alte Burschenherrlichkeit”",
       "categoryId": "student",
       "lyrics": [
         "O gamla klang och jubeltid,",
-        "du fjärdar oss till vår ungdoms tid,",
-        "och gör det lätt att sjunga,",
-        "och läsa även i kväll."
+        "ditt minne skall förbliva,",
+        "och en åt livets bistr strid,",
+        "ett rosigt skimmer giva.",
+        "Snart tystnar allt vårt yra skämt,",
+        "vår sång blir stum, vårt glam förstämt,",
+        "o jerum jerum jerum,",
+        "o quae mutatio rerum,"
       ],
       "tags": ["student", "klassiker"],
       "language": "sv",
