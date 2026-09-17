@@ -10,11 +10,11 @@
 
 The **Digital Sångbok** is a modern, mobile-first responsive web application tailored for social gatherings, dinner parties, kräftskivor, midsommar feasts, and student festivities. It allows guests to easily search, browse, and sing traditional Swedish snapsvisor and drinking songs together with zero friction, instant load times, and crystal-clear readability.
 
-The backend data architecture is powered by a **`json-server` REST API sidecar** operating on `data/db.json`, securely proxied and authenticated by Next.js API routes.
+The backend data architecture is powered by a **`json-server` REST API sidecar** operating on `data/db.json`. The Next.js server-side data client connects directly to the sidecar on port 3001.
 
 Features are structured across three clear priority phases:
 - **Phase 1 (MVP / P0): The Lean MVP (Pure Songbook Experience)** — Fast, lightweight sing-along experience with debounced server-side query search, font sizing, category filtering, and direct links.
-- **Phase 2 (P1): Admin Management & Power Features** — PIN-protected song/category CRUD via Next.js proxy, QR code table sharing, favorites bookmarking, screen wake lock, and dark/light theme switching.
+- **Phase 2 (P1): Admin Management & Power Features** — PIN-protected song/category CRUD against `json-server`, QR code table sharing, favorites bookmarking, screen wake lock, and dark/light theme switching.
 - **Phase 3 (P2 & P3): Party Enhancements & Event Booklets** — Custom curated event booklets (*sånghäften*), category deletion reassignment wizard, offline PWA support, and printable PDF export.
 
 ---
@@ -26,10 +26,10 @@ Features are structured across three clear priority phases:
 | **Phase 1: Lean MVP** | **P0** | **Curated Song Catalog** | 25+ essential Swedish snapsvisor, seasonal songs (Kräftskiva, Midsommar, Jul), beer/student songs, and classics in `data/db.json`. | Zero setup required; instant access to beloved party classics. |
 | **Phase 1: Lean MVP** | **P0** | **Sing-Along Lyric View** | Large-format typography, clear verse spacing, high contrast, and prominent "Melodi: ..." banner. | Maximum legibility when singing around dinner tables. |
 | **Phase 1: Lean MVP** | **P0** | **One-Tap Font Sizing** | `A-` / `A+` font scaling stepper with browser persistence (`localStorage`). | Quickly adapts text size for varying eyesight and table distances. |
-| **Phase 1: Lean MVP** | **P0** | **Server-Side Search & Filters** | Real-time query param search (`/api/songs?q=...&categoryId=...`) routed to `json-server` full-text search with category filter chips. | Find any song in under 2 seconds when someone calls for a toast. |
+| **Phase 1: Lean MVP** | **P0** | **Server-Side Search & Filters** | Real-time query param search (`/songs?q=...&categoryId=...`) against `json-server` full-text search with category filter chips. | Find any song in under 2 seconds when someone calls for a toast. |
 | **Phase 1: Lean MVP** | **P0** | **Direct Shareable URLs** | Unique route `/visa/[slug]` for opening a specific song directly. | Direct sharing in group chats (WhatsApp, SMS, Messenger). |
-| **Phase 1: Lean MVP** | **P0** | **`json-server` REST Data Store** | Standalone `json-server` process on port 3001 watching `data/db.json`, proxied by Next.js API routes on port 3000. | Real-time JSON REST persistence and synchronized catalog. |
-| **Phase 2: Power Features** | **P1.1** | **Admin Song CRUD** | PIN-protected admin portal (`/admin`) to Add, Edit lyrics/melodies/tags, and Delete songs via authenticated proxy routes. | Toastmaster/host can customize songs and add inside jokes. |
+| **Phase 1: Lean MVP** | **P0** | **`json-server` REST Data Store** | Standalone `json-server` process on port 3001 watching `data/db.json`, accessed directly by the Next.js server-side data client. | Real-time JSON REST persistence and synchronized catalog. |
+| **Phase 2: Power Features** | **P1.1** | **Admin Song CRUD** | PIN-protected admin portal (`/admin`) to Add, Edit lyrics/melodies/tags, and Delete songs through the JSON Server REST API. | Toastmaster/host can customize songs and add inside jokes. |
 | **Phase 2: Power Features** | **P1.2** | **Admin Category Management** | Create and edit custom themes (e.g. *Nyår 🍾*, *Bröllop 💍*, *Valborg 🔥*), emojis, and badge colors. | Customizes categories for specific events and seasons. |
 | **Phase 2: Power Features** | **P1.3** | **Table QR Code Sharing Modal** | One-tap button on any song generating a clean, scannable QR code. | Table mates point their phone camera at the screen to open song instantly. |
 | **Phase 2: Power Features** | **P1.4** | **Favorites Bookmarking (⭐)** | Star songs saved locally in browser `localStorage` with a dedicated "⭐ Mina favoriter" filter. | Guests keep their go-to snapsvisor 1 tap away throughout the night. |
@@ -52,15 +52,15 @@ Features are structured across three clear priority phases:
 ### 3.2 Prioritized User Stories
 
 #### Phase 1: MVP (P0)
-- **US-1 [P0 - Browse & Filter]:** As a guest, I want to filter songs by category chips (Snaps, Kräftskiva, Midsommar, etc.) querying `json-server` via `/api/songs?categoryId=[id]`.
-- **US-2 [P0 - Server-Side Search]:** As a guest, I want to type in the search bar and query `json-server` (`/api/songs?q=[term]`) with debounced inputs.
+- **US-1 [P0 - Browse & Filter]:** As a guest, I want to filter songs by category chips (Snaps, Kräftskiva, Midsommar, etc.) querying `json-server` via `/songs?categoryId=[id]`.
+- **US-2 [P0 - Server-Side Search]:** As a guest, I want to type in the search bar and query `json-server` (`/songs?q=[term]`) with debounced inputs.
 - **US-3 [P0 - Sing-Along Lyric View]:** As a singer, I want large high-contrast lyrics with distinct verse spacing and a prominent "Melodi:" subtitle.
 - **US-4 [P0 - Dynamic Font Sizing]:** As a user, I want `A-` / `A+` buttons to resize text on the fly, with my preferred size saved in `localStorage`.
 - **US-5 [P0 - Shareable Deep Links]:** As a user, I want shareable URLs (`/visa/[slug]`) mapping directly to song IDs in `json-server`.
 - **US-6 [P0 - json-server Database & Dev Workflow]:** As a developer, I want `npm run dev` to start both Next.js (port 3000) and `json-server` (port 3001) watching `data/db.json`.
 
 #### Phase 2: Priority 1 Extras (P1)
-- **US-7 [P1.1 - Admin Song CRUD]:** As an admin, I want to log into `/admin` with a secure PIN to add, edit (with live preview), and delete songs via Next.js proxy routes that forward mutations to `json-server`.
+- **US-7 [P1.1 - Admin Song CRUD]:** As an admin, I want to log into `/admin` with a secure PIN to add, edit (with live preview), and delete songs through the JSON Server REST API.
 - **US-8 [P1.2 - Admin Category Management]:** As an admin, I want to create and edit categories with custom emojis, titles, and color badges.
 - **US-9 [P1.3 - Table QR Code Sharing]:** As a guest, I want to display a full-screen QR code modal for any song so table mates can scan it with their camera.
 - **US-10 [P1.4 - Local Favorites]:** As a guest, I want to star songs and access a "⭐ Mina favoriter" filter tab saved in my browser.
@@ -80,16 +80,14 @@ Features are structured across three clear priority phases:
 ```mermaid
 graph TD
     Client[Next.js Client / Mobile Browser] -->|Port 3000| NextApp[Next.js App Router]
-    NextApp -->|GET /api/songs?q=...&categoryId=...| Proxy[Next.js API Route Handlers]
-    NextApp -->|POST/PUT/DELETE with Admin PIN| AuthProxy[Next.js Admin Auth Proxy]
-    Proxy -->|HTTP REST on Port 3001| JsonServer[json-server Sidecar]
-    AuthProxy -->|HTTP REST on Port 3001| JsonServer
+    NextApp -->|HTTP REST /songs and /categories| JsonServer[json-server Sidecar]
+    NextApp -->|Authenticated mutations| JsonServer
     JsonServer -->|Read / Write Auto-Sync| DbFile[(data/db.json)]
 ```
 
 | Layer | Technology | Priority / Phase | Purpose |
 | :--- | :--- | :---: | :--- |
-| **Framework** | Next.js 16 (App Router) | **P0** | Server & client components, API routes (port 3000), proxying, SEO/metadata |
+| **Framework** | Next.js 16 (App Router) | **P0** | Server & client components, server-side data access, SEO/metadata |
 | **Backend Mock REST** | `json-server` (v0.17.4) | **P0** | Sidecar REST API running on port 3001 watching `data/db.json` |
 | **Process Orchestration**| `concurrently` | **P0** | Concurrently runs `next dev` and `json-server` via single `npm run dev` |
 | **UI Library** | React 19 + TypeScript | **P0** | Strict type safety, responsive component hierarchy, and reactive state |
@@ -233,7 +231,7 @@ export interface SongBooklet {
 - Preference stored in browser `localStorage` and applied consistently across song views.
 
 #### 4. Server-Side Query Search & Category Filter
-- Debounced search query dispatched to Next.js API `/api/songs?q=[term]&categoryId=[id]`, which passes query parameters to `json-server` on port 3001.
+- Debounced search query dispatched to `json-server` `/songs?q=[term]&categoryId=[id]` on port 3001.
 - Category chip bar with active state indicator and song count badges.
 - Loading indicator during search transitions.
 
@@ -248,7 +246,7 @@ export interface SongBooklet {
 
 #### 1. Admin Song Management (P1.1)
 - Protected `/admin` dashboard requiring PIN entry.
-- Next.js API route validates PIN session cookie before executing `POST`, `PUT`, or `DELETE` to `json-server`.
+- The admin server action or server-side client validates the PIN before executing `POST`, `PATCH`, or `DELETE` requests to `json-server`.
 - `SongFormModal` featuring live side-by-side lyrics preview, auto-slug generator, and category selector.
 
 #### 2. Admin Category Management (P1.2)
@@ -287,24 +285,23 @@ export interface SongBooklet {
 
 ---
 
-## 7. Next.js Proxy API Endpoints
+## 7. JSON Server Endpoints
 
-All client requests communicate with Next.js on port 3000, which proxies to `json-server` on port 3001:
+The Next.js server-side data client communicates directly with `json-server` on port 3001:
 
-| Method | Next.js API Route | Upstream `json-server` Target | Phase | Auth | Purpose |
-| :--- | :--- | :--- | :---: | :---: | :--- |
-| `GET` | `/api/songs?q=&categoryId=` | `http://localhost:3001/songs?q=&categoryId=` | **P0** | Public | Queries songs with filters |
-| `GET` | `/api/songs/[id]` | `http://localhost:3001/songs/[id]` | **P0** | Public | Returns single song by ID/slug |
-| `GET` | `/api/categories` | `http://localhost:3001/categories?_sort=order` | **P0** | Public | Returns all categories |
-| `POST` | `/api/songs` | `http://localhost:3001/songs` | **P1** | Admin PIN | Proxies song creation |
-| `PUT` | `/api/songs/[id]` | `http://localhost:3001/songs/[id]` | **P1** | Admin PIN | Proxies song update |
-| `DELETE` | `/api/songs/[id]` | `http://localhost:3001/songs/[id]` | **P1** | Admin PIN | Proxies song deletion |
-| `POST` | `/api/categories` | `http://localhost:3001/categories` | **P1** | Admin PIN | Proxies category creation |
-| `PUT` | `/api/categories/[id]` | `http://localhost:3001/categories/[id]` | **P1** | Admin PIN | Proxies category update |
-| `DELETE` | `/api/categories/[id]` | `http://localhost:3001/categories/[id]` | **P1 / P2**| Admin PIN | Proxies category deletion |
-| `POST` | `/api/admin/verify` | Internal Next.js Route | **P1** | Admin PIN | Validates PIN and issues session cookie |
-| `GET` | `/api/booklets` | `http://localhost:3001/booklets` | **P2** | Public | Returns event booklets |
-| `POST` | `/api/booklets` | `http://localhost:3001/booklets` | **P2** | Admin PIN | Proxies booklet creation |
+| Method | JSON Server Endpoint | Phase | Auth | Purpose |
+| :--- | :--- | :---: | :---: | :--- |
+| `GET` | `/songs?q=&categoryId=` | **P0** | Public | Queries songs with filters |
+| `GET` | `/songs/[id]` | **P0** | Public | Returns single song by ID/slug |
+| `GET` | `/categories?_sort=order` | **P0** | Public | Returns all categories |
+| `POST` | `/songs` | **P1** | Admin PIN | Creates a song |
+| `PATCH` | `/songs/[id]` | **P1** | Admin PIN | Updates a song |
+| `DELETE` | `/songs/[id]` | **P1** | Admin PIN | Deletes a song |
+| `POST` | `/categories` | **P1** | Admin PIN | Creates a category |
+| `PATCH` | `/categories/[id]` | **P1** | Admin PIN | Updates a category |
+| `DELETE` | `/categories/[id]` | **P1 / P2** | Admin PIN | Deletes a category |
+| `GET` | `/booklets` | **P2** | Public | Returns event booklets |
+| `POST` | `/booklets` | **P2** | Admin PIN | Creates a booklet |
 
 ---
 
@@ -313,17 +310,6 @@ All client requests communicate with Next.js on port 3000, which proxies to `jso
 ```text
 songbook/
 ├── app/
-│   ├── api/
-│   │   ├── admin/
-│   │   │   └── verify/route.ts       # [P1] PIN verification endpoint
-│   │   ├── categories/
-│   │   │   ├── [id]/route.ts         # [P1] Proxies PUT (edit) & DELETE category
-│   │   │   └── route.ts              # [P0] Proxies GET (all) & [P1] POST category
-│   │   ├── songs/
-│   │   │   ├── [id]/route.ts         # [P0] GET song & [P1] PUT/DELETE song
-│   │   │   └── route.ts              # [P0] Proxies GET with query params & [P1] POST song
-│   │   └── booklets/                 # [P2] Event booklets proxy API
-│   │       └── route.ts
 │   ├── admin/
 │   │   └── page.tsx                  # [P1] Admin dashboard (Songs & Categories tabs)
 │   ├── hafte/                        # [P2] Event booklet guest view
@@ -380,11 +366,11 @@ songbook/
    - Install `json-server` (v0.17.4) and `concurrently`.
    - Setup `data/db.json` pre-seeded with 25+ Swedish songs and standard categories.
    - Configure `.env.local` and `package.json` scripts (`dev`, `dev:next`, `dev:server`).
-   - Implement Next.js proxy API routes (`/api/songs`, `/api/categories`).
+  - Implement direct server-side data access to `json-server` (`/songs`, `/categories`).
    - Implement home catalog with debounced server query search, category chips, and song grid.
   - Implement `/visa/[slug]` sing-along view with `A-` / `A+` font scaling.
 2. **Milestone 2 (Admin Management & Power Utilities - Phase 2 / P1):**
-   - Implement PIN-protected `/admin` portal with Song CRUD (live preview) and Category CRUD (emoji + color pickers) routing mutating requests through Next.js auth proxy to `json-server`.
+  - Implement PIN-protected `/admin` portal with Song CRUD (live preview) and Category CRUD (emoji + color pickers) routing mutating requests through the authenticated JSON Server client.
    - Implement Screen Wake Lock API and indicator.
    - Implement Table QR Code sharing modal.
    - Implement LocalStorage favorites bookmarking and "⭐ Mina favoriter" tab.

@@ -55,30 +55,27 @@ Set up the `json-server` mock REST database sidecar process and seed `data/db.js
 
 ---
 
-## Ticket T-02: Next.js API Proxy Routes & HTTP Client
+## Ticket T-02: JSON Server Client
 - **Milestone:** Phase 1 (MVP)
 - **Priority:** `priority:p0`
 - **Labels:** `phase-1:mvp`, `type:backend`, `priority:p0`
-- **User Story:** US-1, US-2, US-5: As a frontend client, I want Next.js API routes that proxy requests to `json-server` on port 3001.
+- **User Story:** US-1, US-2, US-5: As a frontend client, I want a server-side client that queries `json-server` on port 3001.
 
 ### Description
-Create Next.js App Router API route handlers (`/api/songs`, `/api/songs/[id]`, `/api/categories`) that securely proxy read requests to `json-server`, supporting query search (`?q=...`) and category filtering (`?categoryId=...`).
+Create a server-side JSON Server client for direct requests to `/songs`, `/songs/[id]`, and `/categories`, supporting query search (`?q=...`) and category filtering (`?categoryId=...`).
 
 ### Technical Scope
 - **Files Created/Modified:**
   - `lib/json-server-client.ts` (Fetch utility helper for `http://localhost:3001`)
-  - `app/api/songs/route.ts` (GET proxy forwarding `q` and `categoryId` params)
-  - `app/api/songs/[id]/route.ts` (GET single song by slug/id)
-  - `app/api/categories/route.ts` (GET categories sorted by `order`)
   - `hooks/useSongs.ts` (React hook for fetching and searching songs)
   - `hooks/useCategories.ts` (React hook for fetching categories)
 
 ### Acceptance Criteria
-- [x] `GET /api/songs` returns all songs from `json-server`.
-- [x] `GET /api/songs?q=helan` performs full-text search against lyrics, title, melody, tags.
-- [x] `GET /api/songs?categoryId=snaps` filters songs by category ID.
-- [x] `GET /api/songs/[id]` returns 200 with the single song object or 404 if not found.
-- [x] `GET /api/categories` returns category list ordered by `order`.
+- [x] `GET /songs` returns all songs from `json-server`.
+- [x] `GET /songs?q=helan` performs full-text search against lyrics, title, melody, tags.
+- [x] `GET /songs?categoryId=snaps` filters songs by category ID.
+- [x] `GET /songs/[id]` returns 200 with the single song object or 404 if not found.
+- [x] `GET /categories` returns the category list.
 
 ---
 
@@ -100,7 +97,7 @@ Implement the responsive home page (`/`) featuring a festive header, debounced s
   - `app/globals.css` (Tailwind v4 styling and responsive layout variables)
 
 ### Acceptance Criteria
-- [x] Typing in the search input debounces requests (~300ms) to `/api/songs?q=...`.
+- [x] Typing in the search input debounces requests (~300ms) to `/songs?q=...` through the server-side JSON Server client.
 - [x] Clicking category chips filters the list immediately, updating active chip style and URL state.
 - [x] Displays empty state (*"Inga visor hittades"*) with a reset search button when 0 results match.
 - [x] Responsive grid: 1 column on mobile, 2 columns on tablet, 3 columns on desktop.
@@ -154,18 +151,18 @@ Implement persistent dynamic font sizing across the song detail view. Users can 
 
 # ⚡ Phase 2: Admin Management & Power Features (P1)
 
-## Ticket T-06: Admin PIN Authentication & Proxy Security
+## Ticket T-06: Admin PIN Authentication & JSON Server Security
 - **Milestone:** Phase 2 (Power Features)
 - **Priority:** `priority:p1`
 - **Labels:** `phase-2:power`, `type:backend`, `priority:p1`
 - **User Story:** US-7: As an admin/toastmaster, I want to authenticate with a secure PIN to manage songs and categories.
 
 ### Description
-Implement PIN-based authentication for the `/admin` portal. API mutation routes (`POST`, `PUT`, `DELETE` on `/api/songs` and `/api/categories`) must verify the admin PIN session cookie before proxying changes to `json-server`.
+Implement PIN-based authentication for the `/admin` portal. Song and category mutations must verify the admin PIN session before sending `POST`, `PATCH`, or `DELETE` requests through the JSON Server client.
 
 ### Technical Scope
 - **Files Created/Modified:**
-  - `app/api/admin/verify/route.ts` (Verifies PIN against environment variable `ADMIN_PIN` and sets HTTP-only session cookie)
+  - `lib/admin-auth.ts` (Verifies PIN against environment variable `ADMIN_PIN` and manages the authenticated session)
   - `hooks/useAdminAuth.ts` (Admin auth state hook: `isAuthenticated`, `login(pin)`, `logout()`)
   - `components/admin/AdminLogin.tsx` (PIN entry keypad/card UI with error feedback)
   - `.env.local` (Add `ADMIN_PIN=1234` default fallback)
@@ -173,7 +170,7 @@ Implement PIN-based authentication for the `/admin` portal. API mutation routes 
 ### Acceptance Criteria
 - [ ] Entering the correct PIN issues a secure session and grants access to `/admin`.
 - [ ] Entering an incorrect PIN displays a clear error message and prevents access.
-- [ ] API routes reject unauthorized `POST`/`PUT`/`DELETE` calls with HTTP 401 Unauthorized.
+- [ ] Unauthorized `POST`/`PATCH`/`DELETE` operations are rejected with HTTP 401 Unauthorized.
 - [ ] Logout button clears the session cookie and redirects to `/admin` login screen.
 
 ---
@@ -193,8 +190,7 @@ Create the song management dashboard in `/admin` with a searchable song table, a
   - `components/admin/SongTable.tsx` (Searchable, sortable song management table with edit/delete actions)
   - `components/admin/SongFormModal.tsx` (Form inputs: Title, Melody, Category, Multi-line Lyrics, Tags, Notes; split-screen preview)
   - `components/admin/DeleteConfirmModal.tsx` (Confirmation dialog before deletion)
-  - `app/api/songs/route.ts` (Add authenticated `POST` handler)
-  - `app/api/songs/[id]/route.ts` (Add authenticated `PUT` and `DELETE` handlers)
+  - `lib/json-server-client.ts` (Send authenticated song mutations to JSON Server)
 
 ### Acceptance Criteria
 - [ ] Admin can add a new song; slug is automatically suggested from title.
@@ -218,8 +214,7 @@ Implement category management in `/admin` enabling the host to create custom eve
 - **Files Created/Modified:**
   - `components/admin/CategoryTable.tsx` (List of categories with song counts and edit/delete buttons)
   - `components/admin/CategoryFormModal.tsx` (Name, Slug, Emoji preset selector, Color badge selector, Description, Order)
-  - `app/api/categories/route.ts` (Add authenticated `POST` handler)
-  - `app/api/categories/[id]/route.ts` (Add authenticated `PUT` and `DELETE` handlers)
+  - `lib/json-server-client.ts` (Send authenticated category mutations to JSON Server)
 
 ### Acceptance Criteria
 - [ ] Admin can view all categories with associated song counts.
@@ -362,7 +357,7 @@ Prevent orphaned songs when deleting a category in `/admin`. If songs belong to 
 ### Technical Scope
 - **Files Created/Modified:**
   - `components/admin/CategoryDeleteModal.tsx` (Safety modal detecting song references and providing reassignment dropdown)
-  - `app/api/categories/[id]/route.ts` (Batch-update songs' `categoryId` before deleting category)
+  - `lib/json-server-client.ts` (Batch-update songs' `categoryId` before deleting category)
 
 ### Acceptance Criteria
 - [ ] If a category has 0 songs, admin is shown a simple delete confirmation.
@@ -422,11 +417,11 @@ Provide a printable export feature that generates a formatted 2-column A4 paper 
 | Ticket ID | Phase / Milestone | Priority | Title | Primary Components / Files |
 | :--- | :--- | :---: | :--- | :--- |
 | **T-01** | Phase 1 (MVP) | `P0` | Backend & Sidecar Workflow Setup | `data/db.json`, `package.json`, `types/song.ts` |
-| **T-02** | Phase 1 (MVP) | `P0` | Next.js API Proxy Routes | `app/api/songs`, `app/api/categories`, `lib/json-server-client.ts` |
+| **T-02** | Phase 1 (MVP) | `P0` | JSON Server Client | `lib/json-server-client.ts` |
 | **T-03** | Phase 1 (MVP) | `P0` | Catalog Home View & Debounced Search | `app/page.tsx`, `components/SearchAndFilter.tsx`, `SongCard.tsx` |
 | **T-04** | Phase 1 (MVP) | `P0` | Sing-Along Lyric View & Navigation | `app/visa/[slug]/page.tsx`, `components/SongDetail.tsx` |
 | **T-05** | Phase 1 (MVP) | `P0` | Dynamic Font Sizing Stepper | `hooks/useFontSize.ts`, `components/FontSizeControls.tsx` |
-| **T-06** | Phase 2 (Power) | `P1` | Admin PIN Authentication & Proxy Security | `app/api/admin/verify`, `hooks/useAdminAuth.ts`, `AdminLogin.tsx` |
+| **T-06** | Phase 2 (Power) | `P1` | Admin PIN Authentication & JSON Server Security | `lib/admin-auth.ts`, `hooks/useAdminAuth.ts`, `AdminLogin.tsx` |
 | **T-07** | Phase 2 (Power) | `P1` | Admin Song Management with Live Preview | `app/admin/page.tsx`, `SongTable.tsx`, `SongFormModal.tsx` |
 | **T-08** | Phase 2 (Power) | `P1` | Admin Category Management | `CategoryTable.tsx`, `CategoryFormModal.tsx` |
 | **T-09** | Phase 2 (Power) | `P1` | Table QR Code Sharing Modal | `components/ShareQRModal.tsx`, `qrcode.react` |

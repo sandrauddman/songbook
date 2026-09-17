@@ -52,7 +52,7 @@ export function SongCard({ song, category, isFavorite = false, onToggleFavorite 
       </Link>
 
       <div className="mt-4 flex items-center justify-between border-t border-[var(--line)]/50 pt-3">
-        <button
+        {/* <button
           type="button"
           onClick={(event) => {
             event.stopPropagation();
@@ -71,15 +71,9 @@ export function SongCard({ song, category, isFavorite = false, onToggleFavorite 
             ★
           </span>
           <span className="text-xs">{isFavorite ? 'Sparad' : 'Favorit'}</span>
-        </button>
+        </button> */}
 
-        <Link
-          href={`/visa/${song.slug}`}
-          className="text-xs font-semibold text-[var(--muted)] hover:text-[var(--ink)]"
-          tabIndex={-1}
-        >
-          Sjung visa
-        </Link>
+        
       </div>
     </div>
   );
