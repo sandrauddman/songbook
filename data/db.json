@@ -8,29 +8,21 @@
       "description": "Klassiska visor till nubben",
       "order": 1
     },
+     {
+      "id": "vin-avec",
+      "name": "Vin & Avec",
+      "emoji": "🍷",
+      "color": "purple",
+      "description": "Visor till vinet och kaffekasken",
+      "order": 2
+    },
     {
       "id": "kraftskiva",
       "name": "Kräftskiva",
       "emoji": "🦞",
       "color": "red",
       "description": "Sommarens kräftfest",
-      "order": 2
-    },
-    {
-      "id": "midsommar",
-      "name": "Midsommar",
-      "emoji": "🌸",
-      "color": "green",
-      "description": "Midsommar och sommarpsalm",
       "order": 3
-    },
-    {
-      "id": "jul",
-      "name": "Jul & Vinter",
-      "emoji": "🎄",
-      "color": "slate",
-      "description": "Julvisor och vinterglädje",
-      "order": 4
     },
     {
       "id": "student",
@@ -38,16 +30,9 @@
       "emoji": "🍺",
       "color": "blue",
       "description": "Student- och ölvisor",
-      "order": 5
-    },
-    {
-      "id": "vin-avec",
-      "name": "Vin & Avec",
-      "emoji": "🍷",
-      "color": "purple",
-      "description": "Visor till vinet och kaffekasken",
-      "order": 6
+      "order": 4
     }
+   
   ],
   "songs": [
     {
