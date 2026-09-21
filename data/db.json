@@ -39,485 +39,1411 @@
       "color": "blue",
       "description": "Student- och ölvisor",
       "order": 5
+    },
+    {
+      "id": "vin-avec",
+      "name": "Vin & Avec",
+      "emoji": "🍷",
+      "color": "purple",
+      "description": "Visor till vinet och kaffekasken",
+      "order": 6
     }
   ],
   "songs": [
     {
-      "id": "helan-gar",
-      "slug": "helan-gar",
-      "title": "Helan går",
-      "melody": "Helan går",
+      "id": "valkomna-hit",
+      "slug": "valkomna-hit",
+      "title": "Välkomna hit",
+      "melody": "Jänta o ja",
       "categoryId": "snapsvisor",
       "lyrics": [
-        "Helan går,",
-        "sjung hopp faderallan lallan lej,",
-        "helan går,",
-        "sjung hopp faderallan lej.",
-        "Och den som inte helan tar,",
-        "han ej heller halvan får.",
-        "Helan går...",
-        "[Skål!]",
-        "Sjung hopp faderallan lej!"
+        "Välkomna hit, ta Er en bit",
+        "njut utav brännvin och akvavit",
+        "skoj ska vi ha, ljuga vi ska",
+        "trivas så där förtroligt,",
+        "humöret på toppen alla ska få",
+        "och sjunga vi gör så gott vi förmå",
+        "med minne av kvällen hemåt vi gå",
+        "i kväll ska vi ha det roligt."
       ],
-      "tags": ["snaps", "nubbe", "klassiker"],
-      "notes": "Skålas efter sista raden!",
+      "tags": [
+        "snaps",
+        "välkomstvisa"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "halvan",
-      "slug": "halvan",
-      "title": "Halvan",
-      "melody": "Halvan",
+      "id": "anden",
+      "slug": "anden",
+      "title": "Anden",
+      "melody": "Jag gick mig ut en afton",
       "categoryId": "snapsvisor",
       "lyrics": [
-        "Halvan går,",
-        "halvan går,",
-        "den som inte halvan tar,",
-        "han blir en skam för alla karlar.",
-        "Skål för halvan,",
-        "skål för hela kvällen!"
+        "Om havet vore brännvin",
+        "Och jag en liten and",
+        "Då simmade då simmade",
+        "Jag aldrig mer i land"
       ],
-      "tags": ["snaps", "halvan"],
-      "notes": "Vanligt att sjunga i snabbare takt.",
+      "tags": [
+        "snaps",
+        "kort"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "tersen",
-      "slug": "tersen",
-      "title": "Tersen",
-      "melody": "Tersen",
+      "id": "brannvin-ar-jakligt-gott",
+      "slug": "brannvin-ar-jakligt-gott",
+      "title": "Brännvin är jäkligt gott",
+      "melody": "Karl Alfred Boy",
       "categoryId": "snapsvisor",
       "lyrics": [
-        "Tersen går,",
-        "tersen går,",
-        "skål för den som står här!",
-        "Tersen går,",
-        "tersen går,",
-        "och nu blir det fler!"
+        "Brännvin är jäkligt gott,",
+        "Smakar bättre ju mer man fått.",
+        "Och går man i golvet,",
+        "så där mellan tolv-ett,",
+        "så slår man sig jäkligt hårt. Pling, Plong"
       ],
-      "tags": ["snaps", "tersen"],
+      "tags": [
+        "snaps"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "kvarten",
-      "slug": "kvarten",
-      "title": "Kvarten",
-      "melody": "Kvarten",
+      "id": "cykelvisan",
+      "slug": "cykelvisan",
+      "title": "Cykelvisan",
+      "melody": "Väva vadmal",
       "categoryId": "snapsvisor",
       "lyrics": [
-        "Kvarten går,",
-        "kvarten går,",
-        "låt den få sin ära!",
-        "Kvarten går,",
-        "kvarten går,",
-        "och vi går vidare!"
+        "Man cyklar för lite",
+        "Man röker för mycket",
+        "och man är fasen så liberal",
+        "när det gäller maten och spriten",
+        "Jag borde slutat för länge sen",
+        "men denna sup är för liten",
+        "Vad tjänar att hyckla",
+        "Tids nog får man cykla!"
       ],
-      "tags": ["snaps", "kvarten"],
+      "tags": [
+        "snaps"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "mera-brannvin",
-      "slug": "mera-brannvin",
-      "title": "Mera brännvin",
-      "melody": "Mera brännvin",
+      "id": "den-gamla-apparaten",
+      "slug": "den-gamla-apparaten",
+      "title": "Den gamla apparaten",
+      "melody": "När som sädesfälten",
       "categoryId": "snapsvisor",
       "lyrics": [
-        "Mera brännvin i glasen,",
-        "mera brännvin i vinet,",
-        "en skål för glädjen,",
-        "och en skål för vinet."
+        "Där som sädes-brännvin rann igenom strupen",
+        "och en flaska dunder skymtar bakom den.",
+        "Stod den gamla apparaten uppå vinden,",
+        "som i forna dagar var min gamle vän.",
+        "",
+        "Så kom länsman & tog det käraste jag ägde,",
+        "tog den gamla apparaten med sej hem.",
+        "Nu står alla glasen tomma uppå bordet",
+        "och han bränner själv den lilla djävulen."
       ],
-      "tags": ["snaps", "brännvin"],
+      "tags": [
+        "snaps",
+        "brännvin"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "sangen-om-kraftan",
-      "slug": "sangen-om-kraftan",
-      "title": "Sången om kräftan",
-      "melody": "Kräftan lyser röd på fatet",
-      "categoryId": "kraftskiva",
+      "id": "dricker-man-for-lite",
+      "slug": "dricker-man-for-lite",
+      "title": "Dricker man för lite",
+      "melody": "Lambert walk",
+      "categoryId": "snapsvisor",
       "lyrics": [
-        "Kräftan lyser röd på fatet,",
-        "grönsakerna står i rad,",
-        "och vi sjunger glatt om sommaren,",
-        "när god mat sätter smak i kvällen."
+        "Dricker man får lite blir livet torrt.",
+        "dricker man för mycket blir livet kort.",
+        "Nej, gör som jag, nubba lite varje dag.",
+        "Hej!"
       ],
-      "tags": ["kräftskiva", "sommar"],
+      "tags": [
+        "snaps",
+        "kort"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "nar-kraftorna-ar-kokta",
-      "slug": "nar-kraftorna-ar-kokta",
-      "title": "När kräftorna är kokta",
-      "melody": "När kräftorna är kokta",
-      "categoryId": "kraftskiva",
+      "id": "en-gang-i-manaden-ar-manen-full",
+      "slug": "en-gang-i-manaden-ar-manen-full",
+      "title": "En gång i månaden är månen full",
+      "melody": "Mors lilla Olle",
+      "categoryId": "snapsvisor",
       "lyrics": [
-        "När kräftorna är kokta,",
-        "och smöret har sin dag,",
-        "då blir det fest i stugan,",
-        "och glad i alla lag."
+        "En gång i månan är månen full,",
+        "Men aldrig vi sett honom ramla omkull.",
+        "Stum av beundran hur mycket han tål",
+        "höjer vi glasen och utbringar SKÅL!"
       ],
-      "tags": ["kräftskiva", "höst"],
+      "tags": [
+        "snaps"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "smagrodorna",
-      "slug": "smagrodorna",
-      "title": "Små grodorna",
-      "melody": "Små grodorna",
-      "categoryId": "midsommar",
+      "id": "finska-cykellandslagets-snapsvisa",
+      "slug": "finska-cykellandslagets-snapsvisa",
+      "title": "Finska cykellandslagets snapsvisa",
+      "melody": "Ingen speciell (ropas)",
+      "categoryId": "snapsvisor",
       "lyrics": [
-        "Små grodorna, små grodorna är lustiga att se,",
-        "de sjunger på sommaren,",
-        "de hoppar i sin grej."
+        "HOJ!"
       ],
-      "tags": ["midsommar", "sommar"],
+      "tags": [
+        "snaps",
+        "kort",
+        "finsk"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "sommarpsalm",
-      "slug": "sommarpsalm",
-      "title": "Sommarpsalm",
-      "melody": "Sommarpsalm",
-      "categoryId": "midsommar",
+      "id": "kors-i-allsin-dar",
+      "slug": "kors-i-allsin-dar",
+      "title": "Kors i allsin dar",
+      "melody": "Kors i allsin dar",
+      "categoryId": "snapsvisor",
       "lyrics": [
-        "Solen lyser över ängen,",
-        "vinden viskar sakta,",
-        "och en god och varm sommarnatt,",
-        "fyller hjärtat med glädje."
+        "Kors i allsin dar,",
+        "har du brännvin kvar!",
+        "Är du sparsam eller snål?",
+        "SKÅL!"
       ],
-      "tags": ["midsommar", "sommar"],
+      "tags": [
+        "snaps",
+        "kort"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z",
+      "notes": "Klockan är fem någonstans!"
     },
     {
-      "id": "nu-ar-det-jul-igen",
-      "slug": "nu-ar-det-jul-igen",
-      "title": "Nu är det jul igen",
-      "melody": "Nu är det jul igen",
-      "categoryId": "jul",
+      "id": "flickan-som-red",
+      "slug": "flickan-som-red",
+      "title": "Flickan som red",
+      "melody": "Jag gick mig ut en afton",
+      "categoryId": "snapsvisor",
       "lyrics": [
-        "Nu är det jul igen,",
-        "nu är det jul igen,",
-        "ljusen brinner klart i kväll,",
-        "och glädjen fyller allt."
+        "Det var en gång en flicka",
+        "som red uppå ett svin",
+        "och flickan hon var naken",
+        "men glad var hennes min.",
+        "den borsten, den borsten",
+        "den river gott som brännevin.",
+        "Den borsten, den borsten",
+        "den river gott som sprit.",
+        "",
+        "Det var en gång en flicka",
+        "som red uppå en ål",
+        "och flickan hon var naken",
+        "men glatt var hennes vrål",
+        "SKÅL"
       ],
-      "tags": ["jul", "vinter"],
+      "tags": [
+        "snaps"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "hej-tomtegubbar",
-      "slug": "hej-tomtegubbar",
-      "title": "Hej tomtegubbar",
+      "id": "jag-var-full-en-gang",
+      "slug": "jag-var-full-en-gang",
+      "title": "Jag var full en gång",
+      "melody": "Flottarkärlek",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Jag var full en gång för länge sen,",
+        "på knäna kröp jag hem.",
+        "Alla diken var för mig ett vilohem,",
+        "vilohem.",
+        "I alla skåp i alla lådor,",
+        "hitta jag en liten skvätt,",
+        "i från renat och till första",
+        "",
+        "Klass kornet pissa snett.",
+        "Skååål"
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "fordom-odlade-man",
+      "slug": "fordom-odlade-man",
+      "title": "Fordom odlade man",
+      "melody": "Längtan till landet (Vintern rasat)",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Fordom odlade man vindruvs ranka",
+        "av dess frukt man gjorde ädelt vin",
+        "Nu man pressa saften ur en planka",
+        "doftande av äkta terpentin",
+        "",
+        "Höj nu bägare du broder och syster",
+        "låt den svenska skogen rinna kall",
+        "Höj nu bägaren du broder och syster",
+        "låt oss därför dricka upp en tall."
+      ],
+      "tags": [
+        "snaps",
+        "klassiker"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "se-halvan-den-star-och-vantar",
+      "slug": "se-halvan-den-star-och-vantar",
+      "title": "Se halvan den står och väntar",
+      "melody": "Flickan hon går i ringen",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Se halvan den står och väntar",
+        "att vi ska ta den",
+        "Ej finnes en dryck på jorden",
+        "som smakar så bra",
+        "Den värmer kring hjärtat",
+        "som sol i april",
+        "Och smakar förträffligt till",
+        "smör, ost och sill"
+      ],
+      "tags": [
+        "snaps",
+        "halvan"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "till-nubben-sa-tager-man-sill",
+      "slug": "till-nubben-sa-tager-man-sill",
+      "title": "Till nubben så tager man sill",
+      "melody": "Vi gå över daggstänkta berg",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Till nubben så tager man sill sill sill",
+        "Men också ansjovis om man vill vill vill",
+        "Men om man år oviss om sillen är ansjovis",
+        "Så tar man bara några supar till till till",
+        "Ja om man är oviss om sillen är ansjovis",
+        "Sa tar man bara några supar till till till"
+      ],
+      "tags": [
+        "snaps",
+        "sill"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z",
+      "notes": "Tummarna upp enl. Gun"
+    },
+    {
+      "id": "i-apladalen-i-varnamo",
+      "slug": "i-apladalen-i-varnamo",
+      "title": "I Apladalen i Värnamo",
+      "melody": "Apladalen i Värnamo",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Hon var så ensam.",
+        "Hon var så frusen.",
+        "Hon hade istappar",
+        "under musen.",
+        "(stå upp och skaka musen)",
+        "TINGE LINGE LING",
+        "",
+        "Det var en stor en.",
+        "Det var en kall en.",
+        "Han hade istappar",
+        "under ballen.",
+        "(stå upp och skaka ballen)",
+        "DONG DONGE DONG"
+      ],
+      "tags": [
+        "snaps",
+        "rörelsevisa"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z",
+      "notes": "Stå upp och skaka!"
+    },
+    {
+      "id": "lappluva-med-tofs-pa",
+      "slug": "lappluva-med-tofs-pa",
+      "title": "Lappluva med tofs på",
+      "melody": "När jag var liten",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Att vi har roligt det märks upp på sången.",
+        "Att vi är fulla det märks ju på gången.",
+        "",
+        "Lapp luva med tofs på",
+        "Fy fan vad det snöar!"
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "imbelupet",
+      "slug": "imbelupet",
+      "title": "Imbelupet",
+      "melody": "Kors på Idas grav",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Imbelupet glaset står på bräcklig fot,",
+        "kalla pilsnerflaskor luta sig därmot,",
+        "men därnere, miserere, uti magens dunkla djup,",
+        "sitter djävulen och väntar på en sup.",
+        "Imbelupet glaset står på bräcklig fot,",
+        "kalla pilsnerpavor luta sig därmot,",
+        "men därnere, miserere, uti magens dunkla valv,",
+        "vankar djävulen i väntan på en halv.",
+        "Imbelupet glaset står på bräcklig fot,",
+        "importerad bajerskt luta sig därmot,",
+        "men därnere, miserere, uti magen härs och tvärs,",
+        "knallar djävulen och väntar på en ters."
+      ],
+      "tags": [
+        "snaps",
+        "klassiker"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "jag-tror-jag-tror",
+      "slug": "jag-tror-jag-tror",
+      "title": "Jag tror, jag tror",
+      "melody": "Jag tror på sommaren",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Jag tror, jag tror på akvavit",
+        "jag tror, jag tror på dynamit",
+        "den ger en kraft att sjunga ut",
+        "och inga krämpor blir akut.",
+        "Man glömmer vardagslivets jäkt",
+        "och känner stundens ruseffekt.",
+        "En snaps, en skål, en truddelutt",
+        "och sen så tar vi våran hutt."
+      ],
+      "tags": [
+        "snaps",
+        "sommar"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "jag-ska-festa",
+      "slug": "jag-ska-festa",
+      "title": "Jag ska festa",
+      "melody": "Bamse",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Jag ska festa,",
+        "ta det lungt med spriten,",
+        "ha det roligt utan att va full.",
+        "Inte krypa runt med festeliten,",
+        "ta det sansat för min egen skull.",
+        "",
+        "Först en öl i torra strupen,",
+        "efter det så kommer supen",
+        "i med vinet, i med punchen,",
+        "sen en groggbuffé.",
+        "",
+        "Jag är skitfull, däckar först av alla,",
+        "missar festen men vad gör väl de´?",
+        "Blandar hejdlöst öl med gammal filmjölk.",
+        "kastar mat på alla som är med."
+      ],
+      "tags": [
+        "snaps",
+        "fest"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "kalla-sma-nubbar",
+      "slug": "kalla-sma-nubbar",
+      "title": "Kalla små nubbar",
+      "melody": "Kalle på Spången",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Vad är det som gör att vi människor trivs.",
+        "Jo kalla, kalla, kalla små nubbar.",
+        "Vad är det som först på kalaset väl givs?",
+        "Jo kalla, kalla, kalla små nubbar.",
+        "Den skänker oss alla ett solljust humör",
+        "och även för kroppen stor nytta den gör.",
+        "men skall man ta nubbar som regel dom bör",
+        "stå kalla, mycket kalla, ja kalla,",
+        "mycket kalla, ja kalla , kalla,",
+        "kalla små nubbar."
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "klar-likt-som-en-parla",
+      "slug": "klar-likt-som-en-parla",
+      "title": "Klar likt som en pärla",
+      "melody": "Lili Marleen",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Klar liksom en pärla",
+        "står nu där en sup.",
+        "Och den vill så gärna",
+        "ned i magens djup.",
+        "Drick nu till botten, gamle vän.",
+        "Det kommer kanske en igen.",
+        "En skål, och ned med den,",
+        "En skål, och ned med den."
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "kar-snaps-har-manga-namn",
+      "slug": "kar-snaps-har-manga-namn",
+      "title": "Kär snaps har många namn",
+      "melody": "Det var dans bort i vägen",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Jag är getingen, färdknäppen orren och göken",
+        "Jag är tutingen, rackaren, järnet och kröken",
+        "Knappen innanför västen är jag.",
+        "Jag är klämtaren, luringen, nubben och fjutten",
+        "Jag är jamaren, rövaren, supen och hutten",
+        "// Ja, den godaste pärlan är jag //"
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "lingonroda-nasor",
+      "slug": "lingonroda-nasor",
+      "title": "Lingonröda näsor",
+      "melody": "Flickorna i Småland",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Med lingonröda näsor",
+        "och med bullrande bas",
+        "och skinande som solen",
+        "upp på våra små kalas,",
+        "vi sjunga och vi tralla",
+        "när vi höja våra glas,",
+        "men vad är det som gör",
+        "att vi komma i extas?",
+        "",
+        "Jo, det är stänk av livets vatten,",
+        "det är helan lilla vän.",
+        "Det är litrarna som staten,",
+        "inte lagt beslag på än.",
+        "Jaa det är halvan det är tersen",
+        "Och en grogg vi tager sen.",
+        "Och till morgonen vi spar",
+        "den lilla återställaren."
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "min-lilla-lon",
+      "slug": "min-lilla-lon",
+      "title": "Min lilla lön",
       "melody": "Hej tomtegubbar",
-      "categoryId": "jul",
+      "categoryId": "snapsvisor",
       "lyrics": [
-        "||:Hej tomtegubbar,",
-        "slå i glasen och låt oss lustiga vara:||",
-        "En lite tid, vi leva här,",
-        "med mycket möda och stort besvär.",
-        "Hej tomtegubbar,",
-        "slå i glasen och låt oss lustiga vara!"
+        ":/: Min lilla lön, den räcker inte",
+        "den går till öl och till brännvin. :/:",
+        "Till öl och brännvin går den åt",
+        "och lite flickor/pojkar emellanåt.",
+        "Min lilla lön, den räcker inte",
+        "den går till öl och till brännvin."
       ],
-      "tags": ["jul", "tomte"],
+      "tags": [
+        "snaps"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "o-gamla-klang-och-jubeltid",
-      "slug": "o-gamla-klang-och-jubeltid",
-      "title": "O, gamla klang och jubeltid",
-      "melody": "O, alte Burschenherrlichkeit”",
-      "categoryId": "student",
+      "id": "mors-lilla-olle",
+      "slug": "mors-lilla-olle",
+      "title": "Mors lilla Olle",
+      "melody": "Mors lilla Olle",
+      "categoryId": "snapsvisor",
       "lyrics": [
-        "O gamla klang och jubeltid,",
-        "ditt minne skall förbliva,",
-        "och en åt livets bistra strid,",
-        "ett rosigt skimmer giva.",
-        "Snart tystnar allt vårt yra skämt,",
-        "vår sång blir stum, vårt glam förstämt,",
-        "o jerum jerum jerum,",
-        "o quae mutatio rerum"
+        "Mors lille Olle i skogen gick",
+        "leta bland furerna fast han ej fick.",
+        "Sågade sju och en halv och drog hem,",
+        "kokade OP och konjak av dem.",
+        "Mor fick nu syn på'n gav till ett vrål:",
+        "-Kokar du skogen till ren alkohol?",
+        "Klart sa Olle, och allt som jag fällt,",
+        "är till vår fest uti afton beställt."
       ],
-      "tags": ["student", "klassiker"],
+      "tags": [
+        "snaps"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "strejk-pa-eriksdal",
-      "slug": "strejk-pa-eriksdal",
-      "title": "Strejk på Eriksdal",
-      "melody": "Strejk på Eriksdal",
-      "categoryId": "student",
+      "id": "nu-lyfter-vi-pa-glasen",
+      "slug": "nu-lyfter-vi-pa-glasen",
+      "title": "Nu lyfter vi på glasen",
+      "melody": "Fritiof Anderssons paradmarsch",
+      "categoryId": "snapsvisor",
       "lyrics": [
-        "Strejk på Eriksdal,",
-        "det går i rymden,",
-        "ett glatt och kraftfullt studentenslag,",
-        "som lyfter oss till vänskap och till sång."
+        "Nu lyfter vi på glasen",
+        "med sin fyllning upp till rand",
+        "Det ska bli gott, när vi har fått",
+        "känna den långt ner i magen.",
+        "Ifall att vi blir dimmiga",
+        "så stödjer vi varann",
+        "lova mig att, faller jag platt",
+        "så tag mig uti kragen.",
+        "Och fröjden er go´ vänner uti vårat glada gäng",
+        "och ingen får gå trumpen hem",
+        "och sussa i sin säng.",
+        "Så höjen era glas",
+        "och stämmen upp ett samfällt vrål,",
+        "vilket kalas!",
+        "Sprit i vårt glas,",
+        "vi säger alla SKÅÅÅL!"
       ],
-      "tags": ["student", "sång"],
+      "tags": [
+        "snaps",
+        "skål"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z",
+      "notes": "Öl är gjort av humle. Humle är en växt. Alltså: Öl = Sallad!"
     },
     {
-      "id": "midsommar-vaka",
-      "slug": "midsommar-vaka",
-      "title": "Midsommarnatt",
-      "melody": "Midsommarnatt",
-      "categoryId": "midsommar",
+      "id": "nu-tar-vi-den",
+      "slug": "nu-tar-vi-den",
+      "title": "Nu tar vi den",
+      "melody": "O Tannenbaum",
+      "categoryId": "snapsvisor",
       "lyrics": [
-        "Midsommarnattens skäraste timma,",
-        "så snart som solen går ned,",
-        "fyller vi våra glas med glädje,",
-        "och sjunger in sommarens fred."
+        "Nu tar vi den,",
+        "nu tar vi den,",
+        "nu tar vi den,",
+        "nu tar vi den.",
+        "Nu tar vi den,",
+        "nu tar vi den,",
+        "nu tar vi den,",
+        "nu tar vi den.",
+        "Nu tar vi den,",
+        "nu tar vi den,",
+        "nu tar vi den.",
+        "(Nubben drickes)",
+        "Nu tog vi den!"
       ],
-      "tags": ["midsommar", "sommar"],
+      "tags": [
+        "snaps",
+        "kort"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z",
+      "notes": "Nubben drickes innan 'Nu tog vi den!'"
     },
     {
-      "id": "gubben-noak",
-      "slug": "gubben-noak",
-      "title": "Gubben Noak",
+      "id": "nu-vill-vi-ha",
+      "slug": "nu-vill-vi-ha",
+      "title": "Nu vill vi ha",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Nu vill vi ha, lite snaps, lite snaps,",
+        "lite snaps meddetsamma.",
+        "Vi vill må bra,",
+        "och känna värmen av spriten i kroppen.",
+        "Nu vill vi ha, lite snaps, lite snaps,",
+        "lite snaps meddetsamma.",
+        "Vi vill må bra,",
+        "ty nykter kan ingen människa va!"
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "nubben-goa",
+      "slug": "nubben-goa",
+      "title": "Nubben goa",
       "melody": "Gubben Noak",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Nubben goa, nubben goa",
+        "är en hedersdryck.",
+        "När den går till magen,",
+        "blir man lätt i tagen.",
+        "Nubben goa, nubben goa",
+        "är en hedersdryck."
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "siffervisan",
+      "slug": "siffervisan",
+      "title": "Siffervisan",
+      "melody": "Ritsch, ratsch, filibom-bom-bom",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "1, 2, 75, 6, 7, 75, 6, 7, 75, 6, 7",
+        "1, 2, 75, 6, 7, 75, 6, 7, 73",
+        "",
+        "107, 103, 102",
+        "107, 6, 19, 27",
+        "",
+        "17, 18, 16, 15",
+        "13, 19, 14, 17",
+        "19, 16, 15, 11",
+        "8, 47!",
+        "Skål!"
+      ],
+      "tags": [
+        "snaps",
+        "siffervisa"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "strejk-pa-pripps",
+      "slug": "strejk-pa-pripps",
+      "title": "Strejk på Pripps",
+      "melody": "I natt jag drömde",
       "categoryId": "student",
       "lyrics": [
-        "Gubben Noak, gubben Noak,",
-        "han seglade ut i skyn,",
-        "och med sig hade han en liten skuta,",
-        "som gick i gott sällskap."
+        "I natt jag drömde något som",
+        "jag aldrig drömt förut",
+        "Jag drömde det var strejk på Pripps",
+        "och alla bärs var slut",
+        "Jag drömde om en jätte sal",
+        "där bärsen stod på rad",
+        "så skrev de på ett konvolut",
+        "och reste sig och sa:",
+        "",
+        "ARMEN I VINKEL",
+        "BLICKEN I SKYN",
+        "SÅ VAR DET MENAT",
+        "",
+        "WHISKY OCH RENAT",
+        "VÅRT MÅL ALKOHOL",
+        "SKÅL FÖR DEN SOM TÅL!"
       ],
-      "tags": ["student", "klassiker"],
+      "tags": [
+        "öl",
+        "pripps",
+        "student"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "sommarnatt",
-      "slug": "sommarnatt",
-      "title": "Sommarnatt",
-      "melody": "Sommarnatt",
-      "categoryId": "midsommar",
-      "lyrics": [
-        "Sommarnatt, du ljuva natt,",
-        "fylld med doft och stjärnors sken,",
-        "där mellan fjärilens vingar,",
-        "vi glömmer dagens allvar."
-      ],
-      "tags": ["midsommar", "natt"],
-      "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
-    },
-    {
-      "id": "lilla-bjorn",
-      "slug": "lilla-bjorn",
-      "title": "Lilla Björn",
-      "melody": "Lilla Björn",
-      "categoryId": "student",
-      "lyrics": [
-        "Lilla Björn, lilla Björn,",
-        "du är så rolig att se,",
-        "när du dansar i vår fest,",
-        "och vi alla ler." 
-      ],
-      "tags": ["student", "fest"],
-      "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
-    },
-    {
-      "id": "sa-skal-du-liva",
-      "slug": "sa-skal-du-liva",
-      "title": "Så skål du leva",
-      "melody": "Så skål du leva",
+      "id": "tre-jamare",
+      "slug": "tre-jamare",
+      "title": "Tre jamare",
+      "melody": "Byssan lull",
       "categoryId": "snapsvisor",
       "lyrics": [
-        "Så skål du leva,",
-        "och skål på friska liv,",
-        "där glädjen går i ringen,",
-        "och varje glas får nytt liv."
+        "// Byssan lull, utav brännvin blir man full,",
+        "jag får mig tre Jamare på festen//",
+        "Den ena får jag nu, den andra får du sen,",
+        "och den tredje får jag smyga fram ur västen."
       ],
-      "tags": ["snaps", "skål"],
+      "tags": [
+        "snaps"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "skal-dig-vanner",
-      "slug": "skal-dig-vanner",
-      "title": "Skål dig vänner",
-      "melody": "Skål dig vänner",
+      "id": "sa-lange-rosten-ar-mild",
+      "slug": "sa-lange-rosten-ar-mild",
+      "title": "Så länge rösten är mild",
+      "melody": "Så länge skutan kan gå",
       "categoryId": "snapsvisor",
       "lyrics": [
-        "Skål dig, vänner,",
-        "skål tillsammans,",
-        "natten blir så fin med sång,",
-        "och varje liten stund blir en glädje."
+        "Så länge rösten är mild,",
+        "så länge ingen är vild,",
+        "så länge spegeln på väggen ger halvskaplig bild.",
+        "",
+        "så länge alla kan gå,",
+        "så länge alla kan stå,",
+        "så länge alla kan tralla så fyller vi på.",
+        "",
+        "För vem har sagt att just du kom med storken",
+        "för att bli glad av att lukta på korken.",
+        "Men kring vårt bord här nånstans vi höjer bägarn med glans",
+        "och låter vinet gå ned i en yrande dans."
       ],
-      "tags": ["snaps", "vänner"],
+      "tags": [
+        "snaps",
+        "taube"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "goda-novell",
-      "slug": "goda-novell",
-      "title": "Goda kväll",
-      "melody": "Goda kväll",
+      "id": "till-spritbolaget",
+      "slug": "till-spritbolaget",
+      "title": "Till spritbolaget",
+      "melody": "Snickerboa (Emil i Lönneberga)",
       "categoryId": "snapsvisor",
       "lyrics": [
-        "Goda kväll, kära vänner,",
-        "vi har samlats här igen,",
-        "och fortfarandets sång,",
-        "fyller våra hjärtan."
+        "Till spritbolaget ränner jag och bankar på dess port.",
+        "Jag vill ha nå't som bränner bra och får mig sketfull fort.",
+        "Expediten sade godda', hur gammal kan min herre va'?",
+        "Har du nå't leg, ditt fula drägg? Kom hit igen när du fått skägg!",
+        "Nej, detta var ju inte bra, jag ska bli full ikväll.",
+        "Då plötsligt en idé fick jag, dom har ju sprit på Shell.",
+        "Många flaskor stod där på rad, så nu jag kan bli full och glad.",
+        "Den röda drycken åkte ner, nu kan jag inte titta mer!"
       ],
-      "tags": ["snaps", "kväll"],
+      "tags": [
+        "snaps",
+        "systembolaget"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "en-sommarvisa",
-      "slug": "en-sommarvisa",
-      "title": "En sommarvisa",
-      "melody": "En sommarvisa",
-      "categoryId": "midsommar",
-      "lyrics": [
-        "En sommarvisa,",
-        "en liten sång för dagen,",
-        "där luften är varm,",
-        "och hjärtat är lätt."
-      ],
-      "tags": ["midsommar", "sommar"],
-      "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
-    },
-    {
-      "id": "julvisa-1",
-      "slug": "julvisa-1",
-      "title": "Julvisa i stugan",
-      "melody": "Julvisa i stugan",
-      "categoryId": "jul",
-      "lyrics": [
-        "Julvisa i stugan,",
-        "ljus på fönsterbrädan,",
-        "snö som dalar sakta,",
-        "och glädjen i vårt hem."
-      ],
-      "tags": ["jul", "stuga"],
-      "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
-    },
-    {
-      "id": "studentens-liv",
-      "slug": "studentens-liv",
-      "title": "Studentens liv",
-      "melody": "Studentens liv",
-      "categoryId": "student",
-      "lyrics": [
-        "Studentens liv det går så fort,",
-        "från morgon till kväll,",
-        "med sång och vänner,",
-        "och ett hjärta utan trötthet."
-      ],
-      "tags": ["student", "liv"],
-      "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
-    },
-    {
-      "id": "skala-for-venner",
-      "slug": "skala-for-venner",
-      "title": "Skål för vänner",
-      "melody": "Skål för vänner",
+      "id": "tutingen",
+      "slug": "tutingen",
+      "title": "Tutingen",
+      "melody": "Jazzgossen",
       "categoryId": "snapsvisor",
       "lyrics": [
-        "Skål för vänner,",
-        "skål för glädje,",
-        "skål för kvällen,",
-        "som vi minns i många år."
+        "Och så kommer det en Tuting",
+        "genom luften som ett reaplan.",
+        "Och den träffar som en snyting",
+        "mitt på käften under röda kran.",
+        "Störtar ner i lilla magen",
+        "med jätteplask,",
+        "jätteplask jätte plask",
+        "",
+        "Och så blir man ganska dragen,",
+        "men pigg och rask,",
+        "pigg och rask, pigg och rask."
       ],
-      "tags": ["snaps", "vänner"],
+      "tags": [
+        "snaps"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     },
     {
-      "id": "barndomsminnen",
-      "slug": "barndomsminnen",
-      "title": "Barndomsminnen",
-      "melody": "Barndomsminnen",
-      "categoryId": "midsommar",
-      "lyrics": [
-        "Barndomsminnen dansar fram,",
-        "i sommarens ljus,",
-        "med barnslig glädje,",
-        "och ett hjärta som aldrig slutar."
-      ],
-      "tags": ["midsommar", "minnen"],
-      "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
-    },
-    {
-      "id": "en-klar-natt",
-      "slug": "en-klar-natt",
-      "title": "En klar natt",
-      "melody": "En klar natt",
-      "categoryId": "jul",
-      "lyrics": [
-        "En klar natt,",
-        "en stilla natt,",
-        "och ljusen täcker vårt hem,",
-        "med hopp och kärlek i vår famn."
-      ],
-      "tags": ["jul", "natt"],
-      "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
-    },
-    {
-      "id": "festens-lat",
-      "slug": "festens-lat",
-      "title": "Festens låt",
-      "melody": "Festens låt",
+      "id": "tank-om-jag-hade-nubben-pa-ett-snore",
+      "slug": "tank-om-jag-hade-nubben-pa-ett-snore",
+      "title": "Tänk om jag hade nubben på ett snöre",
+      "melody": "Hej tomtegubbar",
       "categoryId": "snapsvisor",
       "lyrics": [
-        "Festens låt,",
-        "festens låt,",
-        "berättar om glädjen vi bär,",
-        "och gör varje stund till ett minne." 
+        "Tänk om jag hade lilla nubben på ett snöre i halsen.",
+        "Tänk om jag hade lilla nubben på ett snöre i halsen.",
+        "Jag skulle dra den upp och ner,",
+        "så att den kändes som många fler.",
+        "Tänk om jag hade lilla nubben på ett snöre i halsen."
       ],
-      "tags": ["snaps", "fest"],
+      "tags": [
+        "snaps"
+      ],
       "language": "sv",
-      "createdAt": "2026-09-01T00:00:00.000Z",
-      "updatedAt": "2026-09-01T00:00:00.000Z"
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "ut-i-var-mage",
+      "slug": "ut-i-var-mage",
+      "title": "Ut i vår mage",
+      "melody": "Uti vår hage",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Uti vår mage, där växa begär.",
+        "Kom hjärtans kär.",
+        "Vill du mig något, så träffas vi där.",
+        "Kom Skåne och Aqua Vitae.",
+        "Kom O.P. och allt vad sprit ä’",
+        "Kom ljuva Genever. Kom Överste."
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "utan-smarta",
+      "slug": "utan-smarta",
+      "title": "Utan smärta",
+      "melody": "Gubben Noak",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Utan smärta, till vårt hjärta",
+        "nubben sig begav.",
+        "Åkte som på kana,",
+        "det beror på vana.",
+        "Tack du lille, att du ville",
+        "gå hos oss i kvav."
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "vi-ga-over-an-efter-sprit",
+      "slug": "vi-ga-over-an-efter-sprit",
+      "title": "Vi gå över ån efter sprit",
+      "melody": "Vi gå över daggstänkta berg",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Vi gå över ån efter sprit, fallera!",
+        "Men efter vatten gå vi ej en bit, fallera!",
+        "Men suppen nu bröder, tills näsan bliver röder,",
+        "imorgon är den åter akvavit, fallera!"
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "vi-tar-en-enkel-liten-sang",
+      "slug": "vi-tar-en-enkel-liten-sang",
+      "title": "Vi tar en enkel liten sång",
+      "melody": "Med en enkel tulipan",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Vi tar en enkel liten sång",
+        "men den får ej bli så lång,",
+        "vi har så bråttom,",
+        "vi har så bråttom",
+        "att fatta glaset.",
+        "Vi alla titlar lägger bort",
+        "så blir det inte så torrt",
+        "ty uti kväll ska vi ha det trevligt",
+        "uppå kalaset.",
+        "Det glada gänget",
+        "har träffats åter",
+        "och glädjen högt",
+        "uti taket står.",
+        "Vår kära värd nu sin röst upplåter",
+        "vi undra nu vad åt honom går.",
+        "Jo, med en enkel liten fras",
+        "han höjer sitt glas.",
+        "Han säger: Hejsan!",
+        "Vi tackar: Hoppsan!",
+        "Så tar vi Huttsan! Hej,hej!"
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "vi-aro-sma-humlor-vi",
+      "slug": "vi-aro-sma-humlor-vi",
+      "title": "Vi äro små humlor vi",
+      "melody": "Karl Alfred Boy",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Vi äro små humlor vi, bzz, bzz.",
+        "Vi äro små humlor vi, bzz, bzz.",
+        "Vi äro små humlor som tar oss en geting.",
+        "Vi äro små humlor vi, bzz, bzz.",
+        "",
+        "Vi äro små fiskar vi, blupp, blupp.",
+        "Vi äro små fiskar vi, blupp, blupp.",
+        "Vi äro små fiskar som fått oss en kallsup.",
+        "Vi äro små fiskar vi, blupp, blupp."
+      ],
+      "tags": [
+        "snaps",
+        "humlor"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "tva-sma-grona-algar",
+      "slug": "tva-sma-grona-algar",
+      "title": "Två små gröna älgar",
+      "melody": "Två små gröna älgar",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Två små gröna älgar,",
+        "skulle till att dö.",
+        "Klättra' upp i granens topp",
+        "för att svalka sig med snö.",
+        "Det var så skönt, så skönt,",
+        "för två små älgar.",
+        "",
+        "Skål!"
+      ],
+      "tags": [
+        "snaps",
+        "älgar"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "sjobloms-dass",
+      "slug": "sjobloms-dass",
+      "title": "Sjöbloms dass",
+      "melody": "Sjöbloms dass",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "När gäddorna leker i vik och vass,",
+        "och solen går ner bakom Sjöbloms dass,",
+        "Ja då är det vår.",
+        "Se upp där nere nu kommer den!"
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "intellektuell-visa",
+      "slug": "intellektuell-visa",
+      "title": "Intellektuell visa",
+      "melody": "Räven raskar över isen",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Räven raska röva riset.",
+        "Riset raska renar räven.",
+        "å röva ris, å röva rös.",
+        "å riva räven i röven.",
+        "",
+        "Finne finna femton flaskor",
+        "Flickan finna finnen fyller",
+        "å finnen fes, å flickan fås.",
+        "å riva flickan å flaskan",
+        "",
+        "Lisa längtar leva loppan.",
+        "Ludvig längtar Lisa lära.",
+        "å Lisa låg och läxan lär.",
+        "å leva loppan i ladan."
+      ],
+      "tags": [
+        "snaps",
+        "tungvrickare"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "helangorakatt",
+      "slug": "helangorakatt",
+      "title": "Helangorakatt",
+      "melody": "Vi gå över daggstänkta berg",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Det var en gång en helangorakatt, fallera.",
+        "Som älskade en vanlig bonnakatt, fallera.",
+        "Och följden blev en jamare,",
+        "fast den blev mycket tamare,",
+        "för den var bara halvan-går-a-katt, fallera."
+      ],
+      "tags": [
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "potatislandet",
+      "slug": "potatislandet",
+      "title": "Potatislandet",
+      "melody": "Långt nere i Småland",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Supen kan tagas på många handa vis",
+        "Den kröker sig i magen som rumpan på en gris",
+        "Vi skålar för Götaland! Vi skålar för Svealand!",
+        "Vi skålar för vårt potatisland som ger oss brännevin"
+      ],
+      "tags": [
+        "snaps",
+        "brännvin"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "forsta-snapsen-heter-goken",
+      "slug": "forsta-snapsen-heter-goken",
+      "title": "Första snapsen heter göken",
+      "melody": "Räven raskar över isen",
+      "categoryId": "snapsvisor",
+      "lyrics": [
+        "Första snapsen heter göken.",
+        "Första snapsen heter göken.",
+        "Får jag lov, ja får jag lov",
+        "att byta byxor med fröken?",
+        "Andra snapsen den var värre,",
+        "andra snapsen den var värre.",
+        "Får jag lov, får jag lov",
+        "att byta byxor me' min herre",
+        "Mina byxor är himmelsblå",
+        "men med dina är det dock si och så.",
+        "Får jag lov, får jag lov,",
+        "att byta byxor med göken."
+      ],
+      "tags": [
+        "snaps",
+        "göken"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "vinet-knappast-hunnit-sjunka",
+      "slug": "vinet-knappast-hunnit-sjunka",
+      "title": "Vinet knappast hunnit sjunka",
+      "melody": "Amanda Lundbom",
+      "categoryId": "vin-avec",
+      "lyrics": [
+        "Halvan knappast hunnit sjunka",
+        "Hej skuttiplutt tjodelittan dunka",
+        "förrän vi på nytt ska klunka",
+        "Hej pullepitt falleripsan tafs",
+        "Kan du sjunga häst, kusk, sits",
+        "Hej skuttiplutt tjodelittan vits",
+        "HUGG I!!",
+        "Då kan du denna ta med snits",
+        "Hej skulleplutt tjoderittsan slips."
+      ],
+      "tags": [
+        "vin",
+        "vinvisa"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "feta-fransyskor",
+      "slug": "feta-fransyskor",
+      "title": "Feta fransyskor",
+      "melody": "Tomtarnas julmarsch",
+      "categoryId": "vin-avec",
+      "lyrics": [
+        "Feta fransyskor som svettas om fötterna",
+        "de trampar druvor som sedan skall jäsas till vin",
+        "Transpirationen viktig e’",
+        "ty den ger fin bouquet",
+        "Vårtor och svampar följer me’,",
+        "men vad gör väl de’?",
+        "För…",
+        "Vi vill ha vin, vill ha vin, vill ha mera vin",
+        "även om följderna bli att vi må lida pin",
+        "Flickor: Flaskan och glaset gått i sin",
+        "Pojkar: Hit med vin, mera vin",
+        "Flickor: Tror ni att vi är fyllesvin?",
+        "",
+        "JA! (Fast större)"
+      ],
+      "tags": [
+        "vin",
+        "vinvisa",
+        "student"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "bordeaux-bordeaux",
+      "slug": "bordeaux-bordeaux",
+      "title": "Bordeaux, Bordeaux!",
+      "melody": "I sommarens soliga dagar",
+      "categoryId": "vin-avec",
+      "lyrics": [
+        "Jag minns än idag hur min fader",
+        "kom hem ifrån staden så glader",
+        "och rada upp flaskor i rader",
+        "och sade nöjd som så: Bordeaux, Bordeaux!",
+        "Han drack ett glas",
+        "kom i extas",
+        "och sedan blev det stort kalas",
+        "och vi små glin",
+        "ja vi drack vin",
+        "som första klassens fyllesvin",
+        "och vi dansade runt där på golvet",
+        "och skrek så vi blev blå: Bordeaux, Bordeaux!"
+      ],
+      "tags": [
+        "vin",
+        "vinvisa"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "rodvinsskal",
+      "slug": "rodvinsskal",
+      "title": "Rödvinsskål",
+      "melody": "Flickan i Havanna",
+      "categoryId": "vin-avec",
+      "lyrics": [
+        "Flickan vid din sida, hon har ännu rödvin kvar,",
+        "hon sitter nu och väntar att en skål vi tar.",
+        "Hej, nu kära vännen min, drick nu ur ditt röda vin,",
+        "glas blir tomt och Du blir full, skål mitt hjärtegull."
+      ],
+      "tags": [
+        "vin",
+        "vinvisa"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z",
+      "notes": "Vi kunde inte förlora, det var en så kallad vin-vin situation."
+    },
+    {
+      "id": "kaffevisa",
+      "slug": "kaffevisa",
+      "title": "Kaffevisa",
+      "melody": "Du ska få min gamla cykel",
+      "categoryId": "vin-avec",
+      "lyrics": [
+        "Vi har ätit och vi mår så väldans bra",
+        "och nu vill nog säkert alla kaffe ha",
+        "snart så fån ni höra stönen",
+        "när vi sjunger kaffebönen",
+        "Det skall höras långt, långt ut i denna sal!",
+        "",
+        "Kaffe, kaffe, kaffe, whiskey och likör",
+        "ger åt alla här ett riktigt gott humör",
+        "Och det kan ni ger er katten",
+        "vi ska sitta hela natten",
+        "dricka  kaffe, kaffe, whiskey och likör",
+        "",
+        "Kalle Scheven bland´ kaffe sitt med kron",
+        "det var medicin han hade denna  tron",
+        "och man blir ju allt en rask en",
+        "när man dricker kaffekasken",
+        "jublar högt i skyn och sedan tar man ton",
+        "",
+        "Kaffe, kaffe, kaffe, whiskey och likör"
+      ],
+      "tags": [
+        "kaffe",
+        "avec",
+        "kaffekask"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "uppa-kraftkalaset",
+      "slug": "uppa-kraftkalaset",
+      "title": "Uppå kräftkalaset",
+      "melody": "Upp på källarbacken",
+      "categoryId": "kraftskiva",
+      "lyrics": [
+        "Uppå kräftkalaset, uppå kräftkalaset",
+        "där ska ni tro",
+        "tar man sig en liten, tar man sig en liten",
+        "sup till var klo.",
+        "Genom strupen",
+        "lilla supen",
+        "smyger ner till lilla baken.",
+        "Vackra honor",
+        "dill i kronor",
+        "utav brännvin får man smaken."
+      ],
+      "tags": [
+        "kräftskiva",
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "kraftan-ar-ett-lackert-djur",
+      "slug": "kraftan-ar-ett-lackert-djur",
+      "title": "Kräftan är ett läckert djur",
+      "melody": "Kovan",
+      "categoryId": "kraftskiva",
+      "lyrics": [
+        "Kräftan är ett läckert djur,",
+        "läckert djur, läckert djur.",
+        "Färgen den går aldrig ur,",
+        "aldrig ur, aldrig ur.",
+        "Går den bakåt är den okokt,",
+        "går den framåt är det oklokt",
+        "att du tar en nubbe till,",
+        "men du gör ju som du vill."
+      ],
+      "tags": [
+        "kräftskiva",
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "kraftklon",
+      "slug": "kraftklon",
+      "title": "Kräftklon",
+      "melody": "Vi gå över daggstänkta berg",
+      "categoryId": "kraftskiva",
+      "lyrics": [
+        "Till kräftklon man tager en sup sup sup,",
+        "som letar sig ner i magens djup djup djup.",
+        "Och den som börjar tveka,",
+        "om detta var en räka,",
+        "han tar sig ytterligare en sup sup sup."
+      ],
+      "tags": [
+        "kräftskiva",
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "dom-nubbarna",
+      "slug": "dom-nubbarna",
+      "title": "Dom nubbarna",
+      "melody": "Små grodorna",
+      "categoryId": "kraftskiva",
+      "lyrics": [
+        "Dom nubbarna, dom nubbarna",
+        "är lustiga att ta",
+        "dom nubbarna, dom nubbarna",
+        "dom vill vi gärna ha.",
+        "Ej röra, ej röra, nej skala kräftan först",
+        "och sedan, och sedan, vi släcka ska vår törst."
+      ],
+      "tags": [
+        "kräftskiva",
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
+    },
+    {
+      "id": "krafta-prydd-med-dill",
+      "slug": "krafta-prydd-med-dill",
+      "title": "Kräfta prydd med dill",
+      "melody": "Blinka lilla stjärna",
+      "categoryId": "kraftskiva",
+      "lyrics": [
+        "Kräfta, kräfta prydd med dill,",
+        "och en immig sup därtill.",
+        "Bröd och smör och ost och sill,",
+        "och så några supar till.",
+        "Kräfta, kräfta prydd med dill,",
+        "nu har vi fått allt vad vi vill."
+      ],
+      "tags": [
+        "kräftskiva",
+        "snaps"
+      ],
+      "language": "sv",
+      "createdAt": "2026-09-21T00:00:00.000Z",
+      "updatedAt": "2026-09-21T00:00:00.000Z"
     }
   ],
   "booklets": []
