@@ -1,6 +1,6 @@
 export function CatalogHero() {
   return (
-    <section className="mb-10 max-w-2xl">
+    <section className="mb-10 max-w-2xl hidden md:block">
       <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
         Välj en visa
       </p>

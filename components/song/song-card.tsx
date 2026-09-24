@@ -16,7 +16,7 @@ export function SongCard({ song, category, isFavorite = false, onToggleFavorite 
     <div className="group relative flex min-h-64 flex-col overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5 shadow-[0_10px_26px_rgba(0,0,0,0.22)] transition duration-200 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-[0_16px_34px_rgba(0,0,0,0.34)]">
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -right-10 -top-12 h-28 w-28 rounded-full bg-[var(--accent)] opacity-10 blur-2xl transition duration-300 group-hover:opacity-25"
+        className="pointer-events-none absolute -right-10 -top-12 h-28 w-28 rounded-full bg-[var(--accent-deep)] opacity-40 blur-2xl transition duration-300 group-hover:opacity-60"
       />
 
       <Link
@@ -28,12 +28,7 @@ export function SongCard({ song, category, isFavorite = false, onToggleFavorite 
           <h2 className="line-clamp-2 min-h-14 max-w-[calc(100%-2rem)] font-display text-2xl font-semibold leading-[1.05] text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors">
             {song.title}
           </h2>
-          <span
-            aria-hidden="true"
-            className="mt-1 text-xl text-[var(--muted)] transition group-hover:translate-x-1 group-hover:text-[var(--accent)]"
-          >
-            →
-          </span>
+          
         </div>
 
         {song.melody && (

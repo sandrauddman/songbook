@@ -38,7 +38,7 @@ export function SongGrid({ songs, categories }: SongGridProps) {
           </Link>
         </div>
       ) : (
-        <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
           {songs.map((song) => (
             <SongCard
               key={song.id}
