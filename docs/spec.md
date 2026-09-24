@@ -1,6 +1,6 @@
 # Product & Technical Specification: Digital Sångbok (Songbook Web App)
 
-**Version:** 2.1.0  
+**Version:** 2.2.0  
 **Status:** Approved  
 **Target Audience:** Friends, family, party guests, dinner hosts / toastmasters, and administrators.
 
@@ -13,7 +13,7 @@ The **Digital Sångbok** is a modern, mobile-first responsive web application ta
 The backend data architecture is powered by a **`json-server` REST API sidecar** operating on `data/db.json`. The Next.js server-side data client connects directly to the sidecar on port 3001.
 
 Features are structured across three clear priority phases:
-- **Phase 1 (MVP / P0): The Lean MVP (Pure Songbook Experience)** — Fast, lightweight sing-along experience with debounced server-side query search, font sizing, category filtering, and direct links.
+- **Phase 1 (MVP / P0): The Lean MVP (Pure Songbook Experience)** — Fast, lightweight sing-along experience with immediate server-side query search, font sizing, category filtering, and direct links.
 - **Phase 2 (P1): Admin Management & Power Features** — PIN-protected song/category CRUD against `json-server`, QR code table sharing, favorites bookmarking, screen wake lock, and dark/light theme switching.
 - **Phase 3 (P2 & P3): Party Enhancements & Event Booklets** — Custom curated event booklets (*sånghäften*), category deletion reassignment wizard, offline PWA support, and printable PDF export.
 
@@ -53,7 +53,7 @@ Features are structured across three clear priority phases:
 
 #### Phase 1: MVP (P0)
 - **US-1 [P0 - Browse & Filter]:** As a guest, I want to filter songs by category chips (Snaps, Kräftskiva, Midsommar, etc.) querying `json-server` via `/songs?categoryId=[id]`.
-- **US-2 [P0 - Server-Side Search]:** As a guest, I want to type in the search bar and query `json-server` (`/songs?q=[term]`) with debounced inputs.
+- **US-2 [P0 - Server-Side Search]:** As a guest, I want to type in the search bar and query `json-server` (`/songs?q=[term]`) with immediate keystroke updates.
 - **US-3 [P0 - Sing-Along Lyric View]:** As a singer, I want large high-contrast lyrics with distinct verse spacing and a prominent "Melodi:" subtitle.
 - **US-4 [P0 - Dynamic Font Sizing]:** As a user, I want `A-` / `A+` buttons to resize text on the fly, with my preferred size saved in `localStorage`.
 - **US-5 [P0 - Shareable Deep Links]:** As a user, I want shareable URLs (`/visa/[slug]`) mapping directly to song IDs in `json-server`.
@@ -231,7 +231,7 @@ export interface SongBooklet {
 - Preference stored in browser `localStorage` and applied consistently across song views.
 
 #### 4. Server-Side Query Search & Category Filter
-- Debounced search query dispatched to `json-server` `/songs?q=[term]&categoryId=[id]` on port 3001.
+- Immediate search query dispatched to `json-server` `/songs?q=[term]&categoryId=[id]` on port 3001 upon keystroke.
 - Category chip bar with active state indicator and song count badges.
 - Loading indicator during search transitions.
 
@@ -347,7 +347,7 @@ songbook/
 │   ├── useCategories.ts              # [P0] Dynamic categories fetch hook
 │   ├── useFavorites.ts               # [P1] LocalStorage favorites hook
 │   ├── useFontSize.ts                # [P0] LocalStorage font size hook
-│   ├── useSongs.ts                   # [P0] Songs fetch & debounced search hook
+│   ├── useSongs.ts                   # [P0] Songs fetch & search hook
 │   ├── useTheme.ts                   # [P1] Dark / Light theme hook
 │   └── useWakeLock.ts                # [P1] Screen Wake Lock hook
 ├── lib/
@@ -367,7 +367,7 @@ songbook/
    - Setup `data/db.json` pre-seeded with 25+ Swedish songs and standard categories.
    - Configure `.env.local` and `package.json` scripts (`dev`, `dev:next`, `dev:server`).
   - Implement direct server-side data access to `json-server` (`/songs`, `/categories`).
-   - Implement home catalog with debounced server query search, category chips, and song grid.
+   - Implement home catalog with immediate server query search, category chips, and song grid.
   - Implement `/visa/[slug]` sing-along view with `A-` / `A+` font scaling.
 2. **Milestone 2 (Admin Management & Power Utilities - Phase 2 / P1):**
   - Implement PIN-protected `/admin` portal with Song CRUD (live preview) and Category CRUD (emoji + color pickers) routing mutating requests through the authenticated JSON Server client.
