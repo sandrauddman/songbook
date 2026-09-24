@@ -412,6 +412,28 @@ Provide a printable export feature that generates a formatted 2-column A4 paper 
 
 ---
 
+## Ticket T-17: Immediate Keystroke Search (Remove Debounce)
+- **Milestone:** Phase 1 (MVP)
+- **Priority:** `priority:p1`
+- **Labels:** `phase-1:mvp`, `type:ui/ux`, `type:refactor`, `priority:p1`
+- **User Story:** US-2: As a guest, I want to type in the search bar with immediate response without debounce delay or cursor lag.
+
+### Description
+Remove the 300ms debounce timer (`setTimeout`) and asynchronous render synchronization logic from `components/catalog/search-and-filter.tsx`. Immediately trigger the URL query parameter update on each keystroke (`onChange`) via `startTransition` and `router.replace` (Option B).
+
+### Technical Scope
+- **Files Created/Modified:**
+  - `components/catalog/search-and-filter.tsx` (Remove `useEffect` debounce timer, remove `prevInitialQuery` sync, trigger immediate URL update in `onChange` handler)
+
+### Acceptance Criteria
+- [x] Debounce timer and `setTimeout` logic are removed from `components/catalog/search-and-filter.tsx`.
+- [x] Search input state updates immediately on every keystroke with zero delay.
+- [x] URL `?q=...` parameter updates immediately via `startTransition` and `router.replace` upon typing.
+- [x] Clear button ("Rensa") resets query and URL immediately.
+- [x] Component passes build, lint, and formatting without errors.
+
+---
+
 ## 📊 Summary Ticket Overview Table
 
 | Ticket ID | Phase / Milestone | Priority | Title | Primary Components / Files |
@@ -432,3 +454,4 @@ Provide a printable export feature that generates a formatted 2-column A4 paper 
 | **T-14** | Phase 3 (Extras) | `P2` | Category Deletion Safety Reassignment | `components/admin/CategoryDeleteModal.tsx` |
 | **T-15** | Phase 3 (Extras) | `P2` | Offline PWA Support | `public/manifest.json`, Service Worker caching |
 | **T-16** | Phase 3 (Extras) | `P3` | Printable 2-Column PDF Booklet Generator| Print CSS / `@react-pdf/renderer` |
+| **T-17** | Phase 1 (MVP) | `P1` | Immediate Keystroke Search (Remove Debounce) | `components/catalog/search-and-filter.tsx` |
