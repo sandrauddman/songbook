@@ -18,4 +18,10 @@ describe('Header component', () => {
     const link = screen.getByRole('link', { name: /sångbokens startsida/i });
     expect(link).toHaveAttribute('href', '/');
   });
+
+  it('links to the about page', () => {
+    render(<Header />);
+
+    expect(screen.getByRole('link', { name: 'Om' })).toHaveAttribute('href', '/om');
+  });
 });

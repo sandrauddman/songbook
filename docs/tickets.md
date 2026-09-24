@@ -256,12 +256,12 @@ Create a dedicated `/om` page explaining the app's purpose, core features, snaps
 ### Technical Scope
 - **Files Created/Modified:**
   - `app/om/page.tsx` (About page content and metadata)
-  - `components/Header.tsx` (Navigation link to the About page)
+  - `components/layout/header.tsx` (Navigation link to the About page)
 
 ### Acceptance Criteria
-- [ ] `/om` renders a clear explanation of the app and its intended use.
-- [ ] The page includes a concise feature overview and snapsvisa etiquette guidance.
-- [ ] The page includes version or credits information and is reachable from the main navigation.
+- [x] `/om` renders a clear explanation of the app and its intended use.
+- [x] The page includes a concise feature overview and snapsvisa etiquette guidance.
+- [x] The page includes version or credits information and is reachable from the main navigation.
 
 ---
 
