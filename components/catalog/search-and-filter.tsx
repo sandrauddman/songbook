@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useTransition } from 'react';
+import { useState, useTransition } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 import type { Category } from '@/types/song';
@@ -26,34 +26,28 @@ export function SearchAndFilter({
   const [query, setQuery] = useState(initialQuery);
   const [prevInitialQuery, setPrevInitialQuery] = useState(initialQuery);
 
-  // Synchronize state during render if URL query changes externally (e.g. browser back/forward or reset link)
+  // Synchronize state if URL query changes externally and no transition is pending
   if (initialQuery !== prevInitialQuery) {
     setPrevInitialQuery(initialQuery);
-    setQuery(initialQuery);
+    if (!isPending) {
+      setQuery(initialQuery);
+    }
   }
 
-  // Debounced search query update to URL
-  useEffect(() => {
-    if (query === initialQuery) {
-      return;
-    }
-
-    const timeout = window.setTimeout(() => {
-      startTransition(() => {
-        const params = new URLSearchParams(searchParams.toString());
-        const trimmed = query.trim();
-        if (trimmed) {
-          params.set('q', trimmed);
-        } else {
-          params.delete('q');
-        }
-        const queryString = params.toString();
-        router.replace(queryString ? `${pathname}?${queryString}` : pathname, { scroll: false });
-      });
-    }, 300);
-
-    return () => window.clearTimeout(timeout);
-  }, [query, initialQuery, pathname, router, searchParams]);
+  function handleSearchChange(nextQuery: string) {
+    setQuery(nextQuery);
+    startTransition(() => {
+      const params = new URLSearchParams(searchParams.toString());
+      const trimmed = nextQuery.trim();
+      if (trimmed) {
+        params.set('q', trimmed);
+      } else {
+        params.delete('q');
+      }
+      const queryString = params.toString();
+      router.replace(queryString ? `${pathname}?${queryString}` : pathname, { scroll: false });
+    });
+  }
 
   function handleCategoryChange(categoryId: string) {
     startTransition(() => {
@@ -96,7 +90,7 @@ export function SearchAndFilter({
           id="song-search"
           type="search"
           value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          onChange={(event) => handleSearchChange(event.target.value)}
           placeholder="Sök titel, melodi eller text..."
           className="h-14 w-full rounded-2xl border border-[var(--line)] bg-[var(--surface)] px-12 pr-24 text-base text-[var(--ink)] shadow-[0_8px_24px_rgba(0,0,0,0.16)] outline-none transition placeholder:text-[var(--muted)] focus:border-[var(--accent)] focus:ring-4 focus:ring-[var(--accent-soft)]"
         />
