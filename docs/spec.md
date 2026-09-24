@@ -14,8 +14,8 @@ The backend data architecture is powered by a **`json-server` REST API sidecar**
 
 Features are structured across three clear priority phases:
 - **Phase 1 (MVP / P0): The Lean MVP (Pure Songbook Experience)** — Fast, lightweight sing-along experience with immediate server-side query search, font sizing, category filtering, and direct links.
-- **Phase 2 (P1): Admin Management & Power Features** — PIN-protected song/category CRUD against `json-server`, QR code table sharing, favorites bookmarking, screen wake lock, and dark/light theme switching.
-- **Phase 3 (P2 & P3): Party Enhancements & Event Booklets** — Custom curated event booklets (*sånghäften*), category deletion reassignment wizard, offline PWA support, and printable PDF export.
+- **Phase 2 (P1): Guest Experience Features** — About page, dark/light theme switching, favorites bookmarking, and QR code table sharing.
+- **Phase 3 (P2 & P3): Administration, Party Enhancements & Event Booklets** — Admin song/category management, screen wake lock, custom curated event booklets (*sånghäften*), category deletion reassignment wizard, offline PWA support, and printable PDF export.
 
 ---
 
@@ -29,16 +29,16 @@ Features are structured across three clear priority phases:
 | **Phase 1: Lean MVP** | **P0** | **Server-Side Search & Filters** | Real-time query param search (`/songs?q=...&categoryId=...`) against `json-server` full-text search with category filter chips. | Find any song in under 2 seconds when someone calls for a toast. |
 | **Phase 1: Lean MVP** | **P0** | **Direct Shareable URLs** | Unique route `/visa/[slug]` for opening a specific song directly. | Direct sharing in group chats (WhatsApp, SMS, Messenger). |
 | **Phase 1: Lean MVP** | **P0** | **`json-server` REST Data Store** | Standalone `json-server` process on port 3001 watching `data/db.json`, accessed directly by the Next.js server-side data client. | Real-time JSON REST persistence and synchronized catalog. |
-| **Phase 2: Power Features** | **P1.1** | **Admin Song CRUD** | PIN-protected admin portal (`/admin`) to Add, Edit lyrics/melodies/tags, and Delete songs through the JSON Server REST API. | Toastmaster/host can customize songs and add inside jokes. |
-| **Phase 2: Power Features** | **P1.2** | **Admin Category Management** | Create and edit custom themes (e.g. *Nyår 🍾*, *Bröllop 💍*, *Valborg 🔥*), emojis, and badge colors. | Customizes categories for specific events and seasons. |
-| **Phase 2: Power Features** | **P1.3** | **Table QR Code Sharing Modal** | One-tap button on any song generating a clean, scannable QR code. | Table mates point their phone camera at the screen to open song instantly. |
-| **Phase 2: Power Features** | **P1.4** | **Favorites Bookmarking (⭐)** | Star songs saved locally in browser `localStorage` with a dedicated "⭐ Mina favoriter" filter. | Guests keep their go-to snapsvisor 1 tap away throughout the night. |
-| **Phase 2: Power Features** | **P1.5** | **Screen Wake Lock API** | Keeps phone displays awake while viewing song lyrics via `navigator.wakeLock`. | Eliminates phones dimming or locking mid-song. |
-| **Phase 2: Power Features** | **P1.6** | **Theme Switcher (Dark / Light)** | Midnight OLED Black & Gold tavern dark mode vs. crisp daylight parchment mode. | Optimal contrast in dim candlelight or bright daylight. |
-| **Phase 2: Power Features** | **P1.7** | **About Page & Snapsvisa Guide** | Dedicated `/om` page featuring app background, quick feature guide, snapsvisa singing & toasting etiquette (*Snapsvisevett*), and version/credits info. | Dinner guests and hosts learn app features and traditional Swedish toasting rituals. |
-| **Phase 3: Enhancements** | **P2.1** | **Custom Event Booklets (*Sånghäften*)** | Curate an ordered playlist/booklet for a specific event (e.g. *"Midsommar 2026"*, *"Kräftskiva hos Anna"*). | Host guides the party through a scheduled set of songs. |
-| **Phase 3: Enhancements** | **P2.2** | **Category Deletion Safety Reassignment** | Interactive wizard to reassign songs to another category before deleting a category. | Prevents orphaned songs and accidental data loss. |
-| **Phase 3: Enhancements** | **P2.3** | **Offline PWA Support** | Service worker caching and manifest for full offline capability. | Works smoothly at remote summer cottages (*sommarstugor*) without cell coverage. |
+| **Phase 2: Guest Experience Features** | **P1.1** | **Table QR Code Sharing Modal** | One-tap button on any song generating a clean, scannable QR code. | Table mates point their phone camera at the screen to open song instantly. |
+| **Phase 2: Guest Experience Features** | **P1.2** | **Favorites Bookmarking (⭐)** | Star songs saved locally in browser `localStorage` with a dedicated "⭐ Mina favoriter" filter. | Guests keep their go-to snapsvisor 1 tap away throughout the night. |
+| **Phase 2: Guest Experience Features** | **P1.3** | **Theme Switcher (Dark / Light)** | Midnight OLED Black & Gold tavern dark mode vs. crisp daylight parchment mode. | Optimal contrast in dim candlelight or bright daylight. |
+| **Phase 2: Guest Experience Features** | **P1.4** | **About Page & Snapsvisa Guide** | Dedicated `/om` page featuring app background, quick feature guide, snapsvisa singing & toasting etiquette (*Snapsvisevett*), and version/credits info. | Dinner guests and hosts learn app features and traditional Swedish toasting rituals. |
+| **Phase 3: Enhancements** | **P2.1** | **Admin Song CRUD** | PIN-protected admin portal (`/admin`) to Add, Edit lyrics/melodies/tags, and Delete songs through the JSON Server REST API. | Toastmaster/host can customize songs and add inside jokes. |
+| **Phase 3: Enhancements** | **P2.2** | **Admin Category Management** | Create and edit custom themes (e.g. *Nyår 🍾*, *Bröllop 💍*, *Valborg 🔥*), emojis, and badge colors. | Customizes categories for specific events and seasons. |
+| **Phase 3: Enhancements** | **P2.3** | **Screen Wake Lock API** | Keeps phone displays awake while viewing song lyrics via `navigator.wakeLock`. | Eliminates phones dimming or locking mid-song. |
+| **Phase 3: Enhancements** | **P2.4** | **Custom Event Booklets (*Sånghäften*)** | Curate an ordered playlist/booklet for a specific event (e.g. *"Midsommar 2026"*, *"Kräftskiva hos Anna"*). | Host guides the party through a scheduled set of songs. |
+| **Phase 3: Enhancements** | **P2.5** | **Category Deletion Safety Reassignment** | Interactive wizard to reassign songs to another category before deleting a category. | Prevents orphaned songs and accidental data loss. |
+| **Phase 3: Enhancements** | **P2.6** | **Offline PWA Support** | Service worker caching and manifest for full offline capability. | Works smoothly at remote summer cottages (*sommarstugor*) without cell coverage. |
 | **Phase 3: Enhancements** | **P3.1** | **Printable PDF Export** | Formatted 2-column printable paper booklet generator. | Physical backup booklet for traditional table settings. |
 
 ---
@@ -59,19 +59,20 @@ Features are structured across three clear priority phases:
 - **US-5 [P0 - Shareable Deep Links]:** As a user, I want shareable URLs (`/visa/[slug]`) mapping directly to song IDs in `json-server`.
 - **US-6 [P0 - json-server Database & Dev Workflow]:** As a developer, I want `npm run dev` to start both Next.js (port 3000) and `json-server` (port 3001) watching `data/db.json`.
 
-#### Phase 2: Priority 1 Extras (P1)
-- **US-7 [P1.1 - Admin Song CRUD]:** As an admin, I want to log into `/admin` with a secure PIN to add, edit (with live preview), and delete songs through the JSON Server REST API.
-- **US-8 [P1.2 - Admin Category Management]:** As an admin, I want to create and edit categories with custom emojis, titles, and color badges.
-- **US-9 [P1.3 - Table QR Code Sharing]:** As a guest, I want to display a full-screen QR code modal for any song so table mates can scan it with their camera.
-- **US-10 [P1.4 - Local Favorites]:** As a guest, I want to star songs and access a "⭐ Mina favoriter" filter tab saved in my browser.
-- **US-11 [P1.5 - Screen Wake Lock]:** As a singer, I want my phone screen to stay illuminated while viewing lyrics so it doesn't turn off mid-toast.
-- **US-12 [P1.6 - Dark/Light Theme]:** As a user, I want to toggle between Nordic Tavern dark mode and Parchment light mode.
+#### Phase 2: Guest Experience Features (P1)
+- **US-7 [P1.1 - Table QR Code Sharing]:** As a guest, I want to display a full-screen QR code modal for any song so table mates can scan it with their camera.
+- **US-8 [P1.2 - Local Favorites]:** As a guest, I want to star songs and access a "⭐ Mina favoriter" filter tab saved in my browser.
+- **US-9 [P1.3 - Dark/Light Theme]:** As a user, I want to toggle between Nordic Tavern dark mode and Parchment light mode.
+- **US-10 [P1.4 - About Page]:** As a guest, I want to read about the app and learn basic snapsvisa singing and toasting etiquette.
 
-#### Phase 3: Priority 2 & 3 Extras (P2 / P3)
-- **US-13 [P2.1 - Event Booklets / Sånghäften]:** As a host, I want to build a custom ordered song list for a party with a dedicated shareable booklet URL stored under `"booklets"` in `json-server`.
-- **US-14 [P2.2 - Category Reassignment Wizard]:** As an admin deleting a category, I want a wizard prompting me to reassign existing songs to another category before deleting from `json-server`.
-- **US-15 [P2.3 - Offline PWA Support]:** As a user at a summer cottage with poor reception, I want the web app to load and function completely offline.
-- **US-16 [P3.1 - Printable PDF Export]:** As a host, I want to export an event booklet or song catalog as a printable 2-column A4 PDF.
+#### Phase 3: Administration, Party Enhancements & Event Booklets (P2 / P3)
+- **US-11 [P2.1 - Admin Song CRUD]:** As an admin, I want to log into `/admin` with a secure PIN to add, edit (with live preview), and delete songs through the JSON Server REST API.
+- **US-12 [P2.2 - Admin Category Management]:** As an admin, I want to create and edit categories with custom emojis, titles, and color badges.
+- **US-13 [P2.3 - Screen Wake Lock]:** As a singer, I want my phone screen to stay illuminated while viewing lyrics so it doesn't turn off mid-toast.
+- **US-14 [P2.4 - Event Booklets / Sånghäften]:** As a host, I want to build a custom ordered song list for a party with a dedicated shareable booklet URL stored under `"booklets"` in `json-server`.
+- **US-15 [P2.5 - Category Reassignment Wizard]:** As an admin deleting a category, I want a wizard prompting me to reassign existing songs to another category before deleting from `json-server`.
+- **US-16 [P2.6 - Offline PWA Support]:** As a user at a summer cottage with poor reception, I want the web app to load and function completely offline.
+- **US-17 [P3.1 - Printable PDF Export]:** As a host, I want to export an event booklet or song catalog as a printable 2-column A4 PDF.
 
 ---
 
@@ -97,7 +98,7 @@ graph TD
 | **Client Storage** | Browser `localStorage` | **P0 / P1** | Offline favorite bookmarks and user font size preferences |
 | **QR Generation** | `qrcode.react` / SVG generator | **P1** | Lightweight client-side QR code generation for table sharing |
 | **Admin Auth** | PIN / Passcode + Session Cookie | **P1** | Next.js server validates PIN before mutating `json-server` records |
-| **Browser APIs** | Screen Wake Lock API (`navigator.wakeLock`) | **P1** | Prevents mobile screen dimming/sleeping during singing |
+| **Browser APIs** | Screen Wake Lock API (`navigator.wakeLock`) | **P2** | Prevents mobile screen dimming/sleeping during singing |
 | **PWA / Service Worker** | `next-pwa` / Serwist | **P2** | Asset & data caching for zero-connection summer cabins |
 | **PDF Generation** | `@react-pdf/renderer` or print CSS | **P3** | Formatted 2-column printable paper songbook |
 
@@ -242,45 +243,48 @@ export interface SongBooklet {
 
 ---
 
-### 6.2 Phase 2: Priority 1 Extras (P1)
+### 6.2 Phase 2: Guest Experience Features (P1)
 
-#### 1. Admin Song Management (P1.1)
-- Protected `/admin` dashboard requiring PIN entry.
-- The admin server action or server-side client validates the PIN before executing `POST`, `PATCH`, or `DELETE` requests to `json-server`.
-- `SongFormModal` featuring live side-by-side lyrics preview, auto-slug generator, and category selector.
-
-#### 2. Admin Category Management (P1.2)
-- Category management tab in `/admin`.
-- `CategoryFormModal` featuring emoji presets (🥃, 🦞, 🌸, 🎄, 🍺, 🍾, ☕, 🎂, 💍, 🎓, 🎸, ☀️) and color badge selector.
-
-#### 3. Table QR Code Sharing Modal (P1.3)
+#### 1. Table QR Code Sharing Modal (P1.1)
 - "Dela med bordet" button on every song view opening a full-screen QR code linking to current `/visa/[slug]`.
 
-#### 4. Favorites Bookmarking (P1.4)
+#### 2. Favorites Bookmarking (P1.2)
 - Star toggle button (⭐) on catalog song cards and song detail view stored in `localStorage`.
 - "⭐ Mina favoriter" filter tab on the home catalog page.
 
-#### 5. Screen Wake Lock (P1.5)
-- Automatically requests `navigator.wakeLock.request('screen')` on song lyric page mount with visual badge indicator (*"Skärmen hålls vaken"*).
-
-#### 6. Dark & Light Theme Switcher (P1.6)
+#### 3. Dark & Light Theme Switcher (P1.3)
 - Toggle between **Nordic Tavern (Dark)** and **Parchment (Light)** modes.
 
 ---
 
-### 6.3 Phase 3: Priority 2 & 3 Extras (P2 / P3)
+#### 4. About Page & Snapsvisa Guide (P1.4)
+- Dedicated `/om` page with app background, feature overview, snapsvisa singing and toasting etiquette, and version/credits information.
 
-#### 1. Custom Event Booklets / Sånghäften (P2.1)
+### 6.3 Phase 3: Administration, Party Enhancements & Event Booklets (P2 / P3)
+
+#### 1. Admin Song Management (P2.1)
+- Protected `/admin` dashboard requiring PIN entry.
+- The admin server action or server-side client validates the PIN before executing `POST`, `PATCH`, or `DELETE` requests to `json-server`.
+- `SongFormModal` featuring live side-by-side lyrics preview, auto-slug generator, and category selector.
+
+#### 2. Admin Category Management (P2.2)
+- Category management tab in `/admin`.
+- `CategoryFormModal` featuring emoji presets (🥃, 🦞, 🌸, 🎄, 🍺, 🍾, ☕, 🎂, 💍, 🎓, 🎸, ☀️) and color badge selector.
+
+#### 3. Screen Wake Lock (P2.3)
+- Automatically requests `navigator.wakeLock.request('screen')` on song lyric page mount with visual badge indicator (*"Skärmen hålls vaken"*).
+
+#### 4. Custom Event Booklets / Sånghäften (P2.4)
 - Host can create named booklets stored in `data/db.json` under `"booklets"`.
 - Dedicated guest view `/hafte/[slug]` that walks through songs in order.
 
-#### 2. Category Deletion Safety Reassignment (P2.2)
+#### 5. Category Deletion Safety Reassignment (P2.5)
 - Wizard checking if songs reference `categoryId` and prompting admin to reassign songs before executing DELETE.
 
-#### 3. Offline PWA Support (P2.3)
+#### 6. Offline PWA Support (P2.6)
 - Manifest file and Service Worker caching app shell and static responses.
 
-#### 4. Printable PDF Export (P3.1)
+#### 7. Printable PDF Export (P3.1)
 - Generates a 2-column formatted printable A4 PDF booklet with table of contents.
 
 ---
@@ -294,12 +298,12 @@ The Next.js server-side data client communicates directly with `json-server` on 
 | `GET` | `/songs?q=&categoryId=` | **P0** | Public | Queries songs with filters |
 | `GET` | `/songs/[id]` | **P0** | Public | Returns single song by ID/slug |
 | `GET` | `/categories?_sort=order` | **P0** | Public | Returns all categories |
-| `POST` | `/songs` | **P1** | Admin PIN | Creates a song |
-| `PATCH` | `/songs/[id]` | **P1** | Admin PIN | Updates a song |
-| `DELETE` | `/songs/[id]` | **P1** | Admin PIN | Deletes a song |
-| `POST` | `/categories` | **P1** | Admin PIN | Creates a category |
-| `PATCH` | `/categories/[id]` | **P1** | Admin PIN | Updates a category |
-| `DELETE` | `/categories/[id]` | **P1 / P2** | Admin PIN | Deletes a category |
+| `POST` | `/songs` | **P2** | Admin PIN | Creates a song |
+| `PATCH` | `/songs/[id]` | **P2** | Admin PIN | Updates a song |
+| `DELETE` | `/songs/[id]` | **P2** | Admin PIN | Deletes a song |
+| `POST` | `/categories` | **P2** | Admin PIN | Creates a category |
+| `PATCH` | `/categories/[id]` | **P2** | Admin PIN | Updates a category |
+| `DELETE` | `/categories/[id]` | **P2** | Admin PIN | Deletes a category |
 | `GET` | `/booklets` | **P2** | Public | Returns event booklets |
 | `POST` | `/booklets` | **P2** | Admin PIN | Creates a booklet |
 
@@ -311,9 +315,11 @@ The Next.js server-side data client communicates directly with `json-server` on 
 songbook/
 ├── app/
 │   ├── admin/
-│   │   └── page.tsx                  # [P1] Admin dashboard (Songs & Categories tabs)
+│   │   └── page.tsx                  # [P2] Admin dashboard (Songs & Categories tabs)
 │   ├── hafte/                        # [P2] Event booklet guest view
 │   │   └── [slug]/page.tsx
+│   ├── om/
+│   │   └── page.tsx                  # [P1] About page & snapsvisa guide
 │   ├── globals.css                   # [P0] Tailwind v4 styling & dark mode vars
 │   ├── layout.tsx                    # [P0] Global metadata, fonts, theme provider
 │   ├── page.tsx                      # [P0] Catalog view with server-queried search & category filters
@@ -322,20 +328,20 @@ songbook/
 │           └── page.tsx              # [P0] Sing-along song view
 ├── components/
 │   ├── admin/
-│   │   ├── AdminLogin.tsx            # [P1] PIN entry modal/card
-│   │   ├── CategoryDeleteModal.tsx   # [P1/P2] Category deletion & reassignment modal
-│   │   ├── CategoryFormModal.tsx     # [P1] Add/Edit category modal with emoji & color picker
-│   │   ├── CategoryTable.tsx         # [P1] Category list & management cards
-│   │   ├── DeleteConfirmModal.tsx    # [P1] Song deletion confirm modal
-│   │   ├── SongFormModal.tsx         # [P1] Add/Edit song modal with live preview
-│   │   └── SongTable.tsx             # [P1] Song list & management table
+│   │   ├── AdminLogin.tsx            # [P2] PIN entry modal/card
+│   │   ├── CategoryDeleteModal.tsx   # [P2] Category deletion & reassignment modal
+│   │   ├── CategoryFormModal.tsx     # [P2] Add/Edit category modal with emoji & color picker
+│   │   ├── CategoryTable.tsx         # [P2] Category list & management cards
+│   │   ├── DeleteConfirmModal.tsx    # [P2] Song deletion confirm modal
+│   │   ├── SongFormModal.tsx         # [P2] Add/Edit song modal with live preview
+│   │   └── SongTable.tsx             # [P2] Song list & management table
 │   ├── FontSizeControls.tsx          # [P0] Lyric text sizing stepper (A- / A+)
 │   ├── Header.tsx                    # [P0] App branding, [P1] Theme switcher
 │   ├── SearchAndFilter.tsx           # [P0] Search input & category filter chips
 │   ├── ShareQRModal.tsx              # [P1] Table QR code popup modal
 │   ├── SongCard.tsx                  # [P0] Catalog card, [P1] favorite star button
-│   ├── SongDetail.tsx                # [P0] Sing-along view, [P1] Wake Lock status
-│   └── WakeLockIndicator.tsx         # [P1] Screen wake lock status pill
+│   ├── SongDetail.tsx                # [P0] Sing-along view, [P1] QR/favorites, [P2] Wake Lock status
+│   └── WakeLockIndicator.tsx         # [P2] Screen wake lock status pill
 ├── data/
 │   └── db.json                       # [P0] Unified JSON database (songs, categories, booklets)
 ├── docs/
@@ -343,13 +349,13 @@ songbook/
 │   ├── spec.md                       # Master Product & Technical Specification
 │   └── wireframe/                    # UI Wireframes & catalog concepts
 ├── hooks/
-│   ├── useAdminAuth.ts               # [P1] Admin auth session hook
+│   ├── useAdminAuth.ts               # [P2] Admin auth session hook
 │   ├── useCategories.ts              # [P0] Dynamic categories fetch hook
 │   ├── useFavorites.ts               # [P1] LocalStorage favorites hook
 │   ├── useFontSize.ts                # [P0] LocalStorage font size hook
 │   ├── useSongs.ts                   # [P0] Songs fetch & search hook
 │   ├── useTheme.ts                   # [P1] Dark / Light theme hook
-│   └── useWakeLock.ts                # [P1] Screen Wake Lock hook
+│   └── useWakeLock.ts                # [P2] Screen Wake Lock hook
 ├── lib/
 │   └── json-server-client.ts         # [P0] Helper client for upstream json-server communication
 ├── types/
@@ -369,13 +375,14 @@ songbook/
   - Implement direct server-side data access to `json-server` (`/songs`, `/categories`).
    - Implement home catalog with immediate server query search, category chips, and song grid.
   - Implement `/visa/[slug]` sing-along view with `A-` / `A+` font scaling.
-2. **Milestone 2 (Admin Management & Power Utilities - Phase 2 / P1):**
+2. **Milestone 2 (Guest Experience Features - Phase 2 / P1):**
+  - Implement the About page and snapsvisa guide.
+  - Implement Table QR Code sharing modal.
+  - Implement LocalStorage favorites bookmarking and "⭐ Mina favoriter" tab.
+  - Implement Tavern Dark / Parchment Light theme switcher.
+3. **Milestone 3 (Administration, Event Booklets & Offline - Phase 3 / P2 & P3):**
   - Implement PIN-protected `/admin` portal with Song CRUD (live preview) and Category CRUD (emoji + color pickers) routing mutating requests through the authenticated JSON Server client.
-   - Implement Screen Wake Lock API and indicator.
-   - Implement Table QR Code sharing modal.
-   - Implement LocalStorage favorites bookmarking and "⭐ Mina favoriter" tab.
-   - Implement Tavern Dark / Parchment Light theme switcher.
-3. **Milestone 3 (Event Booklets & Offline - Phase 3 / P2 & P3):**
+  - Implement Screen Wake Lock API and indicator.
    - Implement custom event booklets (*sånghäften*) curation stored under `"booklets"` in `data/db.json`.
    - Implement Category deletion safety reassignment wizard.
    - Configure Service Worker offline PWA caching.

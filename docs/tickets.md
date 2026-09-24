@@ -17,8 +17,8 @@ This document defines the complete issue/ticket backlog derived from [`docs/spec
 | Label | Description | Color |
 | :--- | :--- | :--- |
 | `phase-1:mvp` | Phase 1: The Lean MVP (P0) | `#E11D48` (Red) |
-| `phase-2:power` | Phase 2: Power Features & Admin (P1) | `#2563EB` (Blue) |
-| `phase-3:enhancements` | Phase 3: Booklets & Offline (P2/P3) | `#059669` (Green) |
+| `phase-2:power` | Phase 2: Guest Experience Features (P1) | `#2563EB` (Blue) |
+| `phase-3:enhancements` | Phase 3: Administration, Booklets & Offline (P2/P3) | `#059669` (Green) |
 | `type:feature` | New user-facing capability | `#0EA5E9` (Cyan) |
 | `type:backend` | API routes, `json-server`, data layer | `#8B5CF6` (Purple) |
 | `type:ui/ux` | Styling, components, accessibility | `#F59E0B` (Amber) |
@@ -149,13 +149,129 @@ Implement persistent dynamic font sizing across the song detail view. Users can 
 
 ---
 
-# ⚡ Phase 2: Admin Management & Power Features (P1)
+## Ticket T-17: Immediate Keystroke Search (Remove Debounce)
+- **Milestone:** Phase 1 (MVP)
+- **Priority:** `priority:p1`
+- **Labels:** `phase-1:mvp`, `type:ui/ux`, `type:refactor`, `priority:p1`
+- **User Story:** US-2: As a guest, I want to type in the search bar with immediate response without debounce delay or cursor lag.
+
+### Description
+Remove the 300ms debounce timer (`setTimeout`) and asynchronous render synchronization logic from `components/catalog/search-and-filter.tsx`. Immediately trigger the URL query parameter update on each keystroke (`onChange`) via `startTransition` and `router.replace` (Option B).
+
+### Technical Scope
+- **Files Created/Modified:**
+  - `components/catalog/search-and-filter.tsx` (Remove `useEffect` debounce timer, remove `prevInitialQuery` sync, trigger immediate URL update in `onChange` handler)
+
+### Acceptance Criteria
+- [x] Debounce timer and `setTimeout` logic are removed from `components/catalog/search-and-filter.tsx`.
+- [x] Search input state updates immediately on every keystroke with zero delay.
+- [x] URL `?q=...` parameter updates immediately via `startTransition` and `router.replace` upon typing.
+- [x] Clear button ("Rensa") resets query and URL immediately.
+- [x] Component passes build, lint, and formatting without errors.
+
+---
+
+# ⚡ Phase 2: Guest Experience Features (P1)
+
+## Ticket T-09: Table QR Code Sharing Modal
+- **Milestone:** Phase 2 (Guest Experience Features)
+- **Priority:** `priority:p1`
+- **Labels:** `phase-2:power`, `type:feature`, `type:ui/ux`, `priority:p1`
+- **User Story:** US-7: As a party guest, I want to show a QR code for a song on my phone so table mates can scan it with their camera.
+
+### Description
+Add a prominent "Dela med bordet" button on every song lyric page (`/visa/[slug]`) that opens a clean, high-contrast modal displaying a scannable QR code for the current URL, with a copy link button.
+
+### Technical Scope
+- **Files Created/Modified:**
+  - `components/ShareQRModal.tsx` (Modal dialog with QR code generator using `qrcode.react` or SVG canvas)
+  - Copy to clipboard button with success toast feedback
+  - Integration into `components/SongDetail.tsx`
+
+### Acceptance Criteria
+- [ ] Clicking "Dela med bordet" opens a clean modal with the rendered QR code.
+- [ ] Scanning the QR code with another smartphone opens the exact `/visa/[slug]` URL.
+- [ ] "Kopiera länk" button copies the URL to clipboard with visual feedback (*"Kopierad!"*).
+- [ ] Modal can be closed via tap outside, close `✕` button, or `Escape` key.
+
+---
+
+## Ticket T-10: Local Favorites Bookmarking (⭐)
+- **Milestone:** Phase 2 (Guest Experience Features)
+- **Priority:** `priority:p1`
+- **Labels:** `phase-2:power`, `type:feature`, `priority:p1`
+- **User Story:** US-8: As a guest, I want to star songs and access a "⭐ Mina favoriter" tab stored locally in my browser.
+
+### Description
+Implement a client-side favorites system allowing users to star/unstar songs from the catalog cards or the lyric view. Add a persistent "⭐ Mina favoriter" filter tab to the home page filter chips.
+
+### Technical Scope
+- **Files Created/Modified:**
+  - `hooks/useFavorites.ts` (Manages favorites state in `localStorage`: `toggleFavorite(songId)`, `isFavorite(songId)`, `favoriteIds`)
+  - `components/SongCard.tsx` (Interactive star button with filled/unfilled state)
+  - `components/SongDetail.tsx` (Star button in header)
+  - `components/SearchAndFilter.tsx` (Add "⭐ Favoriter (N)" chip)
+
+### Acceptance Criteria
+- [ ] Tapping the star icon on any card or detail page toggles favorite status.
+- [ ] Star status persists across page reloads and browser sessions via `localStorage`.
+- [ ] Clicking the "⭐ Favoriter" filter chip shows only starred songs.
+- [ ] If no favorites exist, selecting the tab displays a friendly empty state message (*"Du har inga sparade favoriter än. Klicka på stjärnan för att spara!"*).
+
+---
+
+## Ticket T-12: Dark & Light Theme Switcher
+- **Milestone:** Phase 2 (Guest Experience Features)
+- **Priority:** `priority:p1`
+- **Labels:** `phase-2:power`, `type:ui/ux`, `priority:p1`
+- **User Story:** US-9: As a user, I want to toggle between Nordic Tavern dark mode and Parchment light mode.
+
+### Description
+Implement a global theme switcher allowing users to toggle between **Nordic Tavern (Dark Mode)** and **Parchment (Light Mode)**, with system preference detection and `localStorage` persistence.
+
+### Technical Scope
+- **Files Created/Modified:**
+  - `hooks/useTheme.ts` (Theme hook with `theme`, `toggleTheme`, `setTheme`)
+  - `components/Header.tsx` (Theme toggle button with Sun / Moon icon)
+  - `app/globals.css` (Tailwind CSS custom color tokens for tavern dark vs parchment light)
+  - `app/layout.tsx` (Theme provider script preventing flash of unstyled theme on load)
+
+### Acceptance Criteria
+- [ ] Toggling theme switches the whole application between Tavern Dark and Parchment Light.
+- [ ] Selected theme is saved in `localStorage` and applied on reload without UI flash.
+- [ ] High contrast lyric text and clear readable badges in both themes.
+- [ ] Defaults to user's system OS preference (`prefers-color-scheme`) on initial visit.
+
+---
+
+## Ticket T-18: About Page & Snapsvisa Guide
+- **Milestone:** Phase 2 (Guest Experience Features)
+- **Priority:** `priority:p1`
+- **Labels:** `phase-2:power`, `type:feature`, `type:ui/ux`, `priority:p1`
+- **User Story:** US-10: As a guest, I want to read about the app and learn basic snapsvisa singing and toasting etiquette.
+
+### Description
+Create a dedicated `/om` page explaining the app's purpose, core features, snapsvisa singing and toasting etiquette, and version or credits information.
+
+### Technical Scope
+- **Files Created/Modified:**
+  - `app/om/page.tsx` (About page content and metadata)
+  - `components/Header.tsx` (Navigation link to the About page)
+
+### Acceptance Criteria
+- [ ] `/om` renders a clear explanation of the app and its intended use.
+- [ ] The page includes a concise feature overview and snapsvisa etiquette guidance.
+- [ ] The page includes version or credits information and is reachable from the main navigation.
+
+---
+
+# 📦 Phase 3: Administration, Party Enhancements & Booklets (P2 / P3)
 
 ## Ticket T-06: Admin PIN Authentication & JSON Server Security
-- **Milestone:** Phase 2 (Power Features)
-- **Priority:** `priority:p1`
-- **Labels:** `phase-2:power`, `type:backend`, `priority:p1`
-- **User Story:** US-7: As an admin/toastmaster, I want to authenticate with a secure PIN to manage songs and categories.
+- **Milestone:** Phase 3 (Administration & Enhancements)
+- **Priority:** `priority:p2`
+- **Labels:** `phase-3:enhancements`, `type:backend`, `priority:p2`
+- **User Story:** US-11: As an admin/toastmaster, I want to authenticate with a secure PIN to manage songs and categories.
 
 ### Description
 Implement PIN-based authentication for the `/admin` portal. Song and category mutations must verify the admin PIN session before sending `POST`, `PATCH`, or `DELETE` requests through the JSON Server client.
@@ -176,10 +292,10 @@ Implement PIN-based authentication for the `/admin` portal. Song and category mu
 ---
 
 ## Ticket T-07: Admin Song Management with Live Preview (CRUD)
-- **Milestone:** Phase 2 (Power Features)
-- **Priority:** `priority:p1`
-- **Labels:** `phase-2:power`, `type:feature`, `type:ui/ux`, `priority:p1`
-- **User Story:** US-7: As an admin, I want to add, edit, and delete songs with a live preview so I can customize the catalog for parties.
+- **Milestone:** Phase 3 (Administration & Enhancements)
+- **Priority:** `priority:p2`
+- **Labels:** `phase-3:enhancements`, `type:feature`, `type:ui/ux`, `priority:p2`
+- **User Story:** US-11: As an admin, I want to add, edit, and delete songs with a live preview so I can customize the catalog for parties.
 
 ### Description
 Create the song management dashboard in `/admin` with a searchable song table, an "Add Song" / "Edit Song" modal featuring live side-by-side lyrics rendering, auto-slug generator, and a deletion confirmation modal.
@@ -202,10 +318,10 @@ Create the song management dashboard in `/admin` with a searchable song table, a
 ---
 
 ## Ticket T-08: Admin Category Management (CRUD)
-- **Milestone:** Phase 2 (Power Features)
-- **Priority:** `priority:p1`
-- **Labels:** `phase-2:power`, `type:feature`, `type:ui/ux`, `priority:p1`
-- **User Story:** US-8: As an admin, I want to create and edit categories with emojis, titles, and color badges.
+- **Milestone:** Phase 3 (Administration & Enhancements)
+- **Priority:** `priority:p2`
+- **Labels:** `phase-3:enhancements`, `type:feature`, `type:ui/ux`, `priority:p2`
+- **User Story:** US-12: As an admin, I want to create and edit categories with emojis, titles, and color badges.
 
 ### Description
 Implement category management in `/admin` enabling the host to create custom event categories (e.g. *Nyår 🍾*, *Kräftskiva 🦞*, *Bröllop 💍*) with emoji pickers and color badge themes.
@@ -224,58 +340,11 @@ Implement category management in `/admin` enabling the host to create custom eve
 
 ---
 
-## Ticket T-09: Table QR Code Sharing Modal
-- **Milestone:** Phase 2 (Power Features)
-- **Priority:** `priority:p1`
-- **Labels:** `phase-2:power`, `type:feature`, `type:ui/ux`, `priority:p1`
-- **User Story:** US-9: As a party guest, I want to show a QR code for a song on my phone so table mates can scan it with their camera.
-
-### Description
-Add a prominent "Dela med bordet" button on every song lyric page (`/visa/[slug]`) that opens a clean, high-contrast modal displaying a scannable QR code for the current URL, with a copy link button.
-
-### Technical Scope
-- **Files Created/Modified:**
-  - `components/ShareQRModal.tsx` (Modal dialog with QR code generator using `qrcode.react` or SVG canvas)
-  - Copy to clipboard button with success toast feedback
-  - Integration into `components/SongDetail.tsx`
-
-### Acceptance Criteria
-- [ ] Clicking "Dela med bordet" opens a clean modal with the rendered QR code.
-- [ ] Scanning the QR code with another smartphone opens the exact `/visa/[slug]` URL.
-- [ ] "Kopiera länk" button copies the URL to clipboard with visual feedback (*"Kopierad!"*).
-- [ ] Modal can be closed via tap outside, close `✕` button, or `Escape` key.
-
----
-
-## Ticket T-10: Local Favorites Bookmarking (⭐)
-- **Milestone:** Phase 2 (Power Features)
-- **Priority:** `priority:p1`
-- **Labels:** `phase-2:power`, `type:feature`, `priority:p1`
-- **User Story:** US-10: As a guest, I want to star songs and access a "⭐ Mina favoriter" tab stored locally in my browser.
-
-### Description
-Implement a client-side favorites system allowing users to star/unstar songs from the catalog cards or the lyric view. Add a persistent "⭐ Mina favoriter" filter tab to the home page filter chips.
-
-### Technical Scope
-- **Files Created/Modified:**
-  - `hooks/useFavorites.ts` (Manages favorites state in `localStorage`: `toggleFavorite(songId)`, `isFavorite(songId)`, `favoriteIds`)
-  - `components/SongCard.tsx` (Interactive star button with filled/unfilled state)
-  - `components/SongDetail.tsx` (Star button in header)
-  - `components/SearchAndFilter.tsx` (Add "⭐ Favoriter (N)" chip)
-
-### Acceptance Criteria
-- [ ] Tapping the star icon on any card or detail page toggles favorite status.
-- [ ] Star status persists across page reloads and browser sessions via `localStorage`.
-- [ ] Clicking the "⭐ Favoriter" filter chip shows only starred songs.
-- [ ] If no favorites exist, selecting the tab displays a friendly empty state message (*"Du har inga sparade favoriter än. Klicka på stjärnan för att spara!"*).
-
----
-
 ## Ticket T-11: Screen Wake Lock API & Status Pill
-- **Milestone:** Phase 2 (Power Features)
-- **Priority:** `priority:p1`
-- **Labels:** `phase-2:power`, `type:feature`, `type:ui/ux`, `priority:p1`
-- **User Story:** US-11: As a singer, I want my phone screen to stay awake while viewing lyrics so it doesn't turn off mid-toast.
+- **Milestone:** Phase 3 (Administration & Enhancements)
+- **Priority:** `priority:p2`
+- **Labels:** `phase-3:enhancements`, `type:feature`, `type:ui/ux`, `priority:p2`
+- **User Story:** US-13: As a singer, I want my phone screen to stay awake while viewing lyrics so it doesn't turn off mid-toast.
 
 ### Description
 Integrate the Browser Screen Wake Lock API (`navigator.wakeLock`) on the song detail page (`/visa/[slug]`). Provide a subtle visual status pill in the UI indicating that the screen is being kept awake, with graceful fallback for unsupported browsers.
@@ -295,37 +364,11 @@ Integrate the Browser Screen Wake Lock API (`navigator.wakeLock`) on the song de
 
 ---
 
-## Ticket T-12: Dark & Light Theme Switcher
-- **Milestone:** Phase 2 (Power Features)
-- **Priority:** `priority:p1`
-- **Labels:** `phase-2:power`, `type:ui/ux`, `priority:p1`
-- **User Story:** US-12: As a user, I want to toggle between Nordic Tavern dark mode and Parchment light mode.
-
-### Description
-Implement a global theme switcher allowing users to toggle between **Nordic Tavern (Dark Mode)** and **Parchment (Light Mode)**, with system preference detection and `localStorage` persistence.
-
-### Technical Scope
-- **Files Created/Modified:**
-  - `hooks/useTheme.ts` (Theme hook with `theme`, `toggleTheme`, `setTheme`)
-  - `components/Header.tsx` (Theme toggle button with Sun / Moon icon)
-  - `app/globals.css` (Tailwind CSS custom color tokens for tavern dark vs parchment light)
-  - `app/layout.tsx` (Theme provider script preventing flash of unstyled theme on load)
-
-### Acceptance Criteria
-- [ ] Toggling theme switches the whole application between Tavern Dark and Parchment Light.
-- [ ] Selected theme is saved in `localStorage` and applied on reload without UI flash.
-- [ ] High contrast lyric text and clear readable badges in both themes.
-- [ ] Defaults to user's system OS preference (`prefers-color-scheme`) on initial visit.
-
----
-
-# 📦 Phase 3: Party Enhancements & Booklets (P2 / P3)
-
 ## Ticket T-13: Custom Event Booklets (*Sånghäften*)
 - **Milestone:** Phase 3 (Enhancements)
 - **Priority:** `priority:p2`
 - **Labels:** `phase-3:enhancements`, `type:feature`, `priority:p2`
-- **User Story:** US-13: As a dinner host, I want to build a custom ordered song list for a party with a dedicated shareable booklet URL.
+- **User Story:** US-14: As a dinner host, I want to build a custom ordered song list for a party with a dedicated shareable booklet URL.
 
 ### Description
 Enable hosts to create named event booklets (e.g. *"Midsommar 2026"*, *"Kräftskiva hos Anna"*) by selecting and ordering songs. Provide a dedicated guest booklet view (`/hafte/[slug]`) that steps through the curated songs in sequence.
@@ -349,7 +392,7 @@ Enable hosts to create named event booklets (e.g. *"Midsommar 2026"*, *"Kräftsk
 - **Milestone:** Phase 3 (Enhancements)
 - **Priority:** `priority:p2`
 - **Labels:** `phase-3:enhancements`, `type:feature`, `type:ui/ux`, `priority:p2`
-- **User Story:** US-14: As an admin deleting a category, I want a wizard prompting me to reassign existing songs to another category before deletion.
+- **User Story:** US-15: As an admin deleting a category, I want a wizard prompting me to reassign existing songs to another category before deletion.
 
 ### Description
 Prevent orphaned songs when deleting a category in `/admin`. If songs belong to the category being deleted, display a modal wizard allowing the admin to choose a target replacement category for all affected songs before completing deletion.
@@ -371,7 +414,7 @@ Prevent orphaned songs when deleting a category in `/admin`. If songs belong to 
 - **Milestone:** Phase 3 (Enhancements)
 - **Priority:** `priority:p2`
 - **Labels:** `phase-3:enhancements`, `type:feature`, `priority:p2`
-- **User Story:** US-15: As a user at a summer cottage with poor reception, I want the web app to load and function offline.
+- **User Story:** US-16: As a user at a summer cottage with poor reception, I want the web app to load and function offline.
 
 ### Description
 Configure Progressive Web App (PWA) manifest and Service Worker caching strategies so guests can install the app on their phone home screen and access cached songs and categories completely offline.
@@ -393,7 +436,7 @@ Configure Progressive Web App (PWA) manifest and Service Worker caching strategi
 - **Milestone:** Phase 3 (Enhancements)
 - **Priority:** `priority:p3`
 - **Labels:** `phase-3:enhancements`, `type:feature`, `priority:p3`
-- **User Story:** US-16: As a host, I want to export an event booklet or song catalog as a formatted printable 2-column A4 PDF.
+- **User Story:** US-17: As a host, I want to export an event booklet or song catalog as a formatted printable 2-column A4 PDF.
 
 ### Description
 Provide a printable export feature that generates a formatted 2-column A4 paper songbook (sånghäfte) with table of contents, melody subtitles, and clean page breaks for physical table settings.
@@ -412,26 +455,6 @@ Provide a printable export feature that generates a formatted 2-column A4 paper 
 
 ---
 
-## Ticket T-17: Immediate Keystroke Search (Remove Debounce)
-- **Milestone:** Phase 1 (MVP)
-- **Priority:** `priority:p1`
-- **Labels:** `phase-1:mvp`, `type:ui/ux`, `type:refactor`, `priority:p1`
-- **User Story:** US-2: As a guest, I want to type in the search bar with immediate response without debounce delay or cursor lag.
-
-### Description
-Remove the 300ms debounce timer (`setTimeout`) and asynchronous render synchronization logic from `components/catalog/search-and-filter.tsx`. Immediately trigger the URL query parameter update on each keystroke (`onChange`) via `startTransition` and `router.replace` (Option B).
-
-### Technical Scope
-- **Files Created/Modified:**
-  - `components/catalog/search-and-filter.tsx` (Remove `useEffect` debounce timer, remove `prevInitialQuery` sync, trigger immediate URL update in `onChange` handler)
-
-### Acceptance Criteria
-- [x] Debounce timer and `setTimeout` logic are removed from `components/catalog/search-and-filter.tsx`.
-- [x] Search input state updates immediately on every keystroke with zero delay.
-- [x] URL `?q=...` parameter updates immediately via `startTransition` and `router.replace` upon typing.
-- [x] Clear button ("Rensa") resets query and URL immediately.
-- [x] Component passes build, lint, and formatting without errors.
-
 ---
 
 ## 📊 Summary Ticket Overview Table
@@ -443,15 +466,16 @@ Remove the 300ms debounce timer (`setTimeout`) and asynchronous render synchroni
 | **T-03** | Phase 1 (MVP) | `P0` | Catalog Home View & Debounced Search | `app/page.tsx`, `components/SearchAndFilter.tsx`, `SongCard.tsx` |
 | **T-04** | Phase 1 (MVP) | `P0` | Sing-Along Lyric View & Navigation | `app/visa/[slug]/page.tsx`, `components/SongDetail.tsx` |
 | **T-05** | Phase 1 (MVP) | `P0` | Dynamic Font Sizing Stepper | `hooks/useFontSize.ts`, `components/FontSizeControls.tsx` |
-| **T-06** | Phase 2 (Power) | `P1` | Admin PIN Authentication & JSON Server Security | `lib/admin-auth.ts`, `hooks/useAdminAuth.ts`, `AdminLogin.tsx` |
-| **T-07** | Phase 2 (Power) | `P1` | Admin Song Management with Live Preview | `app/admin/page.tsx`, `SongTable.tsx`, `SongFormModal.tsx` |
-| **T-08** | Phase 2 (Power) | `P1` | Admin Category Management | `CategoryTable.tsx`, `CategoryFormModal.tsx` |
-| **T-09** | Phase 2 (Power) | `P1` | Table QR Code Sharing Modal | `components/ShareQRModal.tsx`, `qrcode.react` |
-| **T-10** | Phase 2 (Power) | `P1` | Local Favorites Bookmarking (⭐) | `hooks/useFavorites.ts`, `SongCard.tsx`, filter tab |
-| **T-11** | Phase 2 (Power) | `P1` | Screen Wake Lock API & Status Pill | `hooks/useWakeLock.ts`, `components/WakeLockIndicator.tsx` |
-| **T-12** | Phase 2 (Power) | `P1` | Dark & Light Theme Switcher | `hooks/useTheme.ts`, `components/Header.tsx`, `globals.css` |
+| **T-06** | Phase 3 (Administration) | `P2` | Admin PIN Authentication & JSON Server Security | `lib/admin-auth.ts`, `hooks/useAdminAuth.ts`, `AdminLogin.tsx` |
+| **T-07** | Phase 3 (Administration) | `P2` | Admin Song Management with Live Preview | `app/admin/page.tsx`, `SongTable.tsx`, `SongFormModal.tsx` |
+| **T-08** | Phase 3 (Administration) | `P2` | Admin Category Management | `CategoryTable.tsx`, `CategoryFormModal.tsx` |
+| **T-09** | Phase 2 (Guest Experience) | `P1` | Table QR Code Sharing Modal | `components/ShareQRModal.tsx`, `qrcode.react` |
+| **T-10** | Phase 2 (Guest Experience) | `P1` | Local Favorites Bookmarking (⭐) | `hooks/useFavorites.ts`, `SongCard.tsx`, filter tab |
+| **T-11** | Phase 3 (Administration) | `P2` | Screen Wake Lock API & Status Pill | `hooks/useWakeLock.ts`, `components/WakeLockIndicator.tsx` |
+| **T-12** | Phase 2 (Guest Experience) | `P1` | Dark & Light Theme Switcher | `hooks/useTheme.ts`, `components/Header.tsx`, `globals.css` |
 | **T-13** | Phase 3 (Extras) | `P2` | Custom Event Booklets (*Sånghäften*) | `app/hafte/[slug]/page.tsx`, `app/api/booklets` |
 | **T-14** | Phase 3 (Extras) | `P2` | Category Deletion Safety Reassignment | `components/admin/CategoryDeleteModal.tsx` |
 | **T-15** | Phase 3 (Extras) | `P2` | Offline PWA Support | `public/manifest.json`, Service Worker caching |
 | **T-16** | Phase 3 (Extras) | `P3` | Printable 2-Column PDF Booklet Generator| Print CSS / `@react-pdf/renderer` |
 | **T-17** | Phase 1 (MVP) | `P1` | Immediate Keystroke Search (Remove Debounce) | `components/catalog/search-and-filter.tsx` |
+| **T-18** | Phase 2 (Guest Experience) | `P1` | About Page & Snapsvisa Guide | `app/om/page.tsx`, `components/Header.tsx` |
