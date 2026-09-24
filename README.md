@@ -11,7 +11,7 @@ Målgruppen är toastmasters och deltagare av fest/event. Istället för att ha 
 
 
 ## Funktioner
-Appen idag innehåller 27 visor som man lätt kan söka bland i sökfältet. Sångerna är kategoriesarade så att man lätt kan hitta en låt som är lämplig till tillfället. Man kan filtrera lätt bland de olika kategorierna under sökfältet.
+Appen idag innehåller 57 visor som man lätt kan söka bland i sökfältet. Sångerna är kategoriesarade så att man lätt kan hitta en låt som är lämplig till tillfället. Man kan filtrera lätt bland de olika kategorierna under sökfältet.
 
 Sångsidan är utformad för att vara tydlig för användaren och det finns knappar längst upp för att kunna justera storleken på texten 
 
@@ -56,7 +56,7 @@ Projektet är en modern webbapp byggd med följande teknikstack:
 
 
 ## Kända begränsningar
- - För tillfället så består sångboken av 27 sånger som är genererade av AI. Faktiska sånger kommer tillkomma inom kort. Det kan dock vara milt underhållande att se påhittade texter av AI om man har sånn humor. Se till exempel sången "mera brännvin".
+
  - Faviicon borde bytas ut till något mer stilenligt.
  - Kategorier borde inte ha slidebar utan borde visas under varandra för att göra sidan mer användarvänlig.
 
