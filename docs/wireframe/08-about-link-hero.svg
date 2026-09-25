@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#f5efe2"/>
+  <rect x="34" y="28" width="832" height="594" rx="18" fill="#fffaf0" stroke="#c9bda8" stroke-width="2"/>
+  <rect x="34" y="28" width="832" height="82" rx="18" fill="#25352f"/>
+  <text x="74" y="61" fill="#d7b45a" font-family="Arial" font-size="13" font-weight="bold" letter-spacing="3">SANGBOK</text><text x="74" y="91" fill="#fffaf0" font-family="Georgia" font-size="26" font-weight="bold">Uddmans basta snapsvisor!</text>
+  <text x="74" y="159" fill="#b2832e" font-family="Arial" font-size="13" font-weight="bold" letter-spacing="3">VALJ EN VISA</text><text x="74" y="204" fill="#25352f" font-family="Georgia" font-size="42" font-weight="bold">Sangen borjar har.</text><text x="74" y="235" fill="#6c756e" font-family="Arial" font-size="16">Bladdra bland visor for kvallens alla skalar.</text>
+  <rect x="74" y="254" width="155" height="34" rx="8" fill="#d7b45a"/><text x="151" y="276" text-anchor="middle" fill="#25352f" font-family="Arial" font-size="14" font-weight="bold">Om sangboken</text>
+  <rect x="74" y="315" width="752" height="45" rx="9" fill="#f0eadc" stroke="#c9bda8"/><text x="96" y="343" fill="#6c756e" font-family="Arial" font-size="15">Sok visa, melodi eller text...</text>
+  <rect x="74" y="384" width="112" height="32" rx="16" fill="#d7b45a"/><text x="130" y="405" text-anchor="middle" fill="#25352f" font-family="Arial" font-size="13" font-weight="bold">Alla</text><rect x="198" y="384" width="150" height="32" rx="16" fill="#e8dfcf"/><text x="273" y="405" text-anchor="middle" fill="#25352f" font-family="Arial" font-size="13">Snapsvisor</text>
+  <rect x="74" y="450" width="236" height="120" rx="14" fill="#fffaf0" stroke="#c9bda8"/><text x="96" y="485" fill="#25352f" font-family="Georgia" font-size="22" font-weight="bold">Helan Gar</text><text x="96" y="514" fill="#6c756e" font-family="Arial" font-size="13">Melodi: Helan gar</text>
+  <rect x="330" y="450" width="236" height="120" rx="14" fill="#fffaf0" stroke="#c9bda8"/><text x="352" y="485" fill="#25352f" font-family="Georgia" font-size="22" font-weight="bold">Halvan</text><text x="352" y="514" fill="#6c756e" font-family="Arial" font-size="13">Melodi: Trad.</text>
+  <text x="450" y="600" text-anchor="middle" fill="#8b6823" font-family="Arial" font-size="14" font-weight="bold">OPTION 2: LINK BELOW HERO</text>
+</svg>
