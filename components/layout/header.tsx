@@ -18,7 +18,7 @@ export function Header() {
         </Link>
         <Link
           href="/om"
-          className="absolute right-5 rounded-lg px-2 py-1 text-sm font-bold text-[var(--muted)] transition hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)] sm:right-8"
+          className="absolute left-5 rounded-lg px-2 py-1 text-sm font-bold text-[var(--muted)] transition hover:text-[var(--accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)] sm:right-8"
         >
           Om
         </Link>

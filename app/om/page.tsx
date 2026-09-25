@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 import { Header } from '@/components/layout/header';
 
@@ -22,36 +23,27 @@ export default function AboutPage() {
         <section aria-labelledby="about-title" className="max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-[var(--accent)]">Om sångboken</p>
           <h1 id="about-title" className="mt-3 font-display text-5xl font-semibold leading-[0.95] text-[var(--ink)] sm:text-6xl">
-            Visor för goda stunder.
+            Hejsan!
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">
-            Sångboken samlar svenska snapsvisor och festvisor på ett ställe, så att alla runt bordet kan hitta,
-            läsa och sjunga med utan att leta efter ett tryckt häfte.
+            Under många år har jag och min fru Gun försökt glädja många vänner och bekanta med en liten sång i samband med födelsedagar och interna fester. Ofta har det visat sig med ett sånghäfte passande för tillfället.
+            En liten specialitet har bland annat varit snapsvisor som vi under årens lopp har lärt oss och försökt delat med oss vid olika tillfällen. Gitarren har förstås varit med vid många tillfällen och vi tror att det har varit till glädje för många.
+            Många av er har vid andra tillfällen försökt sjunga dessa sånger men tyvärr har man då glömt bort texten. Nu när jag har pensionerat mig har jag försökt samman ställa några av våra favoritsnaps låtar genom att göra lite häfte som vi kallar Uddmans bästa som vi vill gärna dela med oss för fram tiden.
+            Sjung och le och tänk på alla fina och roliga stunder vi har haft tillsammans.
+            Kenneth & Gun
           </p>
         </section>
 
         <section aria-labelledby="features-title" className="mt-14 border-t border-[var(--line)] pt-8">
-          <h2 id="features-title" className="font-display text-3xl font-semibold text-[var(--ink)]">Det här kan du göra</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {features.map(([title, description]) => (
-              <article key={title} className="rounded-2xl border border-[var(--line)] bg-[var(--surface)] p-5">
-                <h3 className="font-display text-xl font-semibold text-[var(--ink)]">{title}</h3>
-                <p className="mt-2 leading-7 text-[var(--muted)]">{description}</p>
-              </article>
-            ))}
-          </div>
+          
+          <Image src="/kenneth.jpg" alt="Kenneth och Gun" width={600} height={400} className="mt-6 rounded-lg border border-[var(--line)]" />
+
+
         </section>
 
-        <section aria-labelledby="etiquette-title" className="mt-14 border-t border-[var(--line)] pt-8">
-          <h2 id="etiquette-title" className="font-display text-3xl font-semibold text-[var(--ink)]">Snapsvisevett</h2>
-          <ol className="mt-6 space-y-4 text-base leading-7 text-[var(--muted)]">
-            <li><strong className="text-[var(--ink)]">1. Presentera visan.</strong> Säg gärna vilken visa ni ska sjunga och vilken melodi den följer.</li>
-            <li><strong className="text-[var(--ink)]">2. Sjung tillsammans.</strong> Håll tempot så att alla hinner med och låt den som kan visan leda.</li>
-            <li><strong className="text-[var(--ink)]">3. Skåla med omtanke.</strong> Vänta tills sista raden är sjungen och skåla i den takt som passar sällskapet.</li>
-          </ol>
-        </section>
-
+        
         <footer className="mt-14 border-t border-[var(--line)] pt-6 text-sm text-[var(--muted)]">
+          <p>Enköping 2022-11-18</p>
           <p>Sångbok version 0.1.0</p>
           <p className="mt-1">Skapad för svenska middagar, kräftskivor och andra goda stunder.</p>
         </footer>
